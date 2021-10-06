@@ -16,5 +16,10 @@ namespace Soccer_Management_Premier_League
         {
             InitializeComponent();
         }
+
+        private void SignUpButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

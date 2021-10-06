@@ -250,7 +250,7 @@
             // 
             this.SignUpButton.AutoRoundedCorners = true;
             this.SignUpButton.BackColor = System.Drawing.Color.Transparent;
-            this.SignUpButton.BorderRadius = 5;
+            this.SignUpButton.BorderRadius = 21;
             this.SignUpButton.CheckedState.Parent = this.SignUpButton;
             this.SignUpButton.CustomImages.Parent = this.SignUpButton;
             this.SignUpButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -262,13 +262,14 @@
             this.SignUpButton.Font = new System.Drawing.Font("Times New Roman", 9.75F);
             this.SignUpButton.ForeColor = System.Drawing.Color.White;
             this.SignUpButton.HoverState.Parent = this.SignUpButton;
-            this.SignUpButton.Location = new System.Drawing.Point(235, 461);
+            this.SignUpButton.Location = new System.Drawing.Point(210, 461);
             this.SignUpButton.Name = "SignUpButton";
             this.SignUpButton.ShadowDecoration.Parent = this.SignUpButton;
             this.SignUpButton.Size = new System.Drawing.Size(114, 45);
             this.SignUpButton.TabIndex = 7;
             this.SignUpButton.Text = "SIGN UP";
             this.SignUpButton.UseTransparentBackground = true;
+            this.SignUpButton.Click += new System.EventHandler(this.SignUpButton_Click);
             // 
             // BackButton
             // 
@@ -306,6 +307,7 @@
             this.Controls.Add(this.PassPanel);
             this.Controls.Add(this.UserPanel);
             this.Controls.Add(this.RwPassPanel);
+            this.MaximizeBox = false;
             this.Name = "Signup";
             this.Text = "premier_league_manager";
             this.UserPanel.ResumeLayout(false);

@@ -38,10 +38,10 @@ namespace Soccer_Management_Premier_League
             this.panelquestion3 = new System.Windows.Forms.FlowLayoutPanel();
             this.question3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.q3answer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pass2label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.ContinueButton = new Guna.UI2.WinForms.Guna2Button();
             this.BackButton = new Guna.UI2.WinForms.Guna2Button();
-            this.pass2label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelquestion1.SuspendLayout();
             this.panelquestion2.SuspendLayout();
             this.panelquestion3.SuspendLayout();
@@ -51,11 +51,11 @@ namespace Soccer_Management_Premier_League
             // question1
             // 
             this.question1.BackColor = System.Drawing.Color.Transparent;
-            this.question1.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.question1.ForeColor = System.Drawing.Color.White;
             this.question1.Location = new System.Drawing.Point(3, 3);
             this.question1.Name = "question1";
-            this.question1.Size = new System.Drawing.Size(398, 31);
+            this.question1.Size = new System.Drawing.Size(388, 28);
             this.question1.TabIndex = 1;
             this.question1.Text = "What\'s your favorite football player ?";
             // 
@@ -76,7 +76,7 @@ namespace Soccer_Management_Premier_League
             this.q1answer.ForeColor = System.Drawing.Color.Black;
             this.q1answer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.q1answer.HoverState.Parent = this.q1answer;
-            this.q1answer.Location = new System.Drawing.Point(5, 42);
+            this.q1answer.Location = new System.Drawing.Point(5, 39);
             this.q1answer.Margin = new System.Windows.Forms.Padding(5);
             this.q1answer.Name = "q1answer";
             this.q1answer.PasswordChar = '\0';
@@ -110,11 +110,11 @@ namespace Soccer_Management_Premier_League
             // question2
             // 
             this.question2.BackColor = System.Drawing.Color.Transparent;
-            this.question2.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.question2.ForeColor = System.Drawing.Color.White;
             this.question2.Location = new System.Drawing.Point(3, 3);
             this.question2.Name = "question2";
-            this.question2.Size = new System.Drawing.Size(355, 31);
+            this.question2.Size = new System.Drawing.Size(342, 28);
             this.question2.TabIndex = 1;
             this.question2.Text = "Which club do you like the most?";
             // 
@@ -135,7 +135,7 @@ namespace Soccer_Management_Premier_League
             this.q2answer.ForeColor = System.Drawing.Color.Black;
             this.q2answer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.q2answer.HoverState.Parent = this.q2answer;
-            this.q2answer.Location = new System.Drawing.Point(5, 42);
+            this.q2answer.Location = new System.Drawing.Point(5, 39);
             this.q2answer.Margin = new System.Windows.Forms.Padding(5);
             this.q2answer.Name = "q2answer";
             this.q2answer.PasswordChar = '\0';
@@ -159,11 +159,11 @@ namespace Soccer_Management_Premier_League
             // question3
             // 
             this.question3.BackColor = System.Drawing.Color.Transparent;
-            this.question3.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.question3.ForeColor = System.Drawing.Color.White;
             this.question3.Location = new System.Drawing.Point(3, 3);
             this.question3.Name = "question3";
-            this.question3.Size = new System.Drawing.Size(327, 31);
+            this.question3.Size = new System.Drawing.Size(318, 28);
             this.question3.TabIndex = 1;
             this.question3.Text = "What\'s your favorite number ?";
             // 
@@ -184,7 +184,7 @@ namespace Soccer_Management_Premier_League
             this.q3answer.ForeColor = System.Drawing.Color.Black;
             this.q3answer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.q3answer.HoverState.Parent = this.q3answer;
-            this.q3answer.Location = new System.Drawing.Point(5, 42);
+            this.q3answer.Location = new System.Drawing.Point(5, 39);
             this.q3answer.Margin = new System.Windows.Forms.Padding(5);
             this.q3answer.Name = "q3answer";
             this.q3answer.PasswordChar = '\0';
@@ -195,14 +195,25 @@ namespace Soccer_Management_Premier_League
             this.q3answer.Size = new System.Drawing.Size(417, 34);
             this.q3answer.TabIndex = 2;
             // 
+            // pass2label
+            // 
+            this.pass2label.BackColor = System.Drawing.Color.Transparent;
+            this.pass2label.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pass2label.ForeColor = System.Drawing.Color.White;
+            this.pass2label.Location = new System.Drawing.Point(118, 82);
+            this.pass2label.Name = "pass2label";
+            this.pass2label.Size = new System.Drawing.Size(268, 41);
+            this.pass2label.TabIndex = 9;
+            this.pass2label.Text = "SECOND PASSWORD";
+            // 
             // pictureBox
             // 
             this.pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox.Image = global::Soccer_Management_Premier_League.Properties.Resources.ronaldo;
-            this.pictureBox.Location = new System.Drawing.Point(522, 12);
+            this.pictureBox.Image = global::Soccer_Management_Premier_League.Properties.Resources.bruno;
+            this.pictureBox.Location = new System.Drawing.Point(515, 33);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(329, 492);
+            this.pictureBox.Size = new System.Drawing.Size(357, 460);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 8;
             this.pictureBox.TabStop = false;
@@ -223,7 +234,7 @@ namespace Soccer_Management_Premier_League
             this.ContinueButton.HoverState.Parent = this.ContinueButton;
             this.ContinueButton.Image = global::Soccer_Management_Premier_League.Properties.Resources.pngegg1;
             this.ContinueButton.ImageSize = new System.Drawing.Size(45, 45);
-            this.ContinueButton.Location = new System.Drawing.Point(221, 431);
+            this.ContinueButton.Location = new System.Drawing.Point(210, 431);
             this.ContinueButton.Name = "ContinueButton";
             this.ContinueButton.ShadowDecoration.Parent = this.ContinueButton;
             this.ContinueButton.Size = new System.Drawing.Size(52, 50);
@@ -254,22 +265,12 @@ namespace Soccer_Management_Premier_League
             this.BackButton.TabIndex = 6;
             this.BackButton.UseTransparentBackground = true;
             // 
-            // pass2label
-            // 
-            this.pass2label.BackColor = System.Drawing.Color.Transparent;
-            this.pass2label.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pass2label.ForeColor = System.Drawing.Color.White;
-            this.pass2label.Location = new System.Drawing.Point(118, 82);
-            this.pass2label.Name = "pass2label";
-            this.pass2label.Size = new System.Drawing.Size(268, 41);
-            this.pass2label.TabIndex = 9;
-            this.pass2label.Text = "SECOND PASSWORD";
-            // 
             // _2ndPassWord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.BackColor = System.Drawing.Color.Firebrick;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(884, 516);
             this.Controls.Add(this.pass2label);
@@ -279,6 +280,8 @@ namespace Soccer_Management_Premier_League
             this.Controls.Add(this.panelquestion3);
             this.Controls.Add(this.panelquestion2);
             this.Controls.Add(this.panelquestion1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "_2ndPassWord";
             this.Text = "premier_league_manager";
             this.Load += new System.EventHandler(this._2ndPassWord_Load);

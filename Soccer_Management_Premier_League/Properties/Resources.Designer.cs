@@ -63,6 +63,26 @@ namespace Soccer_Management_Premier_League.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bruno {
+            get {
+                object obj = ResourceManager.GetObject("bruno", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap de_bruyne {
+            get {
+                object obj = ResourceManager.GetObject("de bruyne", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap football_ge8782764d_1920 {
             get {
                 object obj = ResourceManager.GetObject("football-ge8782764d_1920", resourceCulture);
@@ -86,6 +106,16 @@ namespace Soccer_Management_Premier_League.Properties {
         internal static System.Drawing.Bitmap hinh_nen_manchester_united_1 {
             get {
                 object obj = ResourceManager.GetObject("hinh-nen-manchester-united-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ibra {
+            get {
+                object obj = ResourceManager.GetObject("ibra", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

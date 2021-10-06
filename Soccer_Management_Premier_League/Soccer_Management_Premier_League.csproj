@@ -246,6 +246,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\139-1391483_png-file-svg-back-button-icon-png-transparent.png" />
+    <None Include="Resources\bruno.png" />
+    <None Include="Resources\de bruyne.jpg" />
     <Content Include="Resources\football-ge8782764d_1920.jpg" />
     <None Include="Resources\pngegg1.png" />
     <None Include="Resources\hinh-nen-manchester-united-1.jpg" />
@@ -257,6 +259,7 @@
     <None Include="Resources\football-ge8782764d_19201.jpg" />
     <None Include="Resources\ronaldo.jpg" />
     <None Include="Resources\Question.jpeg" />
+    <None Include="Resources\ibra.jpg" />
     <Content Include="Resources\Statement_Graphic_PL_Lilac.jpg" />
     <Content Include="Resources\unnamed.png" />
   </ItemGroup>
