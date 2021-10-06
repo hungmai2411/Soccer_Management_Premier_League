@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Soccer_Management_Premier_League
 {
-    public partial class Form1 : Form
+    public partial class _2ndPassWord : Form
     {
-        public Form1()
+        public _2ndPassWord()
         {
             InitializeComponent();
         }
