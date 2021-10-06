@@ -16,5 +16,10 @@ namespace Soccer_Management_Premier_League
         {
             InitializeComponent();
         }
+
+        private void _2ndPassWord_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

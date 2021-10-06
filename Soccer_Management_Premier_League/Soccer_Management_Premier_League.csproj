@@ -255,6 +255,8 @@
     <None Include="Resources\hinh-anh-dau-hoi-cham-dep.jpg" />
     <None Include="Resources\unnamed1.png" />
     <None Include="Resources\football-ge8782764d_19201.jpg" />
+    <None Include="Resources\ronaldo.jpg" />
+    <None Include="Resources\Question.jpeg" />
     <Content Include="Resources\Statement_Graphic_PL_Lilac.jpg" />
     <Content Include="Resources\unnamed.png" />
   </ItemGroup>

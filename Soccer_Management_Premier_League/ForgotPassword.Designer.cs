@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BackButton = new Guna.UI2.WinForms.Guna2Button();
             this.EmailPanel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.EmailTextbox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -42,45 +41,24 @@
             this.q4Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.q4Label = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.q4answer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.BackButton = new Guna.UI2.WinForms.Guna2Button();
             this.Q1Panel.SuspendLayout();
             this.q2Panel.SuspendLayout();
             this.q3Panel.SuspendLayout();
             this.q4Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BackButton
-            // 
-            this.BackButton.BackColor = System.Drawing.Color.Transparent;
-            this.BackButton.CheckedState.Parent = this.BackButton;
-            this.BackButton.CustomImages.Parent = this.BackButton;
-            this.BackButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BackButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BackButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BackButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BackButton.DisabledState.Parent = this.BackButton;
-            this.BackButton.FillColor = System.Drawing.Color.Transparent;
-            this.BackButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BackButton.ForeColor = System.Drawing.Color.White;
-            this.BackButton.HoverState.Parent = this.BackButton;
-            this.BackButton.Image = global::Soccer_Management_Premier_League.Properties.Resources.unnamed2;
-            this.BackButton.ImageSize = new System.Drawing.Size(50, 50);
-            this.BackButton.Location = new System.Drawing.Point(12, 12);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.PressedColor = System.Drawing.Color.BurlyWood;
-            this.BackButton.ShadowDecoration.Parent = this.BackButton;
-            this.BackButton.Size = new System.Drawing.Size(57, 58);
-            this.BackButton.TabIndex = 0;
-            this.BackButton.UseTransparentBackground = true;
             // 
             // EmailPanel
             // 
             this.EmailPanel.BackColor = System.Drawing.Color.Transparent;
-            this.EmailPanel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailPanel.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailPanel.ForeColor = System.Drawing.Color.Black;
             this.EmailPanel.Location = new System.Drawing.Point(3, 3);
             this.EmailPanel.Name = "EmailPanel";
-            this.EmailPanel.Size = new System.Drawing.Size(72, 28);
+            this.EmailPanel.Size = new System.Drawing.Size(58, 28);
             this.EmailPanel.TabIndex = 1;
             this.EmailPanel.Text = "Email:";
             // 
@@ -101,6 +79,7 @@
             // EmailTextbox
             // 
             this.EmailTextbox.BackColor = System.Drawing.Color.Transparent;
+            this.EmailTextbox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.EmailTextbox.BorderRadius = 5;
             this.EmailTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.EmailTextbox.DefaultText = "";
@@ -149,17 +128,18 @@
             // q2Label
             // 
             this.q2Label.BackColor = System.Drawing.Color.Transparent;
-            this.q2Label.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q2Label.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.q2Label.ForeColor = System.Drawing.Color.Black;
             this.q2Label.Location = new System.Drawing.Point(3, 3);
             this.q2Label.Name = "q2Label";
-            this.q2Label.Size = new System.Drawing.Size(388, 28);
+            this.q2Label.Size = new System.Drawing.Size(357, 28);
             this.q2Label.TabIndex = 1;
             this.q2Label.Text = "What\'s your favorite football player ?";
             // 
             // q2answer
             // 
             this.q2answer.BackColor = System.Drawing.Color.Transparent;
+            this.q2answer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.q2answer.BorderRadius = 5;
             this.q2answer.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.q2answer.DefaultText = "";
@@ -198,17 +178,18 @@
             // q3Label
             // 
             this.q3Label.BackColor = System.Drawing.Color.Transparent;
-            this.q3Label.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q3Label.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.q3Label.ForeColor = System.Drawing.Color.Black;
             this.q3Label.Location = new System.Drawing.Point(3, 3);
             this.q3Label.Name = "q3Label";
-            this.q3Label.Size = new System.Drawing.Size(342, 28);
+            this.q3Label.Size = new System.Drawing.Size(314, 28);
             this.q3Label.TabIndex = 1;
             this.q3Label.Text = "Which club do you like the most?";
             // 
             // q3answer
             // 
             this.q3answer.BackColor = System.Drawing.Color.Transparent;
+            this.q3answer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.q3answer.BorderRadius = 5;
             this.q3answer.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.q3answer.DefaultText = "";
@@ -247,17 +228,18 @@
             // q4Label
             // 
             this.q4Label.BackColor = System.Drawing.Color.Transparent;
-            this.q4Label.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.q4Label.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.q4Label.ForeColor = System.Drawing.Color.Black;
             this.q4Label.Location = new System.Drawing.Point(3, 3);
             this.q4Label.Name = "q4Label";
-            this.q4Label.Size = new System.Drawing.Size(318, 28);
+            this.q4Label.Size = new System.Drawing.Size(290, 28);
             this.q4Label.TabIndex = 1;
             this.q4Label.Text = "What\'s your favorite number ?";
             // 
             // q4answer
             // 
             this.q4answer.BackColor = System.Drawing.Color.Transparent;
+            this.q4answer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.q4answer.BorderRadius = 5;
             this.q4answer.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.q4answer.DefaultText = "";
@@ -283,6 +265,17 @@
             this.q4answer.Size = new System.Drawing.Size(485, 37);
             this.q4answer.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Soccer_Management_Premier_League.Properties.Resources.Question;
+            this.pictureBox1.Location = new System.Drawing.Point(576, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(296, 459);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // guna2Button1
             // 
             this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
@@ -300,21 +293,46 @@
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Image = global::Soccer_Management_Premier_League.Properties.Resources.pngegg;
             this.guna2Button1.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2Button1.Location = new System.Drawing.Point(288, 424);
+            this.guna2Button1.Location = new System.Drawing.Point(265, 424);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(66, 47);
             this.guna2Button1.TabIndex = 8;
             this.guna2Button1.UseTransparentBackground = true;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // BackButton
+            // 
+            this.BackButton.BackColor = System.Drawing.Color.Transparent;
+            this.BackButton.CheckedState.Parent = this.BackButton;
+            this.BackButton.CustomImages.Parent = this.BackButton;
+            this.BackButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BackButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BackButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BackButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BackButton.DisabledState.Parent = this.BackButton;
+            this.BackButton.FillColor = System.Drawing.Color.Transparent;
+            this.BackButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BackButton.ForeColor = System.Drawing.Color.White;
+            this.BackButton.HoverState.Parent = this.BackButton;
+            this.BackButton.Image = global::Soccer_Management_Premier_League.Properties.Resources.unnamed2;
+            this.BackButton.ImageSize = new System.Drawing.Size(50, 50);
+            this.BackButton.Location = new System.Drawing.Point(12, 12);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.PressedColor = System.Drawing.Color.BurlyWood;
+            this.BackButton.ShadowDecoration.Parent = this.BackButton;
+            this.BackButton.Size = new System.Drawing.Size(57, 58);
+            this.BackButton.TabIndex = 0;
+            this.BackButton.UseTransparentBackground = true;
             // 
             // ForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BackgroundImage = global::Soccer_Management_Premier_League.Properties.Resources.hinh_anh_dau_hoi_cham_dep;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(884, 516);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.q4Panel);
             this.Controls.Add(this.q3Panel);
@@ -331,6 +349,7 @@
             this.q3Panel.PerformLayout();
             this.q4Panel.ResumeLayout(false);
             this.q4Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -352,6 +371,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel q4Label;
         private Guna.UI2.WinForms.Guna2TextBox q4answer;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
