@@ -29,7 +29,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.UserLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.UserTextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.PassTextbox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -129,7 +128,7 @@
             this.UserPanel.BackColor = System.Drawing.Color.Transparent;
             this.UserPanel.Controls.Add(this.UserLabel);
             this.UserPanel.Controls.Add(this.UserTextbox);
-            this.UserPanel.Location = new System.Drawing.Point(216, 273);
+            this.UserPanel.Location = new System.Drawing.Point(216, 242);
             this.UserPanel.Name = "UserPanel";
             this.UserPanel.Size = new System.Drawing.Size(465, 79);
             this.UserPanel.TabIndex = 4;
@@ -139,7 +138,7 @@
             this.PassPanel.BackColor = System.Drawing.Color.Transparent;
             this.PassPanel.Controls.Add(this.PassLabel);
             this.PassPanel.Controls.Add(this.PassTextbox);
-            this.PassPanel.Location = new System.Drawing.Point(216, 351);
+            this.PassPanel.Location = new System.Drawing.Point(216, 327);
             this.PassPanel.Name = "PassPanel";
             this.PassPanel.Size = new System.Drawing.Size(465, 80);
             this.PassPanel.TabIndex = 5;
@@ -158,7 +157,7 @@
             this.LoginButton.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ForeColor = System.Drawing.Color.White;
             this.LoginButton.HoverState.Parent = this.LoginButton;
-            this.LoginButton.Location = new System.Drawing.Point(392, 437);
+            this.LoginButton.Location = new System.Drawing.Point(392, 413);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.ShadowDecoration.Parent = this.LoginButton;
             this.LoginButton.Size = new System.Drawing.Size(111, 36);
@@ -177,7 +176,7 @@
             this.PassCheck.CheckMarkColor = System.Drawing.Color.Black;
             this.PassCheck.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PassCheck.ForeColor = System.Drawing.Color.White;
-            this.PassCheck.Location = new System.Drawing.Point(216, 437);
+            this.PassCheck.Location = new System.Drawing.Point(216, 413);
             this.PassCheck.Name = "PassCheck";
             this.PassCheck.Size = new System.Drawing.Size(136, 19);
             this.PassCheck.TabIndex = 7;
@@ -204,7 +203,7 @@
             this.SignUpButton.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpButton.ForeColor = System.Drawing.Color.White;
             this.SignUpButton.HoverState.Parent = this.SignUpButton;
-            this.SignUpButton.Location = new System.Drawing.Point(392, 477);
+            this.SignUpButton.Location = new System.Drawing.Point(392, 455);
             this.SignUpButton.Name = "SignUpButton";
             this.SignUpButton.ShadowDecoration.Parent = this.SignUpButton;
             this.SignUpButton.Size = new System.Drawing.Size(111, 27);
@@ -226,7 +225,7 @@
             this.ForgotPass.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForgotPass.ForeColor = System.Drawing.Color.White;
             this.ForgotPass.HoverState.Parent = this.ForgotPass;
-            this.ForgotPass.Location = new System.Drawing.Point(561, 430);
+            this.ForgotPass.Location = new System.Drawing.Point(561, 413);
             this.ForgotPass.Name = "ForgotPass";
             this.ForgotPass.ShadowDecoration.Parent = this.ForgotPass;
             this.ForgotPass.Size = new System.Drawing.Size(117, 29);
@@ -262,7 +261,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Soccer_Management_Premier_League.Properties.Resources.logopl;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(884, 516);
             this.Controls.Add(this.ChooseUser);

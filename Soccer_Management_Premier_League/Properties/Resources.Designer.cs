@@ -83,6 +83,16 @@ namespace Soccer_Management_Premier_League.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fo {
+            get {
+                object obj = ResourceManager.GetObject("fo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap football_ge8782764d_1920 {
             get {
                 object obj = ResourceManager.GetObject("football-ge8782764d_1920", resourceCulture);
@@ -116,6 +126,26 @@ namespace Soccer_Management_Premier_League.Properties {
         internal static System.Drawing.Bitmap ibra {
             get {
                 object obj = ResourceManager.GetObject("ibra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logopl {
+            get {
+                object obj = ResourceManager.GetObject("logopl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logosu {
+            get {
+                object obj = ResourceManager.GetObject("logosu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
