@@ -73,6 +73,16 @@ namespace Soccer_Management_Premier_League.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cristiano_ronaldo__soccer__kee_1609761322_0189619c_progressive {
+            get {
+                object obj = ResourceManager.GetObject("cristiano_ronaldo__soccer__kee_1609761322_0189619c_progressive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap de_bruyne {
             get {
                 object obj = ResourceManager.GetObject("de bruyne", resourceCulture);

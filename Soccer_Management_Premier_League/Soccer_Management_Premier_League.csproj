@@ -217,6 +217,9 @@
     <EmbeddedResource Include="2ndPassWord.resx">
       <DependentUpon>2ndPassWord.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,6 +276,7 @@
     <None Include="Resources\bruno.png" />
     <None Include="Resources\de bruyne.jpg" />
     <None Include="Resources\fo.jpg" />
+    <None Include="Resources\cristiano_ronaldo__soccer__kee_1609761322_0189619c_progressive.jpg" />
     <Content Include="Resources\football-ge8782764d_1920.jpg" />
     <None Include="Resources\pngegg1.png" />
     <None Include="Resources\hinh-nen-manchester-united-1.jpg" />

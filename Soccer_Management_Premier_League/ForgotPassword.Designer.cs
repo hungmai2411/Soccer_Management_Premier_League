@@ -357,7 +357,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ForgotPassword";
-            this.Text = "Premier_League_Manager";
+            this.Text = "Premier League Manager";
             this.Q1Panel.ResumeLayout(false);
             this.Q1Panel.PerformLayout();
             this.q2Panel.ResumeLayout(false);
