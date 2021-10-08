@@ -182,6 +182,12 @@
     <Compile Include="ForgotPassword.Designer.cs">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Loading.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
@@ -273,7 +282,27 @@
     <None Include="Resources\logopl.jpg" />
     <None Include="Resources\logosu.jpg" />
     <None Include="Resources\premier-league-logo-vector.png" />
+    <None Include="Resources\mu.png" />
     <Content Include="Resources\Statement_Graphic_PL_Lilac.jpg" />
+    <None Include="Resources\t2.png" />
+    <None Include="Resources\t3.png" />
+    <None Include="Resources\t4.png" />
+    <None Include="Resources\t6 %281%29.png" />
+    <None Include="Resources\t7.png" />
+    <None Include="Resources\t8.png" />
+    <None Include="Resources\t11.png" />
+    <None Include="Resources\t13.png" />
+    <None Include="Resources\t14.png" />
+    <None Include="Resources\t20.png" />
+    <None Include="Resources\t21.png" />
+    <None Include="Resources\t31.png" />
+    <None Include="Resources\t36.png" />
+    <None Include="Resources\t39.png" />
+    <None Include="Resources\t43.png" />
+    <None Include="Resources\t45.png" />
+    <None Include="Resources\t57.png" />
+    <None Include="Resources\t90.png" />
+    <None Include="Resources\t94.png" />
     <Content Include="Resources\unnamed.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
