@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPassword));
             this.EmailPanel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.EmailTextbox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -353,6 +354,7 @@
             this.Controls.Add(this.q2Panel);
             this.Controls.Add(this.Q1Panel);
             this.Controls.Add(this.BackButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ForgotPassword";
             this.Text = "Premier_League_Manager";

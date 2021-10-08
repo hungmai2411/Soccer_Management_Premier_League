@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Signup));
             this.userlabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Usertextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.UserPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -307,6 +308,7 @@
             this.Controls.Add(this.PassPanel);
             this.Controls.Add(this.UserPanel);
             this.Controls.Add(this.RwPassPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Signup";
             this.Text = "premier_league_manager";

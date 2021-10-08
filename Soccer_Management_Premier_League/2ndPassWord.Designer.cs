@@ -29,6 +29,7 @@ namespace Soccer_Management_Premier_League
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_2ndPassWord));
             this.question1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.q1answer = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelquestion1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -281,6 +282,7 @@ namespace Soccer_Management_Premier_League
             this.Controls.Add(this.panelquestion2);
             this.Controls.Add(this.panelquestion1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "_2ndPassWord";
             this.Text = "premier_league_manager";
