@@ -16,7 +16,7 @@ namespace Soccer_Management_Premier_League
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChangePassword());
+            Application.Run(new Loading());
         }
     }
 }

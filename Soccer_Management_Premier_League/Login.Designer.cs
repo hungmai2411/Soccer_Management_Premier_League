@@ -165,6 +165,7 @@
             this.LoginButton.TabIndex = 6;
             this.LoginButton.Text = "LOGIN";
             this.LoginButton.UseTransparentBackground = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // PassCheck
             // 
