@@ -1,7 +1,7 @@
 ﻿
 namespace Soccer_Management_Premier_League
 {
-    partial class AddMatch
+    partial class AddResult
     {
         /// <summary>
         /// Required designer variable.
@@ -67,9 +67,9 @@ namespace Soccer_Management_Premier_League
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.label7.Location = new System.Drawing.Point(379, 12);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 25);
+            this.label7.Size = new System.Drawing.Size(78, 25);
             this.label7.TabIndex = 0;
-            this.label7.Text = "MATCH";
+            this.label7.Text = "RESULT";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DataGridView_match
@@ -85,7 +85,7 @@ namespace Soccer_Management_Premier_League
             this.DataGridView_match.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(165)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(70)))), ((int)(((byte)(235)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -180,7 +180,6 @@ namespace Soccer_Management_Premier_League
             this.button2.Size = new System.Drawing.Size(39, 30);
             this.button2.TabIndex = 3;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // guna2ComboBox1
             // 
@@ -219,16 +218,16 @@ namespace Soccer_Management_Premier_League
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.label2.Image = global::Soccer_Management_Premier_League.Properties.Resources.schedule_30px;
+            this.label2.Image = global::Soccer_Management_Premier_League.Properties.Resources.scorecard_30px;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label2.Location = new System.Drawing.Point(2, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 43);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Manage Matchs";
+            this.label2.Text = "Manage Results";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // AddMatch
+            // AddResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -240,10 +239,10 @@ namespace Soccer_Management_Premier_League
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "AddMatch";
+            this.Name = "AddResult";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
-            this.Load += new System.EventHandler(this.AddMatch_Load);
+            this.Load += new System.EventHandler(this.AddResult_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_match)).EndInit();

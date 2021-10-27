@@ -26,38 +26,24 @@ namespace Soccer_Management_Premier_League
             this.components = new System.ComponentModel.Container();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Btn_exit = new System.Windows.Forms.Button();
-            this.Panel_Referee = new System.Windows.Forms.Panel();
-            this.Btn_AddReferee = new System.Windows.Forms.Button();
-            this.Btn_Referee = new System.Windows.Forms.Button();
-            this.Panel_Ranking = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.Btn_TopGoal = new System.Windows.Forms.Button();
-            this.Btn_Ranking = new System.Windows.Forms.Button();
-            this.Panel_Result = new System.Windows.Forms.Panel();
-            this.Btn_ShowMatch = new System.Windows.Forms.Button();
-            this.Btn_AddResult = new System.Windows.Forms.Button();
-            this.Btn_Result = new System.Windows.Forms.Button();
-            this.Panel_MatchSchedule = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.Btn_AddMatch = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.Btn_MatchSchedule = new System.Windows.Forms.Button();
-            this.Panel_Club = new System.Windows.Forms.Panel();
-            this.Btn_UpdateClub = new System.Windows.Forms.Button();
-            this.Btn_ManageClub = new System.Windows.Forms.Button();
-            this.Btn_Registration = new System.Windows.Forms.Button();
             this.Btn_Club = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
@@ -78,20 +64,18 @@ namespace Soccer_Management_Premier_League
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.Btn_exit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.Panel_Referee.SuspendLayout();
-            this.Panel_Ranking.SuspendLayout();
-            this.Panel_Result.SuspendLayout();
-            this.Panel_MatchSchedule.SuspendLayout();
-            this.Panel_Club.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
@@ -112,7 +96,6 @@ namespace Soccer_Management_Premier_League
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -123,17 +106,15 @@ namespace Soccer_Management_Premier_League
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(135)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(226)))), ((int)(((byte)(171)))));
             this.panel1.Controls.Add(this.Btn_exit);
-            this.panel1.Controls.Add(this.Panel_Referee);
-            this.panel1.Controls.Add(this.Btn_Referee);
-            this.panel1.Controls.Add(this.Panel_Ranking);
-            this.panel1.Controls.Add(this.Btn_Ranking);
-            this.panel1.Controls.Add(this.Panel_Result);
-            this.panel1.Controls.Add(this.Btn_Result);
-            this.panel1.Controls.Add(this.Panel_MatchSchedule);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.Btn_MatchSchedule);
-            this.panel1.Controls.Add(this.Panel_Club);
             this.panel1.Controls.Add(this.Btn_Club);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -142,230 +123,73 @@ namespace Soccer_Management_Premier_League
             this.panel1.Size = new System.Drawing.Size(195, 650);
             this.panel1.TabIndex = 0;
             // 
-            // Btn_exit
+            // button1
             // 
-            this.Btn_exit.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_exit.FlatAppearance.BorderSize = 0;
-            this.Btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_exit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.Btn_exit.Location = new System.Drawing.Point(0, 727);
-            this.Btn_exit.Name = "Btn_exit";
-            this.Btn_exit.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Btn_exit.Size = new System.Drawing.Size(178, 40);
-            this.Btn_exit.TabIndex = 11;
-            this.Btn_exit.Text = "Exit";
-            this.Btn_exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_exit.UseVisualStyleBackColor = true;
-            this.Btn_exit.Click += new System.EventHandler(this.Btn_exit_Click);
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.button1.Location = new System.Drawing.Point(0, 610);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(195, 40);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Logout";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Panel_Referee
+            // button4
             // 
-            this.Panel_Referee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(252)))), ((int)(((byte)(154)))));
-            this.Panel_Referee.Controls.Add(this.Btn_AddReferee);
-            this.Panel_Referee.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_Referee.Location = new System.Drawing.Point(0, 687);
-            this.Panel_Referee.Name = "Panel_Referee";
-            this.Panel_Referee.Size = new System.Drawing.Size(178, 40);
-            this.Panel_Referee.TabIndex = 10;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.button4.Location = new System.Drawing.Point(0, 292);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(195, 40);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "Ranking";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Btn_AddReferee
+            // button3
             // 
-            this.Btn_AddReferee.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_AddReferee.FlatAppearance.BorderSize = 0;
-            this.Btn_AddReferee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_AddReferee.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_AddReferee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(8)))), ((int)(((byte)(58)))));
-            this.Btn_AddReferee.Location = new System.Drawing.Point(0, 0);
-            this.Btn_AddReferee.Name = "Btn_AddReferee";
-            this.Btn_AddReferee.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.Btn_AddReferee.Size = new System.Drawing.Size(178, 40);
-            this.Btn_AddReferee.TabIndex = 2;
-            this.Btn_AddReferee.Text = "Add Referee";
-            this.Btn_AddReferee.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.Btn_AddReferee.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Referee
-            // 
-            this.Btn_Referee.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_Referee.FlatAppearance.BorderSize = 0;
-            this.Btn_Referee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Referee.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Referee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.Btn_Referee.Location = new System.Drawing.Point(0, 647);
-            this.Btn_Referee.Name = "Btn_Referee";
-            this.Btn_Referee.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Btn_Referee.Size = new System.Drawing.Size(178, 40);
-            this.Btn_Referee.TabIndex = 9;
-            this.Btn_Referee.Text = "Referee";
-            this.Btn_Referee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Referee.UseVisualStyleBackColor = true;
-            this.Btn_Referee.Click += new System.EventHandler(this.Btn_Referee_Click);
-            // 
-            // Panel_Ranking
-            // 
-            this.Panel_Ranking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(252)))), ((int)(((byte)(154)))));
-            this.Panel_Ranking.Controls.Add(this.button2);
-            this.Panel_Ranking.Controls.Add(this.Btn_TopGoal);
-            this.Panel_Ranking.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_Ranking.Location = new System.Drawing.Point(0, 573);
-            this.Panel_Ranking.Name = "Panel_Ranking";
-            this.Panel_Ranking.Size = new System.Drawing.Size(178, 74);
-            this.Panel_Ranking.TabIndex = 8;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.button3.Location = new System.Drawing.Point(0, 252);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(195, 40);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Result";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(8)))), ((int)(((byte)(58)))));
-            this.button2.Location = new System.Drawing.Point(0, 40);
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.button2.Location = new System.Drawing.Point(0, 212);
             this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(178, 40);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Top Goal";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(195, 40);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Player";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // Btn_TopGoal
-            // 
-            this.Btn_TopGoal.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_TopGoal.FlatAppearance.BorderSize = 0;
-            this.Btn_TopGoal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_TopGoal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_TopGoal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(8)))), ((int)(((byte)(58)))));
-            this.Btn_TopGoal.Location = new System.Drawing.Point(0, 0);
-            this.Btn_TopGoal.Name = "Btn_TopGoal";
-            this.Btn_TopGoal.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.Btn_TopGoal.Size = new System.Drawing.Size(178, 40);
-            this.Btn_TopGoal.TabIndex = 2;
-            this.Btn_TopGoal.Text = "Ranking Table";
-            this.Btn_TopGoal.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.Btn_TopGoal.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Ranking
-            // 
-            this.Btn_Ranking.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_Ranking.FlatAppearance.BorderSize = 0;
-            this.Btn_Ranking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Ranking.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Ranking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.Btn_Ranking.Location = new System.Drawing.Point(0, 533);
-            this.Btn_Ranking.Name = "Btn_Ranking";
-            this.Btn_Ranking.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Btn_Ranking.Size = new System.Drawing.Size(178, 40);
-            this.Btn_Ranking.TabIndex = 7;
-            this.Btn_Ranking.Text = "Ranking";
-            this.Btn_Ranking.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Ranking.UseVisualStyleBackColor = true;
-            this.Btn_Ranking.Click += new System.EventHandler(this.Btn_Ranking_Click);
-            // 
-            // Panel_Result
-            // 
-            this.Panel_Result.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(252)))), ((int)(((byte)(154)))));
-            this.Panel_Result.Controls.Add(this.Btn_ShowMatch);
-            this.Panel_Result.Controls.Add(this.Btn_AddResult);
-            this.Panel_Result.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_Result.Location = new System.Drawing.Point(0, 453);
-            this.Panel_Result.Name = "Panel_Result";
-            this.Panel_Result.Size = new System.Drawing.Size(178, 80);
-            this.Panel_Result.TabIndex = 5;
-            // 
-            // Btn_ShowMatch
-            // 
-            this.Btn_ShowMatch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_ShowMatch.FlatAppearance.BorderSize = 0;
-            this.Btn_ShowMatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_ShowMatch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ShowMatch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(8)))), ((int)(((byte)(58)))));
-            this.Btn_ShowMatch.Location = new System.Drawing.Point(0, 40);
-            this.Btn_ShowMatch.Name = "Btn_ShowMatch";
-            this.Btn_ShowMatch.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.Btn_ShowMatch.Size = new System.Drawing.Size(178, 40);
-            this.Btn_ShowMatch.TabIndex = 3;
-            this.Btn_ShowMatch.Text = "Show Match";
-            this.Btn_ShowMatch.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.Btn_ShowMatch.UseVisualStyleBackColor = true;
-            // 
-            // Btn_AddResult
-            // 
-            this.Btn_AddResult.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_AddResult.FlatAppearance.BorderSize = 0;
-            this.Btn_AddResult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_AddResult.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_AddResult.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(8)))), ((int)(((byte)(58)))));
-            this.Btn_AddResult.Location = new System.Drawing.Point(0, 0);
-            this.Btn_AddResult.Name = "Btn_AddResult";
-            this.Btn_AddResult.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.Btn_AddResult.Size = new System.Drawing.Size(178, 40);
-            this.Btn_AddResult.TabIndex = 2;
-            this.Btn_AddResult.Text = "Add Result";
-            this.Btn_AddResult.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.Btn_AddResult.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Result
-            // 
-            this.Btn_Result.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_Result.FlatAppearance.BorderSize = 0;
-            this.Btn_Result.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Result.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Result.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.Btn_Result.Location = new System.Drawing.Point(0, 413);
-            this.Btn_Result.Name = "Btn_Result";
-            this.Btn_Result.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Btn_Result.Size = new System.Drawing.Size(178, 40);
-            this.Btn_Result.TabIndex = 4;
-            this.Btn_Result.Text = "Result";
-            this.Btn_Result.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Result.UseVisualStyleBackColor = true;
-            this.Btn_Result.Click += new System.EventHandler(this.Btn_Result_Click);
-            // 
-            // Panel_MatchSchedule
-            // 
-            this.Panel_MatchSchedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(252)))), ((int)(((byte)(154)))));
-            this.Panel_MatchSchedule.Controls.Add(this.button1);
-            this.Panel_MatchSchedule.Controls.Add(this.Btn_AddMatch);
-            this.Panel_MatchSchedule.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_MatchSchedule.Location = new System.Drawing.Point(0, 333);
-            this.Panel_MatchSchedule.Name = "Panel_MatchSchedule";
-            this.Panel_MatchSchedule.Size = new System.Drawing.Size(178, 80);
-            this.Panel_MatchSchedule.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(8)))), ((int)(((byte)(58)))));
-            this.button1.Location = new System.Drawing.Point(0, 40);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(178, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Manage Match";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Btn_AddMatch
-            // 
-            this.Btn_AddMatch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_AddMatch.FlatAppearance.BorderSize = 0;
-            this.Btn_AddMatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_AddMatch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_AddMatch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(8)))), ((int)(((byte)(58)))));
-            this.Btn_AddMatch.Location = new System.Drawing.Point(0, 0);
-            this.Btn_AddMatch.Name = "Btn_AddMatch";
-            this.Btn_AddMatch.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.Btn_AddMatch.Size = new System.Drawing.Size(178, 40);
-            this.Btn_AddMatch.TabIndex = 2;
-            this.Btn_AddMatch.Text = "Add Match";
-            this.Btn_AddMatch.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.Btn_AddMatch.UseVisualStyleBackColor = true;
-            this.Btn_AddMatch.Click += new System.EventHandler(this.Btn_AddMatch_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Btn_MatchSchedule
             // 
@@ -374,78 +198,15 @@ namespace Soccer_Management_Premier_League
             this.Btn_MatchSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_MatchSchedule.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_MatchSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.Btn_MatchSchedule.Location = new System.Drawing.Point(0, 293);
+            this.Btn_MatchSchedule.Location = new System.Drawing.Point(0, 172);
             this.Btn_MatchSchedule.Name = "Btn_MatchSchedule";
             this.Btn_MatchSchedule.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Btn_MatchSchedule.Size = new System.Drawing.Size(178, 40);
+            this.Btn_MatchSchedule.Size = new System.Drawing.Size(195, 40);
             this.Btn_MatchSchedule.TabIndex = 2;
             this.Btn_MatchSchedule.Text = "Match Schedule";
             this.Btn_MatchSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_MatchSchedule.UseVisualStyleBackColor = true;
             this.Btn_MatchSchedule.Click += new System.EventHandler(this.Btn_MatchSchedule_Click);
-            // 
-            // Panel_Club
-            // 
-            this.Panel_Club.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(252)))), ((int)(((byte)(154)))));
-            this.Panel_Club.Controls.Add(this.Btn_UpdateClub);
-            this.Panel_Club.Controls.Add(this.Btn_ManageClub);
-            this.Panel_Club.Controls.Add(this.Btn_Registration);
-            this.Panel_Club.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_Club.Location = new System.Drawing.Point(0, 172);
-            this.Panel_Club.Name = "Panel_Club";
-            this.Panel_Club.Size = new System.Drawing.Size(178, 121);
-            this.Panel_Club.TabIndex = 0;
-            // 
-            // Btn_UpdateClub
-            // 
-            this.Btn_UpdateClub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_UpdateClub.FlatAppearance.BorderSize = 0;
-            this.Btn_UpdateClub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_UpdateClub.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_UpdateClub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(8)))), ((int)(((byte)(58)))));
-            this.Btn_UpdateClub.Location = new System.Drawing.Point(0, 80);
-            this.Btn_UpdateClub.Name = "Btn_UpdateClub";
-            this.Btn_UpdateClub.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.Btn_UpdateClub.Size = new System.Drawing.Size(178, 40);
-            this.Btn_UpdateClub.TabIndex = 4;
-            this.Btn_UpdateClub.Text = "Manage Players";
-            this.Btn_UpdateClub.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_UpdateClub.UseVisualStyleBackColor = true;
-            this.Btn_UpdateClub.Click += new System.EventHandler(this.Btn_UpdateClub_Click);
-            // 
-            // Btn_ManageClub
-            // 
-            this.Btn_ManageClub.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_ManageClub.FlatAppearance.BorderSize = 0;
-            this.Btn_ManageClub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_ManageClub.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ManageClub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(8)))), ((int)(((byte)(58)))));
-            this.Btn_ManageClub.Location = new System.Drawing.Point(0, 40);
-            this.Btn_ManageClub.Name = "Btn_ManageClub";
-            this.Btn_ManageClub.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.Btn_ManageClub.Size = new System.Drawing.Size(178, 40);
-            this.Btn_ManageClub.TabIndex = 3;
-            this.Btn_ManageClub.Text = "Manage Club";
-            this.Btn_ManageClub.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.Btn_ManageClub.UseVisualStyleBackColor = true;
-            this.Btn_ManageClub.Click += new System.EventHandler(this.Btn_ManageClub_Click);
-            // 
-            // Btn_Registration
-            // 
-            this.Btn_Registration.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_Registration.FlatAppearance.BorderSize = 0;
-            this.Btn_Registration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Registration.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Registration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(8)))), ((int)(((byte)(58)))));
-            this.Btn_Registration.Location = new System.Drawing.Point(0, 0);
-            this.Btn_Registration.Name = "Btn_Registration";
-            this.Btn_Registration.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.Btn_Registration.Size = new System.Drawing.Size(178, 40);
-            this.Btn_Registration.TabIndex = 2;
-            this.Btn_Registration.Text = "Registration";
-            this.Btn_Registration.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.Btn_Registration.UseVisualStyleBackColor = true;
-            this.Btn_Registration.Click += new System.EventHandler(this.Btn_Registration_Click);
             // 
             // Btn_Club
             // 
@@ -457,7 +218,7 @@ namespace Soccer_Management_Premier_League
             this.Btn_Club.Location = new System.Drawing.Point(0, 132);
             this.Btn_Club.Name = "Btn_Club";
             this.Btn_Club.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Btn_Club.Size = new System.Drawing.Size(178, 40);
+            this.Btn_Club.Size = new System.Drawing.Size(195, 40);
             this.Btn_Club.TabIndex = 1;
             this.Btn_Club.Text = "Club";
             this.Btn_Club.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -470,14 +231,24 @@ namespace Soccer_Management_Premier_League
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(178, 132);
+            this.panel3.Size = new System.Drawing.Size(195, 132);
             this.panel3.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Soccer_Management_Premier_League.Properties.Resources.FIFA22_PC_REQUIREMENTS_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(168, 106);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(195, 0);
@@ -485,28 +256,29 @@ namespace Soccer_Management_Premier_League
             this.panel2.Size = new System.Drawing.Size(850, 650);
             this.panel2.TabIndex = 1;
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.pictureBox22);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 222);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(850, 428);
-            this.panel6.TabIndex = 2;
-            // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(135)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(226)))), ((int)(((byte)(171)))));
             this.panel5.Controls.Add(this.pictureBox23);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 132);
+            this.panel5.Location = new System.Drawing.Point(0, 560);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(850, 90);
-            this.panel5.TabIndex = 1;
+            this.panel5.TabIndex = 3;
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.Image = global::Soccer_Management_Premier_League.Properties.Resources.admin;
+            this.pictureBox23.Location = new System.Drawing.Point(759, 6);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(88, 78);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox23.TabIndex = 17;
+            this.pictureBox23.TabStop = false;
             // 
             // label4
             // 
@@ -552,9 +324,29 @@ namespace Soccer_Management_Premier_League
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome :";
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.pictureBox22);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 132);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(850, 428);
+            this.panel6.TabIndex = 2;
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox22.Image = global::Soccer_Management_Premier_League.Properties.Resources._2705_fifa_22_release_date1;
+            this.pictureBox22.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(850, 428);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox22.TabIndex = 0;
+            this.pictureBox22.TabStop = false;
+            // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(245)))), ((int)(((byte)(199)))));
             this.panel4.Controls.Add(this.pictureBox21);
             this.panel4.Controls.Add(this.pictureBox20);
             this.panel4.Controls.Add(this.pictureBox19);
@@ -580,27 +372,6 @@ namespace Soccer_Management_Premier_League
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(850, 132);
             this.panel4.TabIndex = 0;
-            // 
-            // pictureBox22
-            // 
-            this.pictureBox22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox22.Image = global::Soccer_Management_Premier_League.Properties.Resources.alex_motoc_7NhFrPxlgM8_unsplash;
-            this.pictureBox22.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(850, 428);
-            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox22.TabIndex = 0;
-            this.pictureBox22.TabStop = false;
-            // 
-            // pictureBox23
-            // 
-            this.pictureBox23.Image = global::Soccer_Management_Premier_League.Properties.Resources.admin;
-            this.pictureBox23.Location = new System.Drawing.Point(759, 6);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(88, 78);
-            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox23.TabIndex = 4;
-            this.pictureBox23.TabStop = false;
             // 
             // pictureBox21
             // 
@@ -802,15 +573,54 @@ namespace Soccer_Management_Premier_League
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // button5
             // 
-            this.pictureBox1.Image = global::Soccer_Management_Premier_League.Properties.Resources.images_v3_removebg_preview__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(156, 106);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.button5.Location = new System.Drawing.Point(0, 332);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(195, 40);
+            this.button5.TabIndex = 17;
+            this.button5.Text = "Referee";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.button6.Location = new System.Drawing.Point(0, 372);
+            this.button6.Name = "button6";
+            this.button6.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button6.Size = new System.Drawing.Size(195, 40);
+            this.button6.TabIndex = 18;
+            this.button6.Text = "Coach";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // Btn_exit
+            // 
+            this.Btn_exit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_exit.FlatAppearance.BorderSize = 0;
+            this.Btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_exit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.Btn_exit.Location = new System.Drawing.Point(0, 412);
+            this.Btn_exit.Name = "Btn_exit";
+            this.Btn_exit.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Btn_exit.Size = new System.Drawing.Size(195, 40);
+            this.Btn_exit.TabIndex = 19;
+            this.Btn_exit.Text = "Exit";
+            this.Btn_exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_exit.UseVisualStyleBackColor = true;
+            this.Btn_exit.Click += new System.EventHandler(this.Btn_exit_Click_1);
             // 
             // HomePage
             // 
@@ -824,19 +634,15 @@ namespace Soccer_Management_Premier_League
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
-            this.Panel_Referee.ResumeLayout(false);
-            this.Panel_Ranking.ResumeLayout(false);
-            this.Panel_Result.ResumeLayout(false);
-            this.Panel_MatchSchedule.ResumeLayout(false);
-            this.Panel_Club.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
@@ -857,7 +663,6 @@ namespace Soccer_Management_Premier_League
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -867,24 +672,7 @@ namespace Soccer_Management_Premier_League
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Btn_Club;
-        private System.Windows.Forms.Panel Panel_Club;
-        private System.Windows.Forms.Button Btn_ManageClub;
-        private System.Windows.Forms.Button Btn_Registration;
-        private System.Windows.Forms.Button Btn_UpdateClub;
-        private System.Windows.Forms.Panel Panel_Result;
-        private System.Windows.Forms.Button Btn_ShowMatch;
-        private System.Windows.Forms.Button Btn_AddResult;
-        private System.Windows.Forms.Button Btn_Result;
-        private System.Windows.Forms.Panel Panel_MatchSchedule;
-        private System.Windows.Forms.Button Btn_AddMatch;
         private System.Windows.Forms.Button Btn_MatchSchedule;
-        private System.Windows.Forms.Panel Panel_Ranking;
-        private System.Windows.Forms.Button Btn_TopGoal;
-        private System.Windows.Forms.Button Btn_Ranking;
-        private System.Windows.Forms.Panel Panel_Referee;
-        private System.Windows.Forms.Button Btn_AddReferee;
-        private System.Windows.Forms.Button Btn_Referee;
-        private System.Windows.Forms.Button Btn_exit;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox21;
@@ -906,15 +694,20 @@ namespace Soccer_Management_Premier_League
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox pictureBox22;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox23;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pictureBox22;
-        private System.Windows.Forms.PictureBox pictureBox23;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Btn_exit;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
     }
 }
