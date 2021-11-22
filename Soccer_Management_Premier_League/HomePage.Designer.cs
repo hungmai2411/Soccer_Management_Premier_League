@@ -26,6 +26,9 @@ namespace Soccer_Management_Premier_League
             this.components = new System.ComponentModel.Container();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Btn_exit = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -64,9 +67,7 @@ namespace Soccer_Management_Premier_League
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.Btn_exit = new System.Windows.Forms.Button();
+            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -123,6 +124,57 @@ namespace Soccer_Management_Premier_League
             this.panel1.Size = new System.Drawing.Size(195, 650);
             this.panel1.TabIndex = 0;
             // 
+            // Btn_exit
+            // 
+            this.Btn_exit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_exit.FlatAppearance.BorderSize = 0;
+            this.Btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_exit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.Btn_exit.Location = new System.Drawing.Point(0, 412);
+            this.Btn_exit.Name = "Btn_exit";
+            this.Btn_exit.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.Btn_exit.Size = new System.Drawing.Size(195, 40);
+            this.Btn_exit.TabIndex = 19;
+            this.Btn_exit.Text = "Exit";
+            this.Btn_exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_exit.UseVisualStyleBackColor = true;
+            this.Btn_exit.Click += new System.EventHandler(this.Btn_exit_Click_1);
+            // 
+            // button6
+            // 
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.button6.Location = new System.Drawing.Point(0, 372);
+            this.button6.Name = "button6";
+            this.button6.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button6.Size = new System.Drawing.Size(195, 40);
+            this.button6.TabIndex = 18;
+            this.button6.Text = "Coach";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.button5.Location = new System.Drawing.Point(0, 332);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(195, 40);
+            this.button5.TabIndex = 17;
+            this.button5.Text = "Referee";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -130,6 +182,7 @@ namespace Soccer_Management_Premier_League
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.Location = new System.Drawing.Point(0, 610);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -573,54 +626,9 @@ namespace Soccer_Management_Premier_League
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // button5
+            // gunaDragControl1
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.button5.Location = new System.Drawing.Point(0, 332);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(195, 40);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "Referee";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.button6.Location = new System.Drawing.Point(0, 372);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(195, 40);
-            this.button6.TabIndex = 18;
-            this.button6.Text = "Coach";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // Btn_exit
-            // 
-            this.Btn_exit.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_exit.FlatAppearance.BorderSize = 0;
-            this.Btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_exit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.Btn_exit.Location = new System.Drawing.Point(0, 412);
-            this.Btn_exit.Name = "Btn_exit";
-            this.Btn_exit.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.Btn_exit.Size = new System.Drawing.Size(195, 40);
-            this.Btn_exit.TabIndex = 19;
-            this.Btn_exit.Text = "Exit";
-            this.Btn_exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_exit.UseVisualStyleBackColor = true;
-            this.Btn_exit.Click += new System.EventHandler(this.Btn_exit_Click_1);
+            this.gunaDragControl1.TargetControl = this.panel4;
             // 
             // HomePage
             // 
@@ -709,5 +717,6 @@ namespace Soccer_Management_Premier_League
         private System.Windows.Forms.Button Btn_exit;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
+        private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
     }
 }

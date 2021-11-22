@@ -134,7 +134,7 @@ namespace Soccer_Management_Premier_League
             this.textSearch.DisplayIcon = true;
             this.textSearch.Icon = global::Soccer_Management_Premier_League.Properties.Resources.search_20px;
             this.textSearch.Lines = new string[0];
-            this.textSearch.Location = new System.Drawing.Point(292, 14);
+            this.textSearch.Location = new System.Drawing.Point(292, 19);
             this.textSearch.MaxLength = 32767;
             this.textSearch.Multiline = true;
             this.textSearch.Name = "textSearch";
@@ -206,7 +206,7 @@ namespace Soccer_Management_Premier_League
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.label2.Image = global::Soccer_Management_Premier_League.Properties.Resources.shield_30px;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(-3, 14);
+            this.label2.Location = new System.Drawing.Point(2, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 43);
             this.label2.TabIndex = 0;
@@ -273,6 +273,7 @@ namespace Soccer_Management_Premier_League
             this.DataGridView_club.ThemeStyle.RowsStyle.Height = 80;
             this.DataGridView_club.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView_club.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DataGridView_club.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DataGridView_club_KeyDown);
             // 
             // Registration
             // 

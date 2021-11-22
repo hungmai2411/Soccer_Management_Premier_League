@@ -75,5 +75,15 @@ namespace Soccer_Management_Premier_League
         {
             Application.Exit();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Referee());
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Coach());
+        }
     }
 }
