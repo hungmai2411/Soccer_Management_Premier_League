@@ -29,7 +29,7 @@ namespace Soccer_Management_Premier_League
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
             {
                 connection.Open();
-                string query = "Select IDMatch, T1.PIC,T1.CLBNAME,SCORED1,SCORED2,T2.PIC,T2.CLBNAME, DATE,TIME, STAYDIUM from CLUB as T1, CLUB as T2, MATCH1 as M where M.CLB1 = T1.IDCLB and " +
+                string query = "Select IDMatch, T1.PIC,T1.CLBNAME,SCORED1,SCORED2,T2.PIC,T2.CLBNAME, DATE,TIME, T1.STAYDIUM from CLUB as T1, CLUB as T2, MATCH1 as M where M.CLB1 = T1.IDCLB and " +
                     "M.CLB2 = T2.IDCLB";
 
                 SqlDataAdapter ada = new SqlDataAdapter(query, connection);
@@ -152,9 +152,66 @@ namespace Soccer_Management_Premier_League
         }
         private void DataGridView_match_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            //try
+            //{
+            //    ResultDetail result = new ResultDetail(this);
+
+            //    byte[] img1 = (byte[])DataGridView_match.CurrentRow.Cells[1].Value;
+            //    MemoryStream ms1 = new MemoryStream(img1);
+            //    result.HostImage.Image = Image.FromStream(ms1);
+
+            //    img1 = (byte[])DataGridView_match.CurrentRow.Cells[5].Value;
+            //    ms1 = new MemoryStream(img1);
+            //    result.VisitImage.Image = Image.FromStream(ms1);
+
+            //    result.HostName.Text = DataGridView_match.CurrentRow.Cells[2].Value.ToString();
+
+            //    if (result.HostName.Text.Length >= 11)
+            //    {
+            //        result.HostName.Location = new Point(result.HostImage.Location.X - 30, 126);
+            //    }
+
+            //    result.VisitName.Text = DataGridView_match.CurrentRow.Cells[6].Value.ToString();
+
+            //    if (result.VisitName.Text.Length >= 11)
+            //    {
+            //        result.VisitName.Location = new Point(result.VisitImage.Location.X - 30, 126);
+            //    }
+
+
+            //    result.Score1.Text = DataGridView_match.CurrentRow.Cells[3].Value.ToString();
+            //    result.Score2.Text = DataGridView_match.CurrentRow.Cells[4].Value.ToString();
+            //    result.StadiumName.Text = DataGridView_match.CurrentRow.Cells[9].Value.ToString();
+            //    result.ID_txt.Text = DataGridView_match.CurrentRow.Cells[0].Value.ToString();
+            //    result.RefereeName.Text = GetNameRef(result.ID_txt.Text);
+            //    var date = (DateTime)DataGridView_match.CurrentRow.Cells[7].Value;
+            //    result.DateMatch.Text = date.ToString("dd/MM/yyyy");
+
+            //    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            //    {
+            //        connection.Open();
+            //        string query = "Select CLBName from CLUB where CLBNAME = '" + DataGridView_match.CurrentRow.Cells[2].Value.ToString() + "' or CLBNAME = '" + DataGridView_match.CurrentRow.Cells[6].Value.ToString() + "'";
+            //        SqlDataAdapter ada = new SqlDataAdapter(query, connection);
+            //        DataSet ds = new DataSet();
+            //        ada.Fill(ds);
+
+            //        result.comboBox1.DisplayMember = "CLBName";
+            //        result.comboBox1.ValueMember = "CLBNAME";
+            //        result.comboBox1.DataSource = ds.Tables[0];
+            //    }
+
+            //    var idMatch = DataGridView_match.CurrentRow.Cells[0].Value.ToString();
+
+            //    result.ShowDialog();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
             try
             {
-                ResultDetail result = new ResultDetail(this);
+                ResultDetail1 result = new ResultDetail1(this);
 
                 byte[] img1 = (byte[])DataGridView_match.CurrentRow.Cells[1].Value;
                 MemoryStream ms1 = new MemoryStream(img1);
@@ -178,7 +235,7 @@ namespace Soccer_Management_Premier_League
                     result.VisitName.Location = new Point(result.VisitImage.Location.X - 30, 126);
                 }
 
-                
+
                 result.Score1.Text = DataGridView_match.CurrentRow.Cells[3].Value.ToString();
                 result.Score2.Text = DataGridView_match.CurrentRow.Cells[4].Value.ToString();
                 result.StadiumName.Text = DataGridView_match.CurrentRow.Cells[9].Value.ToString();

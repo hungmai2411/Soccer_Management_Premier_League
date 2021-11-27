@@ -394,5 +394,10 @@ namespace Soccer_Management_Premier_League
         {
             //GetClub();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
