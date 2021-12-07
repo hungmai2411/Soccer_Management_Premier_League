@@ -113,6 +113,16 @@ namespace Soccer_Management_Premier_League.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _260886767_1482152325499570_6929150643213079603_n {
+            get {
+                object obj = ResourceManager.GetObject("260886767_1482152325499570_6929150643213079603_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2705_fifa_22_release_date {
             get {
                 object obj = ResourceManager.GetObject("2705_fifa-22-release-date", resourceCulture);
@@ -126,6 +136,16 @@ namespace Soccer_Management_Premier_League.Properties {
         internal static System.Drawing.Bitmap _2705_fifa_22_release_date1 {
             get {
                 object obj = ResourceManager.GetObject("2705_fifa-22-release-date1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _6_2_angel_blushing_smile_emoji_png {
+            get {
+                object obj = ResourceManager.GetObject("6-2-angel-blushing-smile-emoji-png", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +226,16 @@ namespace Soccer_Management_Premier_League.Properties {
         internal static System.Drawing.Bitmap ARS {
             get {
                 object obj = ResourceManager.GetObject("ARS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ARS1 {
+            get {
+                object obj = ResourceManager.GetObject("ARS1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -643,6 +673,16 @@ namespace Soccer_Management_Premier_League.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ngoai_hang_anh_cup {
+            get {
+                object obj = ResourceManager.GetObject("ngoai-hang-anh-cup", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nhan_dinh_soi_keo_pordenone_vs_spezia_coppa_italia_202122 {
             get {
                 object obj = ResourceManager.GetObject("nhan-dinh-soi-keo-pordenone-vs-spezia-coppa-italia-202122", resourceCulture);
@@ -826,6 +866,17 @@ namespace Soccer_Management_Premier_League.Properties {
         internal static System.Drawing.Bitmap soccer_ball_50px {
             get {
                 object obj = ResourceManager.GetObject("soccer_ball_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap soccer_championship_design_football_champion_concept_shiny_gold_laurel_ribbon_banner_ball_glowing_green_background_30810506 {
+            get {
+                object obj = ResourceManager.GetObject("soccer-championship-design-football-champion-concept-shiny-gold-laurel-ribbon-ban" +
+                        "ner-ball-glowing-green-background-30810506", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

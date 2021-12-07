@@ -214,6 +214,18 @@
     <Compile Include="AddResult.Designer.cs">
       <DependentUpon>AddResult.cs</DependentUpon>
     </Compile>
+    <Compile Include="Card.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Card.Designer.cs">
+      <DependentUpon>Card.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Champion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Champion.Designer.cs">
+      <DependentUpon>Champion.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +250,12 @@
     <Compile Include="Coach.Designer.cs">
       <DependentUpon>Coach.cs</DependentUpon>
     </Compile>
+    <Compile Include="DesignClub.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DesignClub.Designer.cs">
+      <DependentUpon>DesignClub.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditCoach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +279,18 @@
     </Compile>
     <Compile Include="ForgotPassword.Designer.cs">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUser.Designer.cs">
+      <DependentUpon>FUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Goal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Goal.Designer.cs">
+      <DependentUpon>Goal.cs</DependentUpon>
     </Compile>
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
@@ -363,6 +393,12 @@
     <EmbeddedResource Include="AddResult.resx">
       <DependentUpon>AddResult.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Card.resx">
+      <DependentUpon>Card.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Champion.resx">
+      <DependentUpon>Champion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -375,6 +411,9 @@
     <EmbeddedResource Include="Coach.resx">
       <DependentUpon>Coach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DesignClub.resx">
+      <DependentUpon>DesignClub.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditCoach.resx">
       <DependentUpon>EditCoach.cs</DependentUpon>
     </EmbeddedResource>
@@ -386,6 +425,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUser.resx">
+      <DependentUpon>FUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Goal.resx">
+      <DependentUpon>Goal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
@@ -501,6 +546,9 @@
     <None Include="Resources\2705_fifa-22-release-date1.jpg" />
     <None Include="Resources\add_16px.png" />
     <None Include="Resources\audio_30px.png" />
+    <None Include="Resources\6-2-angel-blushing-smile-emoji-png.png" />
+    <None Include="Resources\260886767_1482152325499570_6929150643213079603_n.png" />
+    <None Include="Resources\ARS1.png" />
     <Content Include="Resources\close_window_30px.png" />
     <None Include="Resources\edit_30px.png" />
     <None Include="Resources\delete_user_male_30px.png" />
@@ -557,6 +605,8 @@
     <None Include="Resources\soccer_ball_30px.png" />
     <None Include="Resources\referee_30px.png" />
     <None Include="Resources\referee_30px1.png" />
+    <None Include="Resources\ngoai-hang-anh-cup.jpg" />
+    <None Include="Resources\soccer-championship-design-football-champion-concept-shiny-gold-laurel-ribbon-banner-ball-glowing-green-background-30810506.jpg" />
     <Content Include="Resources\Statement_Graphic_PL_Lilac.jpg" />
     <None Include="Resources\t2.png" />
     <None Include="Resources\t3.png" />

@@ -42,12 +42,12 @@
             this.label11 = new System.Windows.Forms.Label();
             this.Birth_Date = new System.Windows.Forms.DateTimePicker();
             this.label19 = new System.Windows.Forms.Label();
-            this.Type_Txt = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.Nation_Txt = new System.Windows.Forms.TextBox();
             this.ID_Txt = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.Name_Txt = new System.Windows.Forms.TextBox();
+            this.cbType = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -228,15 +228,6 @@
             this.label19.TabIndex = 153;
             this.label19.Text = "Type :";
             // 
-            // Type_Txt
-            // 
-            this.Type_Txt.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Type_Txt.Location = new System.Drawing.Point(456, 97);
-            this.Type_Txt.Margin = new System.Windows.Forms.Padding(2);
-            this.Type_Txt.Name = "Type_Txt";
-            this.Type_Txt.Size = new System.Drawing.Size(142, 21);
-            this.Type_Txt.TabIndex = 161;
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -290,19 +281,36 @@
             this.Name_Txt.Size = new System.Drawing.Size(142, 21);
             this.Name_Txt.TabIndex = 157;
             // 
+            // cbType
+            // 
+            this.cbType.FormattingEnabled = true;
+            this.cbType.Items.AddRange(new object[] {
+            "Defensive line coach",
+            "Linebacker coach",
+            "Offensive line coach",
+            "Quarterback coach",
+            "Running backs coach",
+            "Secondary coach",
+            "Special teams coach",
+            "Tight ends coach"});
+            this.cbType.Location = new System.Drawing.Point(456, 96);
+            this.cbType.Name = "cbType";
+            this.cbType.Size = new System.Drawing.Size(141, 24);
+            this.cbType.TabIndex = 168;
+            // 
             // AddCoach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(603, 248);
+            this.Controls.Add(this.cbType);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.Birth_Date);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.Type_Txt);
             this.Controls.Add(this.Name_Txt);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
@@ -345,9 +353,9 @@
         public System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        public System.Windows.Forms.TextBox Type_Txt;
         public System.Windows.Forms.TextBox Nation_Txt;
         public System.Windows.Forms.TextBox ID_Txt;
         public System.Windows.Forms.TextBox Name_Txt;
+        private System.Windows.Forms.ComboBox cbType;
     }
 }

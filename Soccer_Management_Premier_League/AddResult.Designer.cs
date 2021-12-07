@@ -29,7 +29,6 @@ namespace Soccer_Management_Premier_League
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,12 +37,7 @@ namespace Soccer_Management_Premier_League
             this.DataGridView_match = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_match)).BeginInit();
             this.panel3.SuspendLayout();
@@ -138,10 +132,6 @@ namespace Soccer_Management_Premier_League
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(226)))), ((int)(((byte)(171)))));
             this.panel3.Controls.Add(this.dateTimePicker1);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -162,51 +152,6 @@ namespace Soccer_Management_Premier_League
             this.dateTimePicker1.TabIndex = 145;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.label5.Location = new System.Drawing.Point(806, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 16);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Add";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.label3.Location = new System.Drawing.Point(759, 41);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Edit";
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::Soccer_Management_Premier_League.Properties.Resources.edit_30px;
-            this.button2.Location = new System.Drawing.Point(756, 9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(39, 30);
-            this.button2.TabIndex = 3;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::Soccer_Management_Premier_League.Properties.Resources.add_30px11;
-            this.button1.Location = new System.Drawing.Point(803, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(39, 30);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -220,10 +165,6 @@ namespace Soccer_Management_Premier_League
             this.label2.TabIndex = 0;
             this.label2.Text = "Manage Results";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // gunaDragControl1
-            // 
-            this.gunaDragControl1.TargetControl = this.panel1;
             // 
             // AddResult
             // 
@@ -245,7 +186,6 @@ namespace Soccer_Management_Premier_League
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_match)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -255,12 +195,7 @@ namespace Soccer_Management_Premier_League
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2DataGridView DataGridView_match;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
     }
 }

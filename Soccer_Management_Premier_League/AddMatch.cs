@@ -23,8 +23,9 @@ namespace Soccer_Management_Premier_League
         {
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
             {
+                
                 connection.Open();
-                string query = "Select IDMatch, T1.PIC,T1.CLBNAME,T2.PIC,T2.CLBNAME, DATE,TIME, STAYDIUM,REF_NAME from REFEREE as R, CLUB as T1, CLUB as T2, MATCH1 as M where R.IDREF = M.IDREF and M.CLB1 = T1.IDCLB and " +
+                string query = "Select IDMatch, T1.PIC,T1.CLBNAME,T2.PIC,T2.CLBNAME, DATE,TIME, STAYDIUM,IDREF from CLUB as T1, CLUB as T2, MATCH1 as M where M.CLB1 = T1.IDCLB and " +
                     "M.CLB2 = T2.IDCLB";
 
                 SqlDataAdapter ada = new SqlDataAdapter(query, connection);
@@ -166,7 +167,7 @@ namespace Soccer_Management_Premier_League
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
             {
                 connection.Open();
-                string query = "Select IDMatch, T1.PIC,T1.CLBNAME,T2.PIC,T2.CLBNAME, DATE,TIME, STAYDIUM from CLUB as T1, CLUB as T2, MATCH1 as M where M.CLB1 = T1.IDCLB and " +
+                string query = "Select IDMatch, T1.PIC,T1.CLBNAME,T2.PIC,T2.CLBNAME, DATE,TIME, STAYDIUM,IDREF from CLUB as T1, CLUB as T2, MATCH1 as M where M.CLB1 = T1.IDCLB and " +
                     "M.CLB2 = T2.IDCLB and DATE = '" + dateTimePicker1.Value + "'";
 
                 SqlDataAdapter ada = new SqlDataAdapter(query, connection);
@@ -183,6 +184,7 @@ namespace Soccer_Management_Premier_League
                 DataGridView_match.Columns[5].HeaderText = "Date";
                 DataGridView_match.Columns[6].HeaderText = "Time";
                 DataGridView_match.Columns[7].HeaderText = "Stadium";
+                DataGridView_match.Columns[8].HeaderText = "REF";
 
                 DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
                 imageColumn = (DataGridViewImageColumn)DataGridView_match.Columns[1];
@@ -195,14 +197,15 @@ namespace Soccer_Management_Premier_League
                 DataGridView_match.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy";
                 DataGridView_match.Columns[6].DefaultCellStyle.Format = @"hh\:mm";
 
-                DataGridView_match.Columns[0].Width = 80;
-                DataGridView_match.Columns[1].Width = 50;
-                DataGridView_match.Columns[2].Width = 200;
-                DataGridView_match.Columns[3].Width = 50;
-                DataGridView_match.Columns[4].Width = 200;
-                DataGridView_match.Columns[5].Width = 130;
-                DataGridView_match.Columns[6].Width = 100;
-                DataGridView_match.Columns[7].Width = 140;
+                DataGridView_match.Columns[0].Width = 70;
+                DataGridView_match.Columns[1].Width = 40;
+                DataGridView_match.Columns[2].Width = 140;
+                DataGridView_match.Columns[3].Width = 40;
+                DataGridView_match.Columns[4].Width = 140;
+                DataGridView_match.Columns[5].Width = 100;
+                DataGridView_match.Columns[6].Width = 70;
+                DataGridView_match.Columns[7].Width = 90;
+                DataGridView_match.Columns[8].Width = 110;
 
 
                 connection.Close();

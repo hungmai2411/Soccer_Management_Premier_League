@@ -77,7 +77,22 @@ namespace Soccer_Management_Premier_League
             }
         }
 
-        
+        private string GetIDPlayer(string name)
+        {
+            string s = "";
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            {
+                connection.Open();
+                string query = "Select IDPL from FOOTBALL_PLAYER where PLNAME = '" + name + "'";
+                SqlDataAdapter ada = new SqlDataAdapter(query, connection);
+                DataTable dt = new DataTable();
+                ada.Fill(dt);
+
+                s = dt.Rows[0].ItemArray[0].ToString();
+            }
+
+            return s;
+        }
 
         private void ManagePlayer_Load_1(object sender, EventArgs e)
         {
@@ -234,7 +249,7 @@ namespace Soccer_Management_Premier_League
                     form1.Name_txt.Text = DataGridView_player.CurrentRow.Cells[1].Value.ToString();
                     form1.Nationality_txt.Text = DataGridView_player.CurrentRow.Cells[2].Value.ToString();
                     form1.comboBox1.Text = DataGridView_player.CurrentRow.Cells[3].Value.ToString();
-
+                    form1.lbID.Text = GetIDPlayer(form1.Name_txt.Text);
                     byte[] img1 = (byte[])DataGridView_player.CurrentRow.Cells[6].Value;
                     MemoryStream ms1 = new MemoryStream(img1);
                     form1.Player_Ptx.Image = Image.FromStream(ms1);

@@ -48,9 +48,9 @@ namespace Soccer_Management_Premier_League
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Player_Ptx = new System.Windows.Forms.PictureBox();
-            this.button_delete = new System.Windows.Forms.Button();
             this.button_update = new System.Windows.Forms.Button();
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.lbID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player_Ptx)).BeginInit();
@@ -240,21 +240,6 @@ namespace Soccer_Management_Premier_League
             this.Player_Ptx.TabIndex = 144;
             this.Player_Ptx.TabStop = false;
             // 
-            // button_delete
-            // 
-            this.button_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(220)))), ((int)(((byte)(87)))));
-            this.button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_delete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_delete.ForeColor = System.Drawing.Color.Black;
-            this.button_delete.Location = new System.Drawing.Point(644, 227);
-            this.button_delete.Name = "button_delete";
-            this.button_delete.Size = new System.Drawing.Size(118, 39);
-            this.button_delete.TabIndex = 151;
-            this.button_delete.Text = "Delete";
-            this.button_delete.UseVisualStyleBackColor = false;
-            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
-            // 
             // button_update
             // 
             this.button_update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -262,7 +247,7 @@ namespace Soccer_Management_Premier_League
             this.button_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_update.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_update.ForeColor = System.Drawing.Color.Black;
-            this.button_update.Location = new System.Drawing.Point(520, 227);
+            this.button_update.Location = new System.Drawing.Point(644, 227);
             this.button_update.Name = "button_update";
             this.button_update.Size = new System.Drawing.Size(118, 39);
             this.button_update.TabIndex = 150;
@@ -274,12 +259,23 @@ namespace Soccer_Management_Premier_League
             // 
             this.gunaDragControl1.TargetControl = this.panel1;
             // 
+            // lbID
+            // 
+            this.lbID.AutoSize = true;
+            this.lbID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbID.Location = new System.Drawing.Point(4, 192);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(35, 21);
+            this.lbID.TabIndex = 151;
+            this.lbID.Text = "ID :";
+            this.lbID.Visible = false;
+            // 
             // Player1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 278);
-            this.Controls.Add(this.button_delete);
+            this.Controls.Add(this.lbID);
             this.Controls.Add(this.button_update);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
@@ -326,7 +322,6 @@ namespace Soccer_Management_Premier_League
         public System.Windows.Forms.TextBox CLBID_txt;
         public System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private System.Windows.Forms.Button button_delete;
         private System.Windows.Forms.Button button_update;
         public System.Windows.Forms.TextBox Name_txt;
         public System.Windows.Forms.TextBox Nationality_txt;
@@ -335,5 +330,6 @@ namespace Soccer_Management_Premier_League
         public System.Windows.Forms.PictureBox Player_Ptx;
         public System.Windows.Forms.ComboBox comboBox1;
         private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
+        public System.Windows.Forms.Label lbID;
     }
 }

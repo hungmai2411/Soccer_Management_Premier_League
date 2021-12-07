@@ -18,8 +18,133 @@ namespace Soccer_Management_Premier_League
         {
             InitializeComponent();
             addResult = ar;
+            
         }
 
+        private string GetNamePlayer(string id)
+        {
+            string name = "";
+
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            {
+                connection.Open();
+                string query = "Select PLNAME from FOOTBALL_PLAYER where IDPL = '" + id + "'";
+                SqlDataAdapter ada = new SqlDataAdapter(query, connection);
+                DataTable dt = new DataTable();
+                ada.Fill(dt);
+
+                name = dt.Rows[0]["PLNAME"].ToString();
+            }
+
+            return name;
+        }
+        private void LoadHistory(string home)
+        {
+            flpHome.Controls.Clear();
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            {
+                connection.Open();
+
+                string query = "select IDPL,TIME_GOAL,IDPLA,TIME_ASSIST from GOAL where IDMATCH = '" + ID_txt.Text + "' and IDCLB = '" + GetID(home) + "' order by TIME_GOAL";
+
+                SqlCommand sqlCommand = new SqlCommand(query, connection);
+                
+                try
+                {
+                    sqlCommand.ExecuteNonQuery();
+                    SqlDataReader dr = sqlCommand.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        if (string.IsNullOrEmpty(dr["IDPLA"].ToString()))
+                        {
+                            Goal goal = new Goal();
+                            goal.lbPlayer.Text = GetNamePlayer(dr["IDPL"].ToString());
+                            goal.lbTime.Text = dr["TIME_GOAL"].ToString() + "'";
+
+                            goal.lbAssist.Text = "";
+
+                            flpHome.Controls.Add(goal);
+                        }
+                        else
+                        {
+                            Goal goal = new Goal();
+                            goal.lbPlayer.Text = GetNamePlayer(dr["IDPL"].ToString());
+                            goal.lbTime.Text = dr["TIME_GOAL"].ToString() + "'";
+
+                            goal.lbAssist.Text = GetNamePlayer(dr["IDPLA"].ToString());
+
+                            flpHome.Controls.Add(goal);
+                        }
+                    }
+                    dr.Close();
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+            }
+        }
+
+        private void LoadHistory1(string visit)
+        {
+            flpVisit.Controls.Clear();
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            {
+                connection.Open();
+
+                string query = "select IDPL,TIME_GOAL,IDPLA,TIME_ASSIST from GOAL where IDMATCH = '" + ID_txt.Text + "' and IDCLB = '" + GetID(visit) + "' order by TIME_GOAL";
+
+                SqlCommand sqlCommand = new SqlCommand(query, connection);
+
+                try
+                {
+                    sqlCommand.ExecuteNonQuery();
+                    SqlDataReader dr = sqlCommand.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        if (string.IsNullOrEmpty(dr["IDPLA"].ToString()))
+                        {
+                            Goal goal = new Goal();
+                            goal.lbPlayer.Text = GetNamePlayer(dr["IDPL"].ToString());
+                            goal.lbTime.Text = dr["TIME_GOAL"].ToString() + "'";
+
+                            goal.lbAssist.Text = "";
+
+                            flpVisit.Controls.Add(goal);
+                        }
+                        else
+                        {
+                            Goal goal = new Goal();
+                            goal.lbPlayer.Text = GetNamePlayer(dr["IDPL"].ToString());
+                            goal.lbTime.Text = dr["TIME_GOAL"].ToString() + "'";
+
+                            goal.lbAssist.Text = GetNamePlayer(dr["IDPLA"].ToString());
+
+                            flpVisit.Controls.Add(goal);
+                        }
+                    }
+                    dr.Close();
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+            }
+        }
         private string GetID(string text)
         {
             string hostClub = "";
@@ -37,39 +162,28 @@ namespace Soccer_Management_Premier_League
 
             return hostClub;
         }
-        private void GetAssistant()
+
+        private void GetPlayer(ComboBox cb)
         {
-            
+            cb.Items.Clear();
+
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
             {
                 connection.Open();
 
                 string query = "Select PLNAME from FOOTBALL_PLAYER where IDCLB = '" + GetID(comboBox1.SelectedValue.ToString()) + "' order by PLNAME";
-                SqlDataAdapter ada = new SqlDataAdapter(query, connection);
-                DataSet ds = new DataSet();
-                ada.Fill(ds);
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataReader dr = command.ExecuteReader();
 
-                Assistant_cbx.DataSource = ds.Tables[0];
-                Assistant_cbx.DisplayMember = "PLNAME";
+                while (dr.Read())
+                {
+                    cb.Items.Add(dr["PLNAME"].ToString());
+                }
+                dr.Close();
+                connection.Close();
             }
         }
 
-        private void GetPlayer()
-        {
-            
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
-            {
-                connection.Open();
-
-                string query = "Select PLNAME from FOOTBALL_PLAYER where IDCLB = '" + GetID(comboBox1.SelectedValue.ToString()) + "' order by PLNAME";
-                SqlDataAdapter ada = new SqlDataAdapter(query, connection);
-                DataSet ds = new DataSet();
-                ada.Fill(ds);
-
-                Player_cbx.DataSource = ds.Tables[0];
-                Player_cbx.DisplayMember = "PLNAME";
-            }
-        }
         private void button1_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to add this result", "Add result", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -106,30 +220,51 @@ namespace Soccer_Management_Premier_League
                 scoreVisit = 0;
                 Score1.Text = "";
                 Score2.Text = "";
-                flowLayoutPanel1.Controls.Clear();
-                flowLayoutPanel2.Controls.Clear();
-                flowLayoutPanel3.Controls.Clear();
-                flowLayoutPanel4.Controls.Clear();
 
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
-                {
-                    connection.Open();
-                    string query = "DELETE FROM GOAL where IDMatch = '" + ID_txt.Text.ToString() + "'";
-                    SqlCommand command = new SqlCommand(query, connection);
-                    try
-                    {
-                        command.ExecuteNonQuery();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-
-                    connection.Close();
-                }
+                DeleteGoal();
+                DeleteCard();
             }
         }
 
+        private void DeleteGoal()
+        {
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            {
+                connection.Open();
+                string query = "DELETE FROM GOAL where IDMatch = '" + ID_txt.Text.ToString() + "'";
+                SqlCommand command = new SqlCommand(query, connection);
+                try
+                {
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                connection.Close();
+            }
+        }
+
+        private void DeleteCard()
+        {
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            {
+                connection.Open();
+                string query = "DELETE FROM CARD where IDMatch = '" + ID_txt.Text.ToString() + "'";
+                SqlCommand command = new SqlCommand(query, connection);
+                try
+                {
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                connection.Close();
+            }
+        }
         private string GetIDPlayer(string text)
         {
             string id;
@@ -152,96 +287,86 @@ namespace Soccer_Management_Premier_League
         static int scoreHome = 0;
         static int scoreVisit = 0;
 
-        //List<string> namePLGoal = new List<string>();
-        //List<string> namePLAssist = new List<string>();
-        //List<string> namePLYellow = new List<string>();
-        //List<string> namePLRed = new List<string>();
-
-        private void LoadScore(FlowLayoutPanel pnl1,FlowLayoutPanel pnl2)
+        private void LoadScore(FlowLayoutPanel flp)
         {
-            Label nameHost, timeHost, nameHostA, timeHostA,nameHostY,timeHostY, nameHostR, timeHostR;
-            PictureBox yellow, red;
-
-            nameHost = new Label();
-            timeHost = new Label();
-            
-            nameHostR = new Label();
-
-            nameHost.Text = Player_cbx.Text;
-            nameHost.AutoSize = true;
-
-            timeHost.Text = Time_txt.Text + "'";
-            timeHost.AutoSize = true;
-
-            pnl1.Controls.Add(nameHost);
-            pnl1.Controls.Add(timeHost);
-
-            if (Yellow_Cbx.Text != "")
+            if(Player_cbx.Text != "" && Time_txt.Value > 0 && Time_txt.Value <= 100)
             {
-                nameHostY = new Label();
-                nameHostY.Text = Yellow_Cbx.Text;
-                yellow = new PictureBox();
-                yellow.Size = new System.Drawing.Size(15,15);
-                yellow.BackColor = Color.Yellow;
-                pnl1.Controls.Add(nameHostY);
-                pnl1.Controls.Add(yellow);
+                Goal goal = new Goal();
+                goal.lbPlayer.Text = Player_cbx.Text;
+                goal.lbTime.Text = Time_txt.Value.ToString() + "'";
+
+                if(Assistant_cbx.Text != "")
+                {
+                    goal.lbAssist.Text = Assistant_cbx.Text;
+                }
+                else
+                {
+                    goal.lbAssist.Text = "";
+                }
+                AddGoal1(goal.lbPlayer.Text, goal.lbAssist.Text, int.Parse(Time_txt.Value.ToString()));
+                flp.Controls.Add(goal);
+                AddScore();
+                
+                
             }
 
-            nameHostA = new Label();
-            timeHostA = new Label();
+            if (Yellow_Cbx.Text != "" && TimeYellow.Value > 0 && TimeYellow.Value <= 100)
+            {
+                Card card = new Card();
+                card.lbPlayer.Text = Yellow_Cbx.Text;
+                card.lbTime.Text = TimeYellow.Value.ToString() + "'";
+                flp.Controls.Add(card);
+                AddCardYellow(card.lbPlayer.Text, int.Parse(TimeYellow.Value.ToString()));
+                
+            }
 
-            nameHostA.Text = Assistant_cbx.Text;
-            nameHostA.AutoSize = true;
-
-            timeHostA.Text = Time_txt.Text + "'";
-            timeHostA.AutoSize = true;
-
-            pnl2.Controls.Add(nameHostA);
-            pnl2.Controls.Add(timeHostA);
-
-            Score1.Text = scoreHome.ToString();
-            Score2.Text = scoreVisit.ToString();
+            if (Red_Cbx.Text != "" && TimeRed.Value > 0 && TimeRed.Value <= 100)
+            {
+                Card card = new Card();
+                card.lbPlayer.Text = Red_Cbx.Text;
+                card.lbTime.Text = TimeRed.Value.ToString() + "'";
+                card.pnlCard.BackColor = Color.Red;
+                flp.Controls.Add(card);
+                AddCardRed(card.lbPlayer.Text, int.Parse(TimeRed.Value.ToString()));
+                
+            }
         }
         private void AddScore()
         {
             if(comboBox1.Text == HostName.Text)
             {
                 scoreHome++;
-                LoadScore(flowLayoutPanel2,flowLayoutPanel4);
+                Score1.Text = scoreHome.ToString();
             }
             else
             {
                 scoreVisit++;
-                LoadScore(flowLayoutPanel1,flowLayoutPanel3);
+                Score2.Text = scoreVisit.ToString();
             }
         }
 
-        private void Goal(string plName, string plaName)
+        private void AddGoal1(string plName, string plaName,int time)
         {
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
             {
                 connection.Open();
-                string insertQuery = "insert into GOAL(IDPL, IDCLB, IDMATCH,TIME_GOAL,IDPLA,TIME_ASSIST,) values(@idpl, @idclb, @idmatch, @time_goal,@idpla,@time_assist)";
-                SqlCommand sqlCommand = new SqlCommand(insertQuery, connection);
 
-                if (Assistant_cbx.SelectedIndex == -1)
-                {
-                    Assistant_cbx.Text = "";
-                }
+                string idpl = GetIDPlayer(plName);
+                string idclb = GetID(comboBox1.SelectedValue.ToString());
+                string idmatch = ID_txt.Text;
 
-                sqlCommand.Parameters.AddWithValue("@idpl", GetIDPlayer(plName));
-                sqlCommand.Parameters.AddWithValue("@idclb", GetID(comboBox1.SelectedValue.ToString()));
-                sqlCommand.Parameters.AddWithValue("@idmatch", ID_txt.Text);
-                sqlCommand.Parameters.AddWithValue("@time_goal", int.Parse(Time_txt.Text));
-                if (string.IsNullOrEmpty(Assistant_cbx.Text))
+                string query = "";
+                if (plaName != "")
                 {
-                    sqlCommand.Parameters.AddWithValue("@idpla", null);
+                    string idpla = GetIDPlayer(plaName);
+                    query = $"insert into GOAL(IDPL, IDCLB, IDMATCH,TIME_GOAL,IDPLA,TIME_ASSIST) values('{idpl}', '{idclb}', '{idmatch}', {time}, '{idpla}', {time})";
                 }
                 else
                 {
-                    sqlCommand.Parameters.AddWithValue("@idpla", GetIDPlayer(plaName));
+                    query = $"insert into GOAL(IDPL, IDCLB, IDMATCH,TIME_GOAL,IDPLA,TIME_ASSIST) values('{idpl}', '{idclb}', '{idmatch}', {time}, null,null)";
                 }
-                sqlCommand.Parameters.AddWithValue("@time_assist", int.Parse(Time_txt.Text));
+
+                SqlCommand sqlCommand = new SqlCommand(query, connection);
 
                 try
                 {
@@ -257,6 +382,83 @@ namespace Soccer_Management_Premier_League
                     connection.Close();
                 }
 
+            }
+        }
+
+        private void AddCardYellow(string plName, int time)
+        {
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            {
+                connection.Open();
+                string insertQuery = "insert into CARD(IDPLY, IDCLB, IDMATCH,TIME_YELLOW) values(@idpl, @idclb, @idmatch, @time_yellow)";
+                SqlCommand sqlCommand = new SqlCommand(insertQuery, connection);
+
+                sqlCommand.Parameters.AddWithValue("@idclb", GetID(comboBox1.SelectedValue.ToString()));
+                sqlCommand.Parameters.AddWithValue("@idmatch", ID_txt.Text);
+
+                if (string.IsNullOrEmpty(Yellow_Cbx.Text))
+                {
+                    sqlCommand.Parameters.AddWithValue("@idpl", null);
+                    sqlCommand.Parameters.AddWithValue("@time_yellow", null);
+                }
+                else
+                {
+                    sqlCommand.Parameters.AddWithValue("@idpl", GetIDPlayer(plName));
+                    sqlCommand.Parameters.AddWithValue("@time_yellow", time);
+                }
+
+                try
+                {
+                    sqlCommand.ExecuteNonQuery();
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+            }
+        }
+
+        private void AddCardRed(string plName, int time)
+        {
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            {
+                connection.Open();
+                string insertQuery = "insert into CARD(IDPLR, IDCLB, IDMATCH,TIME_RED) values(@idpl, @idclb, @idmatch, @time_red)";
+                SqlCommand sqlCommand = new SqlCommand(insertQuery, connection);
+
+                sqlCommand.Parameters.AddWithValue("@idclb", GetID(comboBox1.SelectedValue.ToString()));
+                sqlCommand.Parameters.AddWithValue("@idmatch", ID_txt.Text);
+
+                if (string.IsNullOrEmpty(Red_Cbx.Text))
+                {
+                    sqlCommand.Parameters.AddWithValue("@idpl", null);
+                    sqlCommand.Parameters.AddWithValue("@time_red", null);
+                }
+                else
+                {
+                    sqlCommand.Parameters.AddWithValue("@idpl", GetIDPlayer(plName));
+                    sqlCommand.Parameters.AddWithValue("@time_red", time);
+                }
+
+                try
+                {
+                    sqlCommand.ExecuteNonQuery();
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
             }
         }
         private void UpdateRanking(int score1, int score2, string id)
@@ -374,9 +576,29 @@ namespace Soccer_Management_Premier_League
             }
         }
 
+        private void Clear()
+        {
+            Yellow_Cbx.SelectedIndex = -1;
+            Player_cbx.SelectedIndex = -1;
+            Red_Cbx.SelectedIndex = -1;
+            Assistant_cbx.SelectedIndex = -1;
+            TimeRed.Value = 0;
+            TimeYellow.Value = 0;
+            Time_txt.Value = 0;
+        }
         private void button2_Click(object sender, EventArgs e)
         {
-            AddScore();
+            if(comboBox1.Text == HostName.Text)
+            {
+                LoadScore(flpHome);
+            }
+            else
+            {
+                LoadScore(flpVisit);
+            }
+
+            Clear();
+            
             //Goal(Player_cbx.Text,Assistant_cbx.Text);
         }
 
@@ -384,15 +606,124 @@ namespace Soccer_Management_Premier_League
         {
             ComboBox combo = sender as ComboBox;
 
-            if(!string.IsNullOrEmpty(combo.Text)) {
-                GetPlayer();
-                GetAssistant();
+            if (!string.IsNullOrEmpty(combo.Text))
+            {
+                GetPlayer(Player_cbx);
+                GetPlayer(Assistant_cbx);
+                GetPlayer(Yellow_Cbx);
+                GetPlayer(Red_Cbx);
             }
         }
 
         private void ResultDetail_Load(object sender, EventArgs e)
         {
-            //GetClub();
+            if (addResult.CheckResult())
+            {
+                LoadHistory(HostName.Text);
+                LoadHistory1(VisitName.Text);
+                LoadCard(HostName.Text);
+                LoadCard1(VisitName.Text);
+            }
+        }
+
+        private void LoadCard1(string name)
+        {
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            {
+                connection.Open();
+
+                string query = "select IDPLY,TIME_YELLOW,IDPLR,TIME_RED from CARD where IDMATCH = '" + ID_txt.Text + "' and IDCLB = '" + GetID(name) + "' ";
+
+                SqlCommand sqlCommand = new SqlCommand(query, connection);
+
+                try
+                {
+                    sqlCommand.ExecuteNonQuery();
+                    SqlDataReader dr = sqlCommand.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        if (string.IsNullOrEmpty(dr["IDPLY"].ToString()))
+                        {
+                            Card card = new Card();
+                            card.lbPlayer.Text = GetNamePlayer(dr["IDPLR"].ToString());
+                            card.lbTime.Text = dr["TIME_RED"].ToString() + "'";
+                            card.pnlCard.BackColor = Color.Red;
+                            flpVisit.Controls.Add(card);
+                            
+                        }
+                        else
+                        {
+                            Card card = new Card();
+                            card.lbPlayer.Text = GetNamePlayer(dr["IDPLY"].ToString());
+                            card.lbTime.Text = dr["TIME_YELLOW"].ToString() + "'";
+                            card.pnlCard.BackColor = Color.Yellow;
+                            flpVisit.Controls.Add(card);
+                        }
+                    }
+                    dr.Close();
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+            }
+        }
+
+        private void LoadCard(string text)
+        {
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            {
+                connection.Open();
+
+                string query = "select IDPLY,TIME_YELLOW,IDPLR,TIME_RED from CARD where IDMATCH = '" + ID_txt.Text + "' and IDCLB = '" + GetID(text) + "' ";
+
+                SqlCommand sqlCommand = new SqlCommand(query, connection);
+
+                try
+                {
+                    sqlCommand.ExecuteNonQuery();
+                    SqlDataReader dr = sqlCommand.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        if (string.IsNullOrEmpty(dr["IDPLY"].ToString()))
+                        {
+                            Card card = new Card();
+                            card.lbPlayer.Text = GetNamePlayer(dr["IDPLR"].ToString());
+                            card.lbTime.Text = dr["TIME_RED"].ToString() + "'";
+                            card.pnlCard.BackColor = Color.Red;
+                            flpHome.Controls.Add(card);
+
+                        }
+                        else
+                        {
+                            Card card = new Card();
+                            card.lbPlayer.Text = GetNamePlayer(dr["IDPLY"].ToString());
+                            card.lbTime.Text = dr["TIME_YELLOW"].ToString() + "'";
+                            card.pnlCard.BackColor = Color.Yellow;
+                            flpHome.Controls.Add(card);
+                        }
+                    }
+                    dr.Close();
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+
+            }
         }
     }
 }

@@ -29,7 +29,6 @@ namespace Soccer_Management_Premier_League
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,7 +42,6 @@ namespace Soccer_Management_Premier_League
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView_match)).BeginInit();
             this.panel3.SuspendLayout();
@@ -222,10 +220,6 @@ namespace Soccer_Management_Premier_League
             this.label2.Text = "Manage Matchs";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // gunaDragControl1
-            // 
-            this.gunaDragControl1.TargetControl = this.panel1;
-            // 
             // AddMatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -262,6 +256,5 @@ namespace Soccer_Management_Premier_League
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
     }
 }

@@ -213,6 +213,7 @@
             // ID_Txt
             // 
             this.ID_Txt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ID_Txt.Enabled = false;
             this.ID_Txt.Location = new System.Drawing.Point(457, 69);
             this.ID_Txt.Margin = new System.Windows.Forms.Padding(2);
             this.ID_Txt.Name = "ID_Txt";

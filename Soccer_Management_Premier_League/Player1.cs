@@ -31,36 +31,6 @@ namespace Soccer_Management_Premier_League
                 Player_Ptx.Image = Image.FromFile(opf.FileName);
         }
 
-        private void button_delete_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Are you sure you want to remove this player", "Remove Player", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
-                {
-                    connection.Open();
-
-                    string query = "Delete from FOOTBALL_PLAYER where PLNAME = '" + Name_txt.Text + "'";
-
-                    SqlCommand command = new SqlCommand(query, connection);
-
-                    try
-                    {
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Player Removed", "Remove player", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        mp.LoadPlayers();
-
-                    }
-                    catch(Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    //LoadClubs();
-
-                    connection.Close();
-                }
-            }
-        }
-
         private void button_update_Click(object sender, EventArgs e)
         {
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
@@ -78,7 +48,7 @@ namespace Soccer_Management_Premier_League
                 byte[] img = ms.ToArray();
 
                 connection.Open();
-                string query = "Update FOOTBALL_PLAYER set IDCLB = @id, PLNAME = @name,NATIONALITY = @quocGia, VITRI = @role,NUMBER = @number, DAY_BORN = @dateTime,PIC = @img where PLNAME = '" + name + "'";
+                string query = "Update FOOTBALL_PLAYER set IDCLB = @id, PLNAME = @name,NATIONALITY = @quocGia, VITRI = @role,NUMBER = @number, DAY_BORN = @dateTime,PIC = @img where IDPL = '" + lbID.Text + "'";
 
                 SqlCommand command = new SqlCommand(query, connection);
 

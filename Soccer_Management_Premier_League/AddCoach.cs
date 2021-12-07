@@ -28,7 +28,7 @@ namespace Soccer_Management_Premier_League
                 string name = Name_Txt.Text;
                 string id = ID_Txt.Text;
                 string nationality = Nation_Txt.Text;
-                string type = Type_Txt.Text;
+                string type = cbType.Text;
                 DateTime dt = Birth_Date.Value;
                 using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
                 {
@@ -67,7 +67,7 @@ namespace Soccer_Management_Premier_League
 
         private bool Verify()
         {
-            if (ID_Txt.Text == "" || Name_Txt.Text == "" || Nation_Txt.Text == "" || Type_Txt.Text == "")
+            if (ID_Txt.Text == "" || Name_Txt.Text == "" || Nation_Txt.Text == "" || cbType.Text == "")
                 return false;
 
             return true;
@@ -77,7 +77,7 @@ namespace Soccer_Management_Premier_League
             ID_Txt.Text = "";
             Name_Txt.Text = "";
             Nation_Txt.Text = "";
-            Type_Txt.Text = "";
+            cbType.SelectedIndex = -1;
         }
     }
 }

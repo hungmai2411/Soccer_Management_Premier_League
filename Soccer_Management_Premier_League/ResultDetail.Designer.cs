@@ -44,15 +44,6 @@ namespace Soccer_Management_Premier_League
             this.Score2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.HostImage = new System.Windows.Forms.PictureBox();
-            this.VisitImage = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
-            this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.Time_txt = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.Assistant_cbx = new System.Windows.Forms.ComboBox();
@@ -65,26 +56,27 @@ namespace Soccer_Management_Premier_League
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.Yellow_Cbx = new System.Windows.Forms.ComboBox();
             this.Red_Cbx = new System.Windows.Forms.ComboBox();
-            this.guna2NumericUpDown2 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.TimeRed = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
-            this.guna2NumericUpDown3 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.TimeYellow = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
+            this.gunaVSeparator1 = new Guna.UI.WinForms.GunaVSeparator();
+            this.flpHome = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpVisit = new System.Windows.Forms.FlowLayoutPanel();
+            this.HostImage = new System.Windows.Forms.PictureBox();
+            this.VisitImage = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Time_txt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TimeRed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TimeYellow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HostImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisitImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Time_txt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -237,91 +229,6 @@ namespace Soccer_Management_Premier_League
             this.guna2Separator1.Size = new System.Drawing.Size(766, 10);
             this.guna2Separator1.TabIndex = 155;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Soccer_Management_Premier_League.Properties.Resources.soccer_ball_30px;
-            this.pictureBox4.Location = new System.Drawing.Point(357, 154);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox4.TabIndex = 156;
-            this.pictureBox4.TabStop = false;
-            // 
-            // HostImage
-            // 
-            this.HostImage.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.HostImage.BackColor = System.Drawing.Color.Transparent;
-            this.HostImage.Location = new System.Drawing.Point(83, 53);
-            this.HostImage.Name = "HostImage";
-            this.HostImage.Size = new System.Drawing.Size(65, 65);
-            this.HostImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.HostImage.TabIndex = 149;
-            this.HostImage.TabStop = false;
-            // 
-            // VisitImage
-            // 
-            this.VisitImage.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.VisitImage.BackColor = System.Drawing.Color.Transparent;
-            this.VisitImage.Location = new System.Drawing.Point(608, 53);
-            this.VisitImage.Name = "VisitImage";
-            this.VisitImage.Size = new System.Drawing.Size(65, 65);
-            this.VisitImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.VisitImage.TabIndex = 144;
-            this.VisitImage.TabStop = false;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.ForeColor = System.Drawing.Color.Black;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(591, 161);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(162, 152);
-            this.flowLayoutPanel1.TabIndex = 157;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel2.ForeColor = System.Drawing.Color.Black;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(32, 161);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(162, 152);
-            this.flowLayoutPanel2.TabIndex = 158;
-            // 
-            // guna2Separator2
-            // 
-            this.guna2Separator2.Location = new System.Drawing.Point(0, 319);
-            this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(766, 10);
-            this.guna2Separator2.TabIndex = 159;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(344, 332);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 21);
-            this.label1.TabIndex = 160;
-            this.label1.Text = "Assists";
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(591, 335);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(162, 152);
-            this.flowLayoutPanel3.TabIndex = 158;
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(32, 335);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(162, 152);
-            this.flowLayoutPanel4.TabIndex = 159;
-            // 
             // guna2Separator3
             // 
             this.guna2Separator3.Location = new System.Drawing.Point(-4, 493);
@@ -453,32 +360,6 @@ namespace Soccer_Management_Premier_League
             // 
             this.gunaDragControl1.TargetControl = this.panel1;
             // 
-            // guna2NumericUpDown1
-            // 
-            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown1.DisabledState.Parent = this.guna2NumericUpDown1;
-            this.guna2NumericUpDown1.FocusedState.Parent = this.guna2NumericUpDown1;
-            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown1.ForeColor = System.Drawing.Color.Black;
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(561, 582);
-            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.ShadowDecoration.Parent = this.guna2NumericUpDown1;
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(66, 36);
-            this.guna2NumericUpDown1.TabIndex = 180;
-            this.guna2NumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.White;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(454, 594);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 21);
-            this.label6.TabIndex = 179;
-            this.label6.Text = "Time Assist :";
-            // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -521,20 +402,20 @@ namespace Soccer_Management_Premier_League
             this.Red_Cbx.Size = new System.Drawing.Size(193, 29);
             this.Red_Cbx.TabIndex = 184;
             // 
-            // guna2NumericUpDown2
+            // TimeRed
             // 
-            this.guna2NumericUpDown2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown2.DisabledState.Parent = this.guna2NumericUpDown2;
-            this.guna2NumericUpDown2.FocusedState.Parent = this.guna2NumericUpDown2;
-            this.guna2NumericUpDown2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown2.ForeColor = System.Drawing.Color.Black;
-            this.guna2NumericUpDown2.Location = new System.Drawing.Point(561, 659);
-            this.guna2NumericUpDown2.Name = "guna2NumericUpDown2";
-            this.guna2NumericUpDown2.ShadowDecoration.Parent = this.guna2NumericUpDown2;
-            this.guna2NumericUpDown2.Size = new System.Drawing.Size(66, 36);
-            this.guna2NumericUpDown2.TabIndex = 188;
-            this.guna2NumericUpDown2.UpDownButtonFillColor = System.Drawing.Color.White;
+            this.TimeRed.BackColor = System.Drawing.Color.Transparent;
+            this.TimeRed.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TimeRed.DisabledState.Parent = this.TimeRed;
+            this.TimeRed.FocusedState.Parent = this.TimeRed;
+            this.TimeRed.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TimeRed.ForeColor = System.Drawing.Color.Black;
+            this.TimeRed.Location = new System.Drawing.Point(561, 659);
+            this.TimeRed.Name = "TimeRed";
+            this.TimeRed.ShadowDecoration.Parent = this.TimeRed;
+            this.TimeRed.Size = new System.Drawing.Size(66, 36);
+            this.TimeRed.TabIndex = 188;
+            this.TimeRed.UpDownButtonFillColor = System.Drawing.Color.White;
             // 
             // label9
             // 
@@ -547,20 +428,20 @@ namespace Soccer_Management_Premier_League
             this.label9.TabIndex = 187;
             this.label9.Text = "Time Red :";
             // 
-            // guna2NumericUpDown3
+            // TimeYellow
             // 
-            this.guna2NumericUpDown3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown3.DisabledState.Parent = this.guna2NumericUpDown3;
-            this.guna2NumericUpDown3.FocusedState.Parent = this.guna2NumericUpDown3;
-            this.guna2NumericUpDown3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown3.ForeColor = System.Drawing.Color.Black;
-            this.guna2NumericUpDown3.Location = new System.Drawing.Point(121, 659);
-            this.guna2NumericUpDown3.Name = "guna2NumericUpDown3";
-            this.guna2NumericUpDown3.ShadowDecoration.Parent = this.guna2NumericUpDown3;
-            this.guna2NumericUpDown3.Size = new System.Drawing.Size(66, 36);
-            this.guna2NumericUpDown3.TabIndex = 186;
-            this.guna2NumericUpDown3.UpDownButtonFillColor = System.Drawing.Color.White;
+            this.TimeYellow.BackColor = System.Drawing.Color.Transparent;
+            this.TimeYellow.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TimeYellow.DisabledState.Parent = this.TimeYellow;
+            this.TimeYellow.FocusedState.Parent = this.TimeYellow;
+            this.TimeYellow.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TimeYellow.ForeColor = System.Drawing.Color.Black;
+            this.TimeYellow.Location = new System.Drawing.Point(121, 659);
+            this.TimeYellow.Name = "TimeYellow";
+            this.TimeYellow.ShadowDecoration.Parent = this.TimeYellow;
+            this.TimeYellow.Size = new System.Drawing.Size(66, 36);
+            this.TimeYellow.TabIndex = 186;
+            this.TimeYellow.UpDownButtonFillColor = System.Drawing.Color.White;
             // 
             // label10
             // 
@@ -573,22 +454,70 @@ namespace Soccer_Management_Premier_League
             this.label10.TabIndex = 185;
             this.label10.Text = "Time Yellow :";
             // 
+            // gunaVSeparator1
+            // 
+            this.gunaVSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.gunaVSeparator1.LineColor = System.Drawing.Color.Silver;
+            this.gunaVSeparator1.Location = new System.Drawing.Point(377, 153);
+            this.gunaVSeparator1.Name = "gunaVSeparator1";
+            this.gunaVSeparator1.Size = new System.Drawing.Size(8, 347);
+            this.gunaVSeparator1.TabIndex = 189;
+            // 
+            // flpHome
+            // 
+            this.flpHome.AutoScroll = true;
+            this.flpHome.Location = new System.Drawing.Point(7, 164);
+            this.flpHome.Name = "flpHome";
+            this.flpHome.Size = new System.Drawing.Size(364, 323);
+            this.flpHome.TabIndex = 190;
+            // 
+            // flpVisit
+            // 
+            this.flpVisit.AutoScroll = true;
+            this.flpVisit.Location = new System.Drawing.Point(391, 164);
+            this.flpVisit.Name = "flpVisit";
+            this.flpVisit.Size = new System.Drawing.Size(363, 323);
+            this.flpVisit.TabIndex = 191;
+            // 
+            // HostImage
+            // 
+            this.HostImage.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.HostImage.BackColor = System.Drawing.Color.Transparent;
+            this.HostImage.Location = new System.Drawing.Point(83, 53);
+            this.HostImage.Name = "HostImage";
+            this.HostImage.Size = new System.Drawing.Size(65, 65);
+            this.HostImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.HostImage.TabIndex = 149;
+            this.HostImage.TabStop = false;
+            // 
+            // VisitImage
+            // 
+            this.VisitImage.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.VisitImage.BackColor = System.Drawing.Color.Transparent;
+            this.VisitImage.Location = new System.Drawing.Point(608, 53);
+            this.VisitImage.Name = "VisitImage";
+            this.VisitImage.Size = new System.Drawing.Size(65, 65);
+            this.VisitImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.VisitImage.TabIndex = 144;
+            this.VisitImage.TabStop = false;
+            // 
             // ResultDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(766, 766);
-            this.Controls.Add(this.guna2NumericUpDown2);
+            this.ClientSize = new System.Drawing.Size(766, 749);
+            this.Controls.Add(this.flpVisit);
+            this.Controls.Add(this.flpHome);
+            this.Controls.Add(this.gunaVSeparator1);
+            this.Controls.Add(this.TimeRed);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.guna2NumericUpDown3);
+            this.Controls.Add(this.TimeYellow);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Red_Cbx);
             this.Controls.Add(this.Yellow_Cbx);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.guna2NumericUpDown1);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
@@ -600,13 +529,6 @@ namespace Soccer_Management_Premier_League
             this.Controls.Add(this.Player_cbx);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.guna2Separator3);
-            this.Controls.Add(this.flowLayoutPanel4);
-            this.Controls.Add(this.flowLayoutPanel3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2Separator2);
-            this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Score2);
@@ -629,13 +551,11 @@ namespace Soccer_Management_Premier_League
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Time_txt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TimeRed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TimeYellow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HostImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VisitImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Time_txt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -648,7 +568,6 @@ namespace Soccer_Management_Premier_League
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private System.Windows.Forms.PictureBox pictureBox4;
         public System.Windows.Forms.Label StadiumName;
         public System.Windows.Forms.Label DateMatch;
         public System.Windows.Forms.PictureBox HostImage;
@@ -657,12 +576,6 @@ namespace Soccer_Management_Premier_League
         public System.Windows.Forms.Label Score1;
         public System.Windows.Forms.Label Score2;
         public System.Windows.Forms.PictureBox VisitImage;
-        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
-        public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
         private Guna.UI2.WinForms.Guna2NumericUpDown Time_txt;
         public System.Windows.Forms.ComboBox Assistant_cbx;
@@ -676,16 +589,17 @@ namespace Soccer_Management_Premier_League
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.ComboBox comboBox1;
         private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         public System.Windows.Forms.ComboBox Yellow_Cbx;
         public System.Windows.Forms.ComboBox Red_Cbx;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown2;
+        private Guna.UI2.WinForms.Guna2NumericUpDown TimeRed;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown3;
+        private Guna.UI2.WinForms.Guna2NumericUpDown TimeYellow;
         private System.Windows.Forms.Label label10;
         public System.Windows.Forms.Label RefereeName;
+        private Guna.UI.WinForms.GunaVSeparator gunaVSeparator1;
+        private System.Windows.Forms.FlowLayoutPanel flpHome;
+        private System.Windows.Forms.FlowLayoutPanel flpVisit;
     }
 }
