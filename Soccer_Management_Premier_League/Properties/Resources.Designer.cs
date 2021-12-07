@@ -143,6 +143,16 @@ namespace Soccer_Management_Premier_League.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _326ffb9bef63243d7d72 {
+            get {
+                object obj = ResourceManager.GetObject("326ffb9bef63243d7d72", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _6_2_angel_blushing_smile_emoji_png {
             get {
                 object obj = ResourceManager.GetObject("6-2-angel-blushing-smile-emoji-png", resourceCulture);
@@ -247,6 +257,15 @@ namespace Soccer_Management_Premier_League.Properties {
             get {
                 object obj = ResourceManager.GetObject("audio_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream audiotheme {
+            get {
+                return ResourceManager.GetStream("audiotheme", resourceCulture);
             }
         }
         
@@ -561,6 +580,16 @@ namespace Soccer_Management_Premier_League.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] intro {
+            get {
+                object obj = ResourceManager.GetObject("intro", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap jason_charters_IorqsMssQH0_unsplash {
@@ -696,6 +725,26 @@ namespace Soccer_Management_Premier_League.Properties {
         internal static System.Drawing.Bitmap NOR {
             get {
                 object obj = ResourceManager.GetObject("NOR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outline_volume_mute_black_24dp {
+            get {
+                object obj = ResourceManager.GetObject("outline_volume_mute_black_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outline_volume_up_black_24dp {
+            get {
+                object obj = ResourceManager.GetObject("outline_volume_up_black_24dp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

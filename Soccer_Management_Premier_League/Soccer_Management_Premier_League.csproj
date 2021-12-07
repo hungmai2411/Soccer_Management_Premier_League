@@ -250,6 +250,12 @@
     <Compile Include="Coach.Designer.cs">
       <DependentUpon>Coach.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="DesignClub.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -411,6 +417,9 @@
     <EmbeddedResource Include="Coach.resx">
       <DependentUpon>Coach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DesignClub.resx">
       <DependentUpon>DesignClub.cs</DependentUpon>
     </EmbeddedResource>
@@ -549,6 +558,8 @@
     <None Include="Resources\6-2-angel-blushing-smile-emoji-png.png" />
     <None Include="Resources\260886767_1482152325499570_6929150643213079603_n.png" />
     <None Include="Resources\ARS1.png" />
+    <None Include="Resources\audiotheme .wav" />
+    <None Include="Resources\326ffb9bef63243d7d72.jpg" />
     <Content Include="Resources\close_window_30px.png" />
     <None Include="Resources\edit_30px.png" />
     <None Include="Resources\delete_user_male_30px.png" />
@@ -607,6 +618,9 @@
     <None Include="Resources\referee_30px1.png" />
     <None Include="Resources\ngoai-hang-anh-cup.jpg" />
     <None Include="Resources\soccer-championship-design-football-champion-concept-shiny-gold-laurel-ribbon-banner-ball-glowing-green-background-30810506.jpg" />
+    <None Include="Resources\intro.mp4" />
+    <None Include="Resources\outline_volume_mute_black_24dp.jpg" />
+    <None Include="Resources\outline_volume_up_black_24dp.png" />
     <Content Include="Resources\Statement_Graphic_PL_Lilac.jpg" />
     <None Include="Resources\t2.png" />
     <None Include="Resources\t3.png" />
@@ -631,6 +645,28 @@
     <None Include="Resources\tải xuống.png" />
     <None Include="Resources\tải xuống %281%29.png" />
     <Content Include="Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AxWMPLib\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
