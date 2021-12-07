@@ -89,7 +89,7 @@ namespace Soccer_Management_Premier_League
                 {
                     EditReferee form1 = new EditReferee(this);
 
-                    //form1.text_id.Text = DataGridView_referee.CurrentRow.Cells[0].Value.ToString();
+                    form1.lbID.Text = DataGridView_referee.CurrentRow.Cells[0].Value.ToString();
                     form1.text_name.Text = DataGridView_referee.CurrentRow.Cells[1].Value.ToString();
                     form1.text_nation.Text = DataGridView_referee.CurrentRow.Cells[2].Value.ToString();
                     form1.date_birth.Value = (DateTime)DataGridView_referee.CurrentRow.Cells[3].Value;
@@ -147,6 +147,32 @@ namespace Soccer_Management_Premier_League
                         }
                     }
                 }
+            }
+        }
+
+        private void textSearch_TextChanged(object sender, EventArgs e)
+        {
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            {
+                connection.Open();
+                string query = $"Select IDREF, REF_NAME, NATIONALITY, DAY_BORN, TYPE_REF from REFEREE where REF_NAME like '%{textSearch.Text}%'";
+                SqlDataAdapter ada = new SqlDataAdapter(query, connection);
+                DataTable dt = new DataTable();
+                ada.Fill(dt);
+                DataGridView_referee.DataSource = dt;
+                DataGridView_referee.Columns[0].HeaderText = "ID";
+                DataGridView_referee.Columns[1].HeaderText = "Name";
+                DataGridView_referee.Columns[2].HeaderText = "Nationality";
+                DataGridView_referee.Columns[3].HeaderText = "Birthday";
+                DataGridView_referee.Columns[4].HeaderText = "Type";
+
+                DataGridView_referee.Columns[0].Width = 60;
+                DataGridView_referee.Columns[1].Width = 100;
+                DataGridView_referee.Columns[2].Width = 100;
+                DataGridView_referee.Columns[3].Width = 80;
+                DataGridView_referee.Columns[4].Width = 130;
+
+                connection.Close();
             }
         }
     }

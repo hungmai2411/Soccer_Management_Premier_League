@@ -134,7 +134,7 @@ namespace Soccer_Management_Premier_League
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+           // this.Dispose();
         }
     }
 }

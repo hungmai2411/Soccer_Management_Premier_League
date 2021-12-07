@@ -42,6 +42,7 @@
             this.la_name = new System.Windows.Forms.Label();
             this.la_type = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.lbID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -205,12 +206,25 @@
             this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // lbID
+            // 
+            this.lbID.AutoSize = true;
+            this.lbID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbID.Location = new System.Drawing.Point(7, 152);
+            this.lbID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(66, 21);
+            this.lbID.TabIndex = 182;
+            this.lbID.Text = "Name :";
+            this.lbID.Visible = false;
+            // 
             // EditReferee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(603, 228);
+            this.Controls.Add(this.lbID);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.date_birth);
             this.Controls.Add(this.la_birth);
@@ -253,5 +267,6 @@
         public System.Windows.Forms.TextBox text_type;
         public System.Windows.Forms.TextBox text_nation;
         public System.Windows.Forms.TextBox text_name;
+        public System.Windows.Forms.Label lbID;
     }
 }

@@ -31,7 +31,7 @@ namespace Soccer_Management_Premier_League
 
                 connection.Open();
 
-                string query = "Update REFEREE set IDREF = @id, REF_NAME = @name, NATIONALITY = @quocGia, DAY_BORN=@dateTime, TYPE_REF = @type where REF_NAME = '" + name + "'";
+                string query = "Update REFEREE set REF_NAME = @name, NATIONALITY = @quocGia, DAY_BORN=@dateTime, TYPE_REF = @type where IDREF = '" + lbID.Text + "'";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 command.Parameters.AddWithValue("@name", name);

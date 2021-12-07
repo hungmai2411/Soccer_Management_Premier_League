@@ -22,7 +22,24 @@ namespace Soccer_Management_Premier_League
 
         private void Ranking_Load_1(object sender, EventArgs e)
         {
-            ///LoadRanking();
+            
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            {
+                connection.Open();
+                string query = "select * from BXH where PL = 30";
+
+                SqlDataAdapter ada = new SqlDataAdapter(query, connection);
+                DataTable dt = new DataTable();
+                ada.Fill(dt);
+
+                if(dt.Rows.Count == 20)
+                {
+                    btnEnd.Enabled = true;
+                }
+
+                connection.Close();
+            }
+
         }
 
         public void LoadRanking()
@@ -79,6 +96,68 @@ namespace Soccer_Management_Premier_League
 
                 connection.Close();
             }
+        }
+
+        private void btnEnd_Click(object sender, EventArgs e)
+        {
+            Form formBackground = new Form();
+
+            try
+            {
+                Champion form1 = new Champion();
+
+                formBackground.FormBorderStyle = FormBorderStyle.None;
+                formBackground.Opacity = .50d;
+                formBackground.BackColor = Color.Black;
+                formBackground.WindowState = FormWindowState.Maximized;
+                formBackground.TopMost = true;
+                formBackground.Location = this.Location;
+                formBackground.ShowInTaskbar = false;
+                formBackground.Show();
+
+                form1.lbName.Text = FindChampion();
+
+                //144, 27
+                if (form1.lbName.Text.Length >= 11)
+                {
+                    form1.lbName.Location = new Point(form1.lbName.Location.X - 40, 216);
+                }
+
+                form1.Owner = formBackground;
+                form1.ShowDialog();
+
+
+                formBackground.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
+        }
+
+        private string FindChampion()
+        {
+            string s = "";
+
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            {
+                connection.Open();
+                string query = "select top(1) CLBNAME from BXH,CLUB where CLUB.IDCLB = BXH.IDCLB order by PTS desc";
+
+                SqlDataAdapter ada = new SqlDataAdapter(query, connection);
+                DataTable dt = new DataTable();
+                ada.Fill(dt);
+
+                s = dt.Rows[0].ItemArray[0].ToString();
+
+                connection.Close();
+            }
+
+            return s;
         }
     }
 }

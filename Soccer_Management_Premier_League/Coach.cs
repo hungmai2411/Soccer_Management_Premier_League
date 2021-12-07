@@ -42,7 +42,7 @@ namespace Soccer_Management_Premier_League
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
             {
                 connection.Open();
-                string query = "Select IDCOACH, C1.IDCLB, C.CLBNAME, COACHNAME, NATIONALITY, DAY_BORN, TYPE_COACH from COACH as C1,CLUB as C where C1.IDCLB = C.IDCLB";
+                string query = "Select IDCOACH, C1.IDCLB, C.CLBNAME, COACHNAME, NATIONALITY, DAY_BORN, TYPE_COACH from COACH as C1,CLUB as C where C1.IDCLB = C.IDCLB and C1.IDCLB = '" + guna2ComboBox1.SelectedValue.ToString() +"'";
                 SqlDataAdapter ada = new SqlDataAdapter(query, connection);
                 DataTable dt = new DataTable();
                 ada.Fill(dt);
@@ -55,13 +55,13 @@ namespace Soccer_Management_Premier_League
                 DataGridView_coach.Columns[5].HeaderText = "Birthday";
                 DataGridView_coach.Columns[6].HeaderText = "Type";
 
-                DataGridView_coach.Columns[0].Width = 60;
-                DataGridView_coach.Columns[1].Width = 60;
-                DataGridView_coach.Columns[2].Width = 130;
-                DataGridView_coach.Columns[3].Width = 130;
-                DataGridView_coach.Columns[4].Width = 130;
-                DataGridView_coach.Columns[5].Width = 80;
-                DataGridView_coach.Columns[6].Width = 40;
+                DataGridView_coach.Columns[0].Width = 40;
+                DataGridView_coach.Columns[1].Width = 40;
+                DataGridView_coach.Columns[2].Width = 100;
+                DataGridView_coach.Columns[3].Width = 80;
+                DataGridView_coach.Columns[4].Width = 80;
+                DataGridView_coach.Columns[5].Width = 60;
+                DataGridView_coach.Columns[6].Width = 130;
 
                 connection.Close();
             }
@@ -206,6 +206,11 @@ namespace Soccer_Management_Premier_League
                     }
                 }
             }
+        }
+
+        private void guna2ComboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            LoadCoach();
         }
     }
 }

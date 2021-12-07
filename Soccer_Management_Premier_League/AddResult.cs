@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +29,7 @@ namespace Soccer_Management_Premier_League
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
             {
                 connection.Open();
-                string query = "Select IDMatch, T1.PIC,T1.CLBNAME,SCORED1,SCORED2,T2.PIC,T2.CLBNAME, DATE,TIME, T1.STAYDIUM from CLUB as T1, CLUB as T2, MATCH1 as M where M.CLB1 = T1.IDCLB and " +
+                string query = "Select IDMatch, T1.PIC,T1.CLBNAME,SCORED1,SCORED2,T2.PIC,T2.CLBNAME, DATE,TIME, STAYDIUM from CLUB as T1, CLUB as T2, MATCH1 as M where M.CLB1 = T1.IDCLB and " +
                     "M.CLB2 = T2.IDCLB";
 
                 SqlDataAdapter ada = new SqlDataAdapter(query, connection);
@@ -152,208 +152,108 @@ namespace Soccer_Management_Premier_League
         }
         private void DataGridView_match_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            //try
-            //{
-            //    ResultDetail result = new ResultDetail(this);
-
-            //    byte[] img1 = (byte[])DataGridView_match.CurrentRow.Cells[1].Value;
-            //    MemoryStream ms1 = new MemoryStream(img1);
-            //    result.HostImage.Image = Image.FromStream(ms1);
-
-            //    img1 = (byte[])DataGridView_match.CurrentRow.Cells[5].Value;
-            //    ms1 = new MemoryStream(img1);
-            //    result.VisitImage.Image = Image.FromStream(ms1);
-
-            //    result.HostName.Text = DataGridView_match.CurrentRow.Cells[2].Value.ToString();
-
-            //    if (result.HostName.Text.Length >= 11)
-            //    {
-            //        result.HostName.Location = new Point(result.HostImage.Location.X - 30, 126);
-            //    }
-
-            //    result.VisitName.Text = DataGridView_match.CurrentRow.Cells[6].Value.ToString();
-
-            //    if (result.VisitName.Text.Length >= 11)
-            //    {
-            //        result.VisitName.Location = new Point(result.VisitImage.Location.X - 30, 126);
-            //    }
-
-
-            //    result.Score1.Text = DataGridView_match.CurrentRow.Cells[3].Value.ToString();
-            //    result.Score2.Text = DataGridView_match.CurrentRow.Cells[4].Value.ToString();
-            //    result.StadiumName.Text = DataGridView_match.CurrentRow.Cells[9].Value.ToString();
-            //    result.ID_txt.Text = DataGridView_match.CurrentRow.Cells[0].Value.ToString();
-            //    result.RefereeName.Text = GetNameRef(result.ID_txt.Text);
-            //    var date = (DateTime)DataGridView_match.CurrentRow.Cells[7].Value;
-            //    result.DateMatch.Text = date.ToString("dd/MM/yyyy");
-
-            //    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
-            //    {
-            //        connection.Open();
-            //        string query = "Select CLBName from CLUB where CLBNAME = '" + DataGridView_match.CurrentRow.Cells[2].Value.ToString() + "' or CLBNAME = '" + DataGridView_match.CurrentRow.Cells[6].Value.ToString() + "'";
-            //        SqlDataAdapter ada = new SqlDataAdapter(query, connection);
-            //        DataSet ds = new DataSet();
-            //        ada.Fill(ds);
-
-            //        result.comboBox1.DisplayMember = "CLBName";
-            //        result.comboBox1.ValueMember = "CLBNAME";
-            //        result.comboBox1.DataSource = ds.Tables[0];
-            //    }
-
-            //    var idMatch = DataGridView_match.CurrentRow.Cells[0].Value.ToString();
-
-            //    result.ShowDialog();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-            try
+            if (CheckReferee())
             {
-                ResultDetail1 result = new ResultDetail1(this);
-
-                byte[] img1 = (byte[])DataGridView_match.CurrentRow.Cells[1].Value;
-                MemoryStream ms1 = new MemoryStream(img1);
-                result.HostImage.Image = Image.FromStream(ms1);
-
-                img1 = (byte[])DataGridView_match.CurrentRow.Cells[5].Value;
-                ms1 = new MemoryStream(img1);
-                result.VisitImage.Image = Image.FromStream(ms1);
-
-                result.HostName.Text = DataGridView_match.CurrentRow.Cells[2].Value.ToString();
-
-                if (result.HostName.Text.Length >= 11)
+                try
                 {
-                    result.HostName.Location = new Point(result.HostImage.Location.X - 30, 126);
+                    ResultDetail result = new ResultDetail(this);
+
+                    byte[] img1 = (byte[])DataGridView_match.CurrentRow.Cells[1].Value;
+                    MemoryStream ms1 = new MemoryStream(img1);
+                    result.HostImage.Image = Image.FromStream(ms1);
+
+                    img1 = (byte[])DataGridView_match.CurrentRow.Cells[5].Value;
+                    ms1 = new MemoryStream(img1);
+                    result.VisitImage.Image = Image.FromStream(ms1);
+
+                    result.HostName.Text = DataGridView_match.CurrentRow.Cells[2].Value.ToString();
+
+                    if (result.HostName.Text.Length >= 11)
+                    {
+                        result.HostName.Location = new Point(result.HostImage.Location.X - 30, 126);
+                    }
+
+                    result.VisitName.Text = DataGridView_match.CurrentRow.Cells[6].Value.ToString();
+
+                    if (result.VisitName.Text.Length >= 11)
+                    {
+                        result.VisitName.Location = new Point(result.VisitImage.Location.X - 30, 126);
+                    }
+
+                    result.Score1.Text = DataGridView_match.CurrentRow.Cells[3].Value.ToString();
+                    result.Score2.Text = DataGridView_match.CurrentRow.Cells[4].Value.ToString();
+                    result.StadiumName.Text = DataGridView_match.CurrentRow.Cells[9].Value.ToString();
+                    result.ID_txt.Text = DataGridView_match.CurrentRow.Cells[0].Value.ToString();
+                    result.RefereeName.Text = GetNameRef(result.ID_txt.Text);
+                    var date = (DateTime)DataGridView_match.CurrentRow.Cells[7].Value;
+                    result.DateMatch.Text = date.ToString("dd/MM/yyyy");
+
+                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+                    {
+                        connection.Open();
+                        string query = "Select CLBName from CLUB where CLBNAME = '" + DataGridView_match.CurrentRow.Cells[2].Value.ToString() + "' or CLBNAME = '" + DataGridView_match.CurrentRow.Cells[6].Value.ToString() + "'";
+                        SqlDataAdapter ada = new SqlDataAdapter(query, connection);
+                        DataSet ds = new DataSet();
+                        ada.Fill(ds);
+
+                        result.comboBox1.DisplayMember = "CLBName";
+                        result.comboBox1.ValueMember = "CLBNAME";
+                        result.comboBox1.DataSource = ds.Tables[0];
+                    }
+
+                    var idMatch = DataGridView_match.CurrentRow.Cells[0].Value.ToString();
+
+                    result.ShowDialog();
                 }
-
-                result.VisitName.Text = DataGridView_match.CurrentRow.Cells[6].Value.ToString();
-
-                if (result.VisitName.Text.Length >= 11)
+                catch (Exception ex)
                 {
-                    result.VisitName.Location = new Point(result.VisitImage.Location.X - 30, 126);
+                    MessageBox.Show(ex.Message);
                 }
-
-
-                result.Score1.Text = DataGridView_match.CurrentRow.Cells[3].Value.ToString();
-                result.Score2.Text = DataGridView_match.CurrentRow.Cells[4].Value.ToString();
-                result.StadiumName.Text = DataGridView_match.CurrentRow.Cells[9].Value.ToString();
-                result.ID_txt.Text = DataGridView_match.CurrentRow.Cells[0].Value.ToString();
-                result.RefereeName.Text = GetNameRef(result.ID_txt.Text);
-                var date = (DateTime)DataGridView_match.CurrentRow.Cells[7].Value;
-                result.DateMatch.Text = date.ToString("dd/MM/yyyy");
-
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
-                {
-                    connection.Open();
-                    string query = "Select CLBName from CLUB where CLBNAME = '" + DataGridView_match.CurrentRow.Cells[2].Value.ToString() + "' or CLBNAME = '" + DataGridView_match.CurrentRow.Cells[6].Value.ToString() + "'";
-                    SqlDataAdapter ada = new SqlDataAdapter(query, connection);
-                    DataSet ds = new DataSet();
-                    ada.Fill(ds);
-
-                    result.comboBox1.DisplayMember = "CLBName";
-                    result.comboBox1.ValueMember = "CLBNAME";
-                    result.comboBox1.DataSource = ds.Tables[0];
-                }
-
-                var idMatch = DataGridView_match.CurrentRow.Cells[0].Value.ToString();
-
-                result.ShowDialog();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Please add referee", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void LoadPl(string id, ResultDetail result,string idclub)
+        private bool CheckReferee()
         {
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
             {
                 connection.Open();
-                string query = "select F1.PLNAME as F1,G.TIME_GOAL,F2.PLNAME as F2,G.TIME_ASSIST from GOAL as G, FOOTBALL_PLAYER as F1, FOOTBALL_PLAYER as F2 where F1.IDPL = G.IDPL and G.IDMATCH = '" + id + "' and G.IDCLB = '" + idclub+ "' and F2.IDPL = G.IDPLA";
+                string query = "select * from MATCH1 where IDREF is not null and IDMATCH = '" + DataGridView_match.CurrentRow.Cells[0].Value.ToString() + "'";
+
                 SqlDataAdapter ada = new SqlDataAdapter(query, connection);
                 DataTable dt = new DataTable();
                 ada.Fill(dt);
 
-                Label nameHost, timeHost, nameHostA, timeHostA;
-
-
-                for (int i = 0; i < dt.Rows.Count; i++)
+                if (dt.Rows.Count == 0)
                 {
-                    nameHost = new Label();
-                    timeHost = new Label();
-
-                    nameHost.Text = dt.Rows[i]["F1"].ToString();
-                    nameHost.AutoSize = true;
-
-                    timeHost.Text = dt.Rows[i]["TIME_GOAL"].ToString() + "'";
-                    timeHost.AutoSize = true;
-
-                    result.flowLayoutPanel2.Controls.Add(nameHost);
-                    result.flowLayoutPanel2.Controls.Add(timeHost);
-
-                    nameHostA = new Label();
-                    timeHostA = new Label();
-
-                    nameHostA.Text = dt.Rows[i]["F2"].ToString();
-                    nameHostA.AutoSize = true;
-
-                    timeHostA.Text = dt.Rows[i]["TIME_ASSIST"].ToString() + "'";
-                    timeHostA.AutoSize = true;
-
-                    result.flowLayoutPanel4.Controls.Add(nameHostA);
-                    result.flowLayoutPanel4.Controls.Add(timeHostA);
+                    return false; 
                 }
-
-                connection.Close();
             }
-        }
 
-        private void LoadPlA(string id, ResultDetail result,string idclub)
+            return true;
+        }
+        public bool CheckResult()
         {
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
             {
                 connection.Open();
-                string query = "select F1.PLNAME as F1,G.TIME_GOAL,F2.PLNAME as F2,G.TIME_ASSIST from GOAL as G, FOOTBALL_PLAYER as F1, FOOTBALL_PLAYER as F2 where F1.IDPL = G.IDPL and G.IDMATCH = '" + id + "' and G.IDCLB = '" + idclub + "' and F2.IDPL = G.IDPLA";
+                string query = "select * from MATCH1 where SCORED1 is not null and SCORED2 is not null and IDMATCH = '" + DataGridView_match.CurrentRow.Cells[0].Value.ToString() + "'";
+
                 SqlDataAdapter ada = new SqlDataAdapter(query, connection);
                 DataTable dt = new DataTable();
                 ada.Fill(dt);
 
-                Label nameHost, timeHost, nameHostA, timeHostA;
-
-                for (int i = 0; i < dt.Rows.Count; i++)
+                if(dt.Rows.Count == 0)
                 {
-                    nameHost = new Label();
-                    timeHost = new Label();
-
-                    nameHost.Text = dt.Rows[i]["F1"].ToString();
-                    nameHost.AutoSize = true;
-
-                    timeHost.Text = dt.Rows[i]["TIME_GOAL"].ToString() + "'";
-                    timeHost.AutoSize = true;
-
-                    result.flowLayoutPanel1.Controls.Add(nameHost);
-                    result.flowLayoutPanel1.Controls.Add(timeHost);
-
-                    nameHostA = new Label();
-                    timeHostA = new Label();
-
-                    nameHostA.Text = dt.Rows[i]["F2"].ToString();
-                    nameHostA.AutoSize = true;
-
-                    timeHostA.Text = dt.Rows[i]["TIME_ASSIST"].ToString() + "'";
-                    timeHostA.AutoSize = true;
-
-                    result.flowLayoutPanel3.Controls.Add(nameHostA);
-                    result.flowLayoutPanel3.Controls.Add(timeHostA);
+                    return false; // add result
                 }
-
-                connection.Close();
             }
-        }
 
+            return true;
+        }
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
@@ -405,6 +305,11 @@ namespace Soccer_Management_Premier_League
 
                 connection.Close();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
