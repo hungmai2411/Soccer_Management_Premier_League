@@ -1,4 +1,4 @@
-﻿
+
 namespace Soccer_Management_Premier_League
 {
     partial class ResultDetail
