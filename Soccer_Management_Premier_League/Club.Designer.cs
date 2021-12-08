@@ -52,7 +52,7 @@ namespace Soccer_Management_Premier_League
             this.label18 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.Name_Txt = new System.Windows.Forms.TextBox();
-            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Club_Ptx)).BeginInit();
@@ -295,9 +295,9 @@ namespace Soccer_Management_Premier_League
             this.Name_Txt.Size = new System.Drawing.Size(181, 21);
             this.Name_Txt.TabIndex = 57;
             // 
-            // gunaDragControl1
+            // guna2DragControl1
             // 
-            this.gunaDragControl1.TargetControl = this.panel1;
+            this.guna2DragControl1.TargetControl = this.panel1;
             // 
             // Club
             // 
@@ -364,6 +364,6 @@ namespace Soccer_Management_Premier_League
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox Name_Txt;
-        private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

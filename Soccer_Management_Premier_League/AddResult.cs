@@ -77,49 +77,6 @@ namespace Soccer_Management_Premier_League
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form formBackground = new Form();
-
-            try
-            {
-                Result result = new Result(this);
-
-                formBackground.FormBorderStyle = FormBorderStyle.None;
-                formBackground.Opacity = .50d;
-                formBackground.BackColor = Color.Black;
-                formBackground.WindowState = FormWindowState.Maximized;
-                //formBackground.TopMost = true;
-                formBackground.Location = this.Location;
-                formBackground.ShowInTaskbar = false;
-                formBackground.Show();
-
-                result.Owner = formBackground;
-
-                result.ID_txt.Text = DataGridView_match.CurrentRow.Cells[0].Value.ToString();
-                result.Club_cbx.Text = DataGridView_match.CurrentRow.Cells[2].Value.ToString();
-                result.Club_cbx1.Text = DataGridView_match.CurrentRow.Cells[6].Value.ToString();
-
-                result.dateTimePicker1.Value = (DateTime)DataGridView_match.CurrentRow.Cells[7].Value;
-                var dt = result.dateTimePicker1.Value.Add((TimeSpan)DataGridView_match.CurrentRow.Cells[8].Value);
-                result.dateTimePicker1.Value = dt;
-
-                result.Stadium_cbx.Text = DataGridView_match.CurrentRow.Cells[9].Value.ToString();
-
-                result.ShowDialog();
-                
-                formBackground.Dispose();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                formBackground.Dispose();
-            }
-        }
-
         public string GetID(string text)
         {
             string hostClub;

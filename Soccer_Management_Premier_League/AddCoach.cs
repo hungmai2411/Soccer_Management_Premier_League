@@ -58,6 +58,10 @@ namespace Soccer_Management_Premier_League
                     connection.Close();
                 }
             }
+            else
+            {
+                MessageBox.Show("Please add full information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)

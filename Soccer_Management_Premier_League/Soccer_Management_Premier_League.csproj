@@ -256,12 +256,6 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="DesignClub.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="DesignClub.Designer.cs">
-      <DependentUpon>DesignClub.cs</DependentUpon>
-    </Compile>
     <Compile Include="EditCoach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,12 +279,6 @@
     </Compile>
     <Compile Include="ForgotPassword.Designer.cs">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FUser.Designer.cs">
-      <DependentUpon>FUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Goal.cs">
       <SubType>UserControl</SubType>
@@ -360,29 +348,11 @@
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Result.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Result.Designer.cs">
-      <DependentUpon>Result.cs</DependentUpon>
-    </Compile>
     <Compile Include="ResultDetail.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ResultDetail.Designer.cs">
       <DependentUpon>ResultDetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ResultDetail1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ResultDetail1.Designer.cs">
-      <DependentUpon>ResultDetail1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Score.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Score.Designer.cs">
-      <DependentUpon>Score.cs</DependentUpon>
     </Compile>
     <Compile Include="Signup.cs">
       <SubType>Form</SubType>
@@ -426,9 +396,6 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DesignClub.resx">
-      <DependentUpon>DesignClub.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EditCoach.resx">
       <DependentUpon>EditCoach.cs</DependentUpon>
     </EmbeddedResource>
@@ -440,9 +407,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FUser.resx">
-      <DependentUpon>FUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Goal.resx">
       <DependentUpon>Goal.cs</DependentUpon>
@@ -487,17 +451,8 @@
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Result.resx">
-      <DependentUpon>Result.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ResultDetail.resx">
       <DependentUpon>ResultDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResultDetail1.resx">
-      <DependentUpon>ResultDetail1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Score.resx">
-      <DependentUpon>Score.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
@@ -653,11 +608,10 @@
     <None Include="Resources\TOT.png" />
     <None Include="Resources\tải xuống.png" />
     <None Include="Resources\tải xuống %281%29.png" />
+    <None Include="Resources\tải xuống1.png" />
     <Content Include="Resources\unnamed.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AxWMPLib\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <COMReference Include="AxWMPLib">
       <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>

@@ -27,6 +27,7 @@ namespace Soccer_Management_Premier_League
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSound = new Guna.UI2.WinForms.Guna2ImageButton();
             this.Btn_exit = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -37,19 +38,16 @@ namespace Soccer_Management_Premier_League
             this.Btn_MatchSchedule = new System.Windows.Forms.Button();
             this.Btn_Club = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
@@ -70,16 +68,18 @@ namespace Soccer_Management_Premier_League
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnSound = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            this.panel6.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
@@ -100,7 +100,7 @@ namespace Soccer_Management_Premier_League
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -128,6 +128,26 @@ namespace Soccer_Management_Premier_League
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(195, 650);
             this.panel1.TabIndex = 0;
+            // 
+            // btnSound
+            // 
+            this.btnSound.CheckedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnSound.CheckedState.Parent = this.btnSound;
+            this.btnSound.HoverState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnSound.HoverState.Parent = this.btnSound;
+            this.btnSound.Image = ((System.Drawing.Image)(resources.GetObject("btnSound.Image")));
+            this.btnSound.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnSound.ImageRotate = 0F;
+            this.btnSound.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnSound.Location = new System.Drawing.Point(167, 621);
+            this.btnSound.Name = "btnSound";
+            this.btnSound.PressedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnSound.PressedState.Parent = this.btnSound;
+            this.btnSound.ShadowDecoration.Parent = this.btnSound;
+            this.btnSound.Size = new System.Drawing.Size(24, 24);
+            this.btnSound.TabIndex = 20;
+            this.btnSound.Visible = false;
+            this.btnSound.Click += new System.EventHandler(this.btnSound_Click);
             // 
             // Btn_exit
             // 
@@ -291,6 +311,18 @@ namespace Soccer_Management_Premier_League
             this.panel3.Size = new System.Drawing.Size(195, 132);
             this.panel3.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Soccer_Management_Premier_League.Properties.Resources._326ffb9bef63243d7d72;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(195, 132);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
@@ -316,6 +348,16 @@ namespace Soccer_Management_Premier_League
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(850, 90);
             this.panel5.TabIndex = 3;
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.Image = global::Soccer_Management_Premier_League.Properties.Resources.admin;
+            this.pictureBox23.Location = new System.Drawing.Point(759, 6);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(88, 78);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox23.TabIndex = 17;
+            this.pictureBox23.TabStop = false;
             // 
             // label4
             // 
@@ -370,17 +412,6 @@ namespace Soccer_Management_Premier_League
             this.panel6.Size = new System.Drawing.Size(850, 428);
             this.panel6.TabIndex = 2;
             // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 0);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(850, 428);
-            this.axWindowsMediaPlayer1.TabIndex = 0;
-            this.axWindowsMediaPlayer1.ClickEvent += new AxWMPLib._WMPOCXEvents_ClickEventHandler(this.axWindowsMediaPlayer1_ClickEvent);
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(245)))), ((int)(((byte)(199)))));
@@ -409,31 +440,6 @@ namespace Soccer_Management_Premier_League
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(850, 132);
             this.panel4.TabIndex = 0;
-            // 
-            // gunaDragControl1
-            // 
-            this.gunaDragControl1.TargetControl = this.panel4;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 51000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 201000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // pictureBox23
-            // 
-            this.pictureBox23.Image = global::Soccer_Management_Premier_League.Properties.Resources.admin;
-            this.pictureBox23.Location = new System.Drawing.Point(759, 6);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(88, 78);
-            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox23.TabIndex = 17;
-            this.pictureBox23.TabStop = false;
             // 
             // pictureBox21
             // 
@@ -635,37 +641,31 @@ namespace Soccer_Management_Premier_League
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // btnSound
+            // timer1
             // 
-            this.btnSound.CheckedState.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnSound.CheckedState.Parent = this.btnSound;
-            this.btnSound.HoverState.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnSound.HoverState.Parent = this.btnSound;
-            this.btnSound.Image = ((System.Drawing.Image)(resources.GetObject("btnSound.Image")));
-            this.btnSound.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnSound.ImageRotate = 0F;
-            this.btnSound.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnSound.Location = new System.Drawing.Point(167, 621);
-            this.btnSound.Name = "btnSound";
-            this.btnSound.PressedState.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnSound.PressedState.Parent = this.btnSound;
-            this.btnSound.ShadowDecoration.Parent = this.btnSound;
-            this.btnSound.Size = new System.Drawing.Size(24, 24);
-            this.btnSound.TabIndex = 20;
-            this.btnSound.Visible = false;
-            this.btnSound.Click += new System.EventHandler(this.btnSound_Click);
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 51000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pictureBox1
+            // timer2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Soccer_Management_Premier_League.Properties.Resources._326ffb9bef63243d7d72;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(195, 132);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.timer2.Interval = 201000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 0);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(850, 428);
+            this.axWindowsMediaPlayer1.TabIndex = 0;
+            this.axWindowsMediaPlayer1.ClickEvent += new AxWMPLib._WMPOCXEvents_ClickEventHandler(this.axWindowsMediaPlayer1_ClickEvent);
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this.panel2;
             // 
             // HomePage
             // 
@@ -681,13 +681,13 @@ namespace Soccer_Management_Premier_League
             this.Load += new System.EventHandler(this.HomePage_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
-            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
@@ -708,7 +708,7 @@ namespace Soccer_Management_Premier_League
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -753,12 +753,12 @@ namespace Soccer_Management_Premier_League
         private System.Windows.Forms.Button Btn_exit;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
         private System.Windows.Forms.PictureBox pictureBox1;
         //private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private Guna.UI2.WinForms.Guna2ImageButton btnSound;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }
