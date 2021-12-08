@@ -55,7 +55,6 @@ namespace Soccer_Management_Premier_League
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.Yellow_Cbx = new System.Windows.Forms.ComboBox();
@@ -64,11 +63,12 @@ namespace Soccer_Management_Premier_League
             this.label9 = new System.Windows.Forms.Label();
             this.TimeYellow = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
-            this.gunaVSeparator1 = new Guna.UI.WinForms.GunaVSeparator();
             this.flpHome = new System.Windows.Forms.FlowLayoutPanel();
             this.flpVisit = new System.Windows.Forms.FlowLayoutPanel();
             this.HostImage = new System.Windows.Forms.PictureBox();
             this.VisitImage = new System.Windows.Forms.PictureBox();
+            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -356,10 +356,6 @@ namespace Soccer_Management_Premier_League
             this.comboBox1.TabIndex = 178;
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             // 
-            // gunaDragControl1
-            // 
-            this.gunaDragControl1.TargetControl = this.panel1;
-            // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -454,15 +450,6 @@ namespace Soccer_Management_Premier_League
             this.label10.TabIndex = 185;
             this.label10.Text = "Time Yellow :";
             // 
-            // gunaVSeparator1
-            // 
-            this.gunaVSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gunaVSeparator1.LineColor = System.Drawing.Color.Silver;
-            this.gunaVSeparator1.Location = new System.Drawing.Point(377, 153);
-            this.gunaVSeparator1.Name = "gunaVSeparator1";
-            this.gunaVSeparator1.Size = new System.Drawing.Size(8, 347);
-            this.gunaVSeparator1.TabIndex = 189;
-            // 
             // flpHome
             // 
             this.flpHome.AutoScroll = true;
@@ -501,15 +488,26 @@ namespace Soccer_Management_Premier_League
             this.VisitImage.TabIndex = 144;
             this.VisitImage.TabStop = false;
             // 
+            // guna2VSeparator1
+            // 
+            this.guna2VSeparator1.Location = new System.Drawing.Point(375, 155);
+            this.guna2VSeparator1.Name = "guna2VSeparator1";
+            this.guna2VSeparator1.Size = new System.Drawing.Size(10, 340);
+            this.guna2VSeparator1.TabIndex = 192;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this.panel1;
+            // 
             // ResultDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(766, 749);
+            this.Controls.Add(this.guna2VSeparator1);
             this.Controls.Add(this.flpVisit);
             this.Controls.Add(this.flpHome);
-            this.Controls.Add(this.gunaVSeparator1);
             this.Controls.Add(this.TimeRed);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.TimeYellow);
@@ -588,7 +586,6 @@ namespace Soccer_Management_Premier_League
         public System.Windows.Forms.Label ID_txt;
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.ComboBox comboBox1;
-        private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         public System.Windows.Forms.ComboBox Yellow_Cbx;
@@ -598,8 +595,9 @@ namespace Soccer_Management_Premier_League
         private Guna.UI2.WinForms.Guna2NumericUpDown TimeYellow;
         private System.Windows.Forms.Label label10;
         public System.Windows.Forms.Label RefereeName;
-        private Guna.UI.WinForms.GunaVSeparator gunaVSeparator1;
         private System.Windows.Forms.FlowLayoutPanel flpHome;
         private System.Windows.Forms.FlowLayoutPanel flpVisit;
+        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
+        public Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

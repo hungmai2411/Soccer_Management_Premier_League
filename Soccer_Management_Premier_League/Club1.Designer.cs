@@ -51,7 +51,7 @@ namespace Soccer_Management_Premier_League
             this.Name_Txt = new System.Windows.Forms.TextBox();
             this.Club_Ptx = new System.Windows.Forms.PictureBox();
             this.button_update = new System.Windows.Forms.Button();
-            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Club_Ptx)).BeginInit();
@@ -278,9 +278,9 @@ namespace Soccer_Management_Premier_League
             this.button_update.UseVisualStyleBackColor = false;
             this.button_update.Click += new System.EventHandler(this.button_update_Click);
             // 
-            // gunaDragControl1
+            // guna2DragControl1
             // 
-            this.gunaDragControl1.TargetControl = this.panel1;
+            this.guna2DragControl1.TargetControl = this.panel1;
             // 
             // Club1
             // 
@@ -345,6 +345,6 @@ namespace Soccer_Management_Premier_League
         public System.Windows.Forms.TextBox Address_Txt;
         public System.Windows.Forms.TextBox ID_Txt;
         public System.Windows.Forms.TextBox Name_Txt;
-        private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

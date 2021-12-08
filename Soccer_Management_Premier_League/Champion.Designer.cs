@@ -30,8 +30,8 @@ namespace Soccer_Management_Premier_League
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbName = new Guna.UI.WinForms.GunaLabel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.lbName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,20 +47,6 @@ namespace Soccer_Management_Premier_League
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // lbName
-            // 
-            this.lbName.AutoSize = true;
-            this.lbName.BackColor = System.Drawing.Color.Transparent;
-            this.lbName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbName.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lbName.Location = new System.Drawing.Point(127, 218);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(144, 27);
-            this.lbName.TabIndex = 2;
-            this.lbName.Text = "Manchester United";
-            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbName.UseCompatibleTextRendering = true;
-            // 
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -74,14 +60,25 @@ namespace Soccer_Management_Premier_League
             this.guna2ControlBox1.Size = new System.Drawing.Size(34, 29);
             this.guna2ControlBox1.TabIndex = 3;
             // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lbName.Location = new System.Drawing.Point(127, 218);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(141, 21);
+            this.lbName.TabIndex = 4;
+            this.lbName.Text = "Manchester United";
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Champion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(308, 309);
-            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.lbName);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(600, 230);
@@ -100,6 +97,6 @@ namespace Soccer_Management_Premier_League
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        public Guna.UI.WinForms.GunaLabel lbName;
+        public System.Windows.Forms.Label lbName;
     }
 }

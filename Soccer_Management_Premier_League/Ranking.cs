@@ -26,7 +26,7 @@ namespace Soccer_Management_Premier_League
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
             {
                 connection.Open();
-                string query = "select * from BXH where PL = 30";
+                string query = "select * from BXH where PL = 38";
 
                 SqlDataAdapter ada = new SqlDataAdapter(query, connection);
                 DataTable dt = new DataTable();

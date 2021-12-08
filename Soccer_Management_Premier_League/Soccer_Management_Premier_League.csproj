@@ -250,11 +250,11 @@
     <Compile Include="Coach.Designer.cs">
       <DependentUpon>Coach.cs</DependentUpon>
     </Compile>
-    <Compile Include="DesignClub.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DesignClub.Designer.cs">
-      <DependentUpon>DesignClub.cs</DependentUpon>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="EditCoach.cs">
       <SubType>Form</SubType>
@@ -279,12 +279,6 @@
     </Compile>
     <Compile Include="ForgotPassword.Designer.cs">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FUser.Designer.cs">
-      <DependentUpon>FUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Goal.cs">
       <SubType>UserControl</SubType>
@@ -354,29 +348,11 @@
     <Compile Include="Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Result.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Result.Designer.cs">
-      <DependentUpon>Result.cs</DependentUpon>
-    </Compile>
     <Compile Include="ResultDetail.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ResultDetail.Designer.cs">
       <DependentUpon>ResultDetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ResultDetail1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ResultDetail1.Designer.cs">
-      <DependentUpon>ResultDetail1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Score.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Score.Designer.cs">
-      <DependentUpon>Score.cs</DependentUpon>
     </Compile>
     <Compile Include="Signup.cs">
       <SubType>Form</SubType>
@@ -417,8 +393,8 @@
     <EmbeddedResource Include="Coach.resx">
       <DependentUpon>Coach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DesignClub.resx">
-      <DependentUpon>DesignClub.cs</DependentUpon>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditCoach.resx">
       <DependentUpon>EditCoach.cs</DependentUpon>
@@ -431,9 +407,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FUser.resx">
-      <DependentUpon>FUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Goal.resx">
       <DependentUpon>Goal.cs</DependentUpon>
@@ -478,17 +451,8 @@
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Result.resx">
-      <DependentUpon>Result.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ResultDetail.resx">
       <DependentUpon>ResultDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResultDetail1.resx">
-      <DependentUpon>ResultDetail1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Score.resx">
-      <DependentUpon>Score.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
@@ -558,6 +522,8 @@
     <None Include="Resources\6-2-angel-blushing-smile-emoji-png.png" />
     <None Include="Resources\260886767_1482152325499570_6929150643213079603_n.png" />
     <None Include="Resources\ARS1.png" />
+    <None Include="Resources\audiotheme .wav" />
+    <None Include="Resources\326ffb9bef63243d7d72.jpg" />
     <Content Include="Resources\close_window_30px.png" />
     <None Include="Resources\edit_30px.png" />
     <None Include="Resources\delete_user_male_30px.png" />
@@ -616,6 +582,9 @@
     <None Include="Resources\referee_30px1.png" />
     <None Include="Resources\ngoai-hang-anh-cup.jpg" />
     <None Include="Resources\soccer-championship-design-football-champion-concept-shiny-gold-laurel-ribbon-banner-ball-glowing-green-background-30810506.jpg" />
+    <None Include="Resources\intro.mp4" />
+    <None Include="Resources\outline_volume_mute_black_24dp.jpg" />
+    <None Include="Resources\outline_volume_up_black_24dp.png" />
     <Content Include="Resources\Statement_Graphic_PL_Lilac.jpg" />
     <None Include="Resources\t2.png" />
     <None Include="Resources\t3.png" />
@@ -639,7 +608,28 @@
     <None Include="Resources\TOT.png" />
     <None Include="Resources\tải xuống.png" />
     <None Include="Resources\tải xuống %281%29.png" />
+    <None Include="Resources\tải xuống1.png" />
     <Content Include="Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
