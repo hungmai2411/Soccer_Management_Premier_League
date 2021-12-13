@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Net.Mail;
+using System.Net;
 
 namespace Soccer_Management_Premier_League
 {
@@ -19,8 +21,20 @@ namespace Soccer_Management_Premier_League
         }
         string strcon = @"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True";
         SqlConnection sqlcon = null;
+
+        public Signup(string u, string p, string e)
+        {
+            InitializeComponent();
+            this.Usertextbox.Text = u;
+            this.PassTestbox.Text = p;
+            this.RwPassTestbox.Text = p;
+            this.EmailTextbox.Text = e;
+        }
+
         private void SignUpButton_Click(object sender, EventArgs e)
         {
+            Usertextbox.Focus();
+            // Kiem tra neu user de trong cac o nhap lieu
             if (Usertextbox.Text == "")
             {
                 MessageBox.Show("Please fill in the Username!");
@@ -47,47 +61,43 @@ namespace Soccer_Management_Premier_League
                 MessageBox.Show("Please fill in the Email");
                 EmailTextbox.Focus();
             }
-            else
+            else // Khi da nhap lieu du
             {
-                try
+                SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True");
+
+                // Tao cau lenh de lay ra user co trung ten voi ten User ma nguoi dung dang chon
+                SqlDataAdapter da = new SqlDataAdapter("select USERNAME from account where USERNAME = N'" + Usertextbox.Text + "'", connection);
+                SqlDataAdapter dae = new SqlDataAdapter("select EMAIL from account where EMAIL = N'" + EmailTextbox.Text + "'", connection);
+
+
+                // Tao bang de luu du lieu database tra ve (neu co)
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                DataTable dte = new DataTable();
+                dae.Fill(dte);
+
+                // Neu bang co du lieu tra ve tu database nghia la da co ten Username nguoi dung dang chon trong database
+                if (dt.Rows.Count > 0)
                 {
-                    if (sqlcon == null)
-                    {
-                        sqlcon = new SqlConnection(strcon);
-                    }
-                    if (sqlcon.State == ConnectionState.Closed)
-                    {
-                        sqlcon.Open();
-                    }
-
-                    string user = Usertextbox.Text.Trim();
-                    string pass = PassTestbox.Text.Trim();
-                    string email = EmailTextbox.Text.Trim();
-
-
-                    SqlCommand sqlcmd = new SqlCommand();
-                    sqlcmd.CommandType = CommandType.Text;
-                    sqlcmd.CommandText = "insert into ACCOUNT values ('" + user + "', '" + pass + "', '" + email + "')";
-
-                    sqlcmd.Connection = sqlcon;
-                    int kq = sqlcmd.ExecuteNonQuery();
-                    if (kq > 0)
-                    {
-                        MessageBox.Show("Sign up successfully \nNow we need you to answer 3 next secrect questions to protect your account!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        _2ndPassWord second = new _2ndPassWord();
-                        this.Hide();
-                        second.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Fail to sign up", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Your Username has been existed. \nPlease try again!");
-                    Usertextbox.Focus();
+                    MessageBox.Show("Your username has been already existed. Please try again", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Usertextbox.SelectAll();
+                    Usertextbox.Focus();
+                }
+                else if (dte.Rows.Count > 0)
+                {
+                    MessageBox.Show("Your email has been already existed. Please try again", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    EmailTextbox.SelectAll();
+                    EmailTextbox.Focus();
+                }
+                else // Neu bang khong co du lieu thi User co the dung duoc cai ten do
+                {
+                    Random rnd = new Random();
+                    int n = rnd.Next(100, 999);
+                    SendMail(email, EmailTextbox.Text, "ACTIVATION EMAIL", "Your activation code is: " + n);
+                    this.Hide();
+                    _2ndPassWord sp = new _2ndPassWord(Usertextbox.Text, PassTestbox.Text, EmailTextbox.Text, n);
+                    sp.Show();
                 }
             }
         }
@@ -97,6 +107,17 @@ namespace Soccer_Management_Premier_League
             Login lg = new Login();
             this.Hide();
             lg.Show();
+        }
+        string email = "projectuit0@gmail.com";
+        void SendMail(string from, string to, string subject, string message)
+        {
+            MailMessage mess = new MailMessage(from, to, subject, message);
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+            client.EnableSsl = true;
+
+            client.Credentials = new NetworkCredential(email, "projectuit01234");
+
+            client.Send(mess);
         }
     }
 }
