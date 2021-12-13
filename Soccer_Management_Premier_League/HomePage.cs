@@ -58,12 +58,14 @@ namespace Soccer_Management_Premier_League
         private void button1_Click(object sender, EventArgs e)
         {
             Login login = new Login();
-            this.Hide();
-            login.Show();
+            
+            
             axWindowsMediaPlayer1.Ctlcontrols.stop();
             timer1.Stop();
             player.Stop();
             timer2.Stop();
+            this.Dispose();
+            login.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -146,9 +148,9 @@ namespace Soccer_Management_Premier_League
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            changedmusic();
+            
             HomePage hp = new HomePage();
-            this.Hide();
+            this.Dispose();
             hp.Show();
         }
 

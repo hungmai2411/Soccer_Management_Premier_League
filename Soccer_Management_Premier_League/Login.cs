@@ -20,17 +20,26 @@ namespace Soccer_Management_Premier_League
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            SqlConnection Connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True");
-            SqlDataAdapter da = new SqlDataAdapter("select * from account where USERNAME = N'" + UserTextbox.Text + "' and PASS = N'" + PassTextbox.Text + "'", Connection);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            if (dt.Rows.Count > 0)
+            if (UserTextbox.Text == "admin" && PassTextbox.Text == "admin")
             {
-                HomePage home = new HomePage();
+                HomePage admin = new HomePage();
                 this.Hide();
-                home.Show();
+                admin.Show();
             }
-            else MessageBox.Show("Your Username or Password is incorrect \nPlease try again!", "NOTICE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                SqlConnection Connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True");
+                SqlDataAdapter da = new SqlDataAdapter("select * from account where USERNAME = N'" + UserTextbox.Text + "' and PASS = N'" + PassTextbox.Text + "'", Connection);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    FUser user = new FUser();
+                    this.Hide();
+                    user.Show();
+                }
+                else MessageBox.Show("Your Username or Password is incorrect \nPlease try again!", "NOTICE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void ForgotPass_Click(object sender, EventArgs e)

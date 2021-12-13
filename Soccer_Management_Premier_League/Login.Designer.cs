@@ -30,7 +30,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.ChooseUser = new Guna.UI2.WinForms.Guna2ComboBox();
             this.UserTextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.UserPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.UserLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -38,35 +37,11 @@
             this.PassPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.PassLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ForgotPass = new Guna.UI2.WinForms.Guna2Button();
-            this.PassCheck = new Guna.UI2.WinForms.Guna2CheckBox();
             this.SignUpButton = new Guna.UI2.WinForms.Guna2Button();
             this.LoginButton = new Guna.UI2.WinForms.Guna2Button();
             this.UserPanel.SuspendLayout();
             this.PassPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ChooseUser
-            // 
-            this.ChooseUser.BackColor = System.Drawing.Color.Transparent;
-            this.ChooseUser.BorderRadius = 5;
-            this.ChooseUser.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ChooseUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ChooseUser.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ChooseUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ChooseUser.FocusedState.Parent = this.ChooseUser;
-            this.ChooseUser.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.ChooseUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.ChooseUser.HoverState.Parent = this.ChooseUser;
-            this.ChooseUser.ItemHeight = 30;
-            this.ChooseUser.Items.AddRange(new object[] {
-            "User",
-            "Admin"});
-            this.ChooseUser.ItemsAppearance.Parent = this.ChooseUser;
-            this.ChooseUser.Location = new System.Drawing.Point(775, 12);
-            this.ChooseUser.Name = "ChooseUser";
-            this.ChooseUser.ShadowDecoration.Parent = this.ChooseUser;
-            this.ChooseUser.Size = new System.Drawing.Size(97, 36);
-            this.ChooseUser.TabIndex = 10;
             // 
             // UserTextbox
             // 
@@ -188,28 +163,6 @@
             this.ForgotPass.UseTransparentBackground = true;
             this.ForgotPass.Click += new System.EventHandler(this.ForgotPass_Click);
             // 
-            // PassCheck
-            // 
-            this.PassCheck.AutoSize = true;
-            this.PassCheck.BackColor = System.Drawing.Color.Transparent;
-            this.PassCheck.CheckedState.BorderColor = System.Drawing.Color.Black;
-            this.PassCheck.CheckedState.BorderRadius = 0;
-            this.PassCheck.CheckedState.BorderThickness = 0;
-            this.PassCheck.CheckedState.FillColor = System.Drawing.Color.White;
-            this.PassCheck.CheckMarkColor = System.Drawing.Color.Black;
-            this.PassCheck.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PassCheck.ForeColor = System.Drawing.Color.White;
-            this.PassCheck.Location = new System.Drawing.Point(216, 413);
-            this.PassCheck.Name = "PassCheck";
-            this.PassCheck.Size = new System.Drawing.Size(136, 19);
-            this.PassCheck.TabIndex = 7;
-            this.PassCheck.Text = "Remember Password";
-            this.PassCheck.UncheckedState.BorderColor = System.Drawing.Color.White;
-            this.PassCheck.UncheckedState.BorderRadius = 0;
-            this.PassCheck.UncheckedState.BorderThickness = 0;
-            this.PassCheck.UncheckedState.FillColor = System.Drawing.Color.White;
-            this.PassCheck.UseVisualStyleBackColor = false;
-            // 
             // SignUpButton
             // 
             this.SignUpButton.BackColor = System.Drawing.Color.Transparent;
@@ -266,10 +219,8 @@
             this.BackgroundImage = global::Soccer_Management_Premier_League.Properties.Resources.logopl;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(884, 516);
-            this.Controls.Add(this.ChooseUser);
             this.Controls.Add(this.ForgotPass);
             this.Controls.Add(this.SignUpButton);
-            this.Controls.Add(this.PassCheck);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.PassPanel);
             this.Controls.Add(this.UserPanel);
@@ -277,17 +228,15 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Premier League Manager";
             this.UserPanel.ResumeLayout(false);
             this.PassPanel.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2ComboBox ChooseUser;
         private Guna.UI2.WinForms.Guna2TextBox UserTextbox;
         private System.Windows.Forms.FlowLayoutPanel UserPanel;
         private Guna.UI2.WinForms.Guna2HtmlLabel UserLabel;
@@ -295,7 +244,6 @@
         private System.Windows.Forms.FlowLayoutPanel PassPanel;
         private Guna.UI2.WinForms.Guna2HtmlLabel PassLabel;
         private Guna.UI2.WinForms.Guna2Button ForgotPass;
-        private Guna.UI2.WinForms.Guna2CheckBox PassCheck;
         private Guna.UI2.WinForms.Guna2Button SignUpButton;
         private Guna.UI2.WinForms.Guna2Button LoginButton;
     }

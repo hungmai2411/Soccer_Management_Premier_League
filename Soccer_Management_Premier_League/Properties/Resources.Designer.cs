@@ -282,6 +282,16 @@ namespace Soccer_Management_Premier_League.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back_30px {
+            get {
+                object obj = ResourceManager.GetObject("back_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BHA {
             get {
                 object obj = ResourceManager.GetObject("BHA", resourceCulture);
@@ -482,6 +492,26 @@ namespace Soccer_Management_Premier_League.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap forward_30px {
+            get {
+                object obj = ResourceManager.GetObject("forward_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap forward_30px1 {
+            get {
+                object obj = ResourceManager.GetObject("forward_30px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hinh_anh_dau_hoi_cham_dep {
             get {
                 object obj = ResourceManager.GetObject("hinh-anh-dau-hoi-cham-dep", resourceCulture);
@@ -665,6 +695,16 @@ namespace Soccer_Management_Premier_League.Properties {
         internal static System.Drawing.Bitmap MCI {
             get {
                 object obj = ResourceManager.GetObject("MCI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MCI1 {
+            get {
+                object obj = ResourceManager.GetObject("MCI1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1256,6 +1296,16 @@ namespace Soccer_Management_Premier_League.Properties {
         internal static System.Drawing.Bitmap WOL {
             get {
                 object obj = ResourceManager.GetObject("WOL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WOL1 {
+            get {
+                object obj = ResourceManager.GetObject("WOL1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
