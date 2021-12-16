@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +26,7 @@ namespace Soccer_Management_Premier_League
         {
             //metroTabControl1.SelectedTab = metroTabControl1.TabPages[0];
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 string query = "Select Pic,CLBNAME, STADIUM from CLUB";
                 SqlDataAdapter ada = new SqlDataAdapter(query, connection);
@@ -54,7 +55,7 @@ namespace Soccer_Management_Premier_League
         }
         private void LoadRanking()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select ROW_NUMBER() OVER(ORDER BY PTS desc) Position, C.CLBNAME, PL, W, D,L,GD,PTS from BXH as B, CLUB as C where C.IDCLB = B.IDCLB";
@@ -93,7 +94,7 @@ namespace Soccer_Management_Premier_League
         {
             this.Invoke(new Action(() =>
             {
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
                 {
                     connection.Open();
                     string query = "Select T1.PIC,T1.CLBNAME,T2.PIC,T2.CLBNAME,TIME,SCORED1,SCORED2,DATE from CLUB as T1, CLUB as T2, MATCH1 as M where M.CLB1 = T1.IDCLB and " +
@@ -140,6 +141,7 @@ namespace Soccer_Management_Premier_League
 
                         match = new Match1();
 
+
                         match.lbClubHost.Text = row["CLBNAME"].ToString();
                         match.lbClubVisit.Text = row["CLBNAME1"].ToString();
 
@@ -156,6 +158,8 @@ namespace Soccer_Management_Premier_League
 
                         if (!string.IsNullOrEmpty(score1) && !string.IsNullOrEmpty(score2))
                         {
+                            match.btnForward.Tag = row["IDMATCH"].ToString();
+                            match.btnForward.Click += Match_Click;
                             match.lbScore.Text = score1 + " - " + score2;
                         }
                         else
@@ -189,6 +193,49 @@ namespace Soccer_Management_Premier_League
             }));
         }
 
+        private void Match_Click(object sender, EventArgs e)
+        {
+            FResult result = new FResult();
+
+            Guna2Button b = sender as Guna2Button;
+            string id = b.Tag.ToString();
+
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            {
+                connection.Open();
+                string query = $"Select T1.PIC,T1.CLBNAME,T2.PIC,T2.CLBNAME,TIME,SCORED1,SCORED2 from CLUB as T1, CLUB as T2, MATCH1 as M where M.CLB1 = T1.IDCLB and M.CLB2 = T2.IDCLB and M.IDMATCH='{id}'";
+
+                SqlDataAdapter ada = new SqlDataAdapter(query, connection);
+                DataTable dt = new DataTable();
+                ada.Fill(dt);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    result.HostName.Text = row["CLBNAME"].ToString();
+                    result.VisitName.Text = row["CLBNAME1"].ToString();
+
+                    string score1 = row["SCORED1"].ToString();
+                    string score2 = row["SCORED2"].ToString();
+
+                    byte[] img = (byte[])row["PIC"];
+                    MemoryStream ms = new MemoryStream(img);
+                    result.HostImage.Image = Image.FromStream(ms);
+
+                    byte[] img1 = (byte[])row["PIC1"];
+                    MemoryStream ms1 = new MemoryStream(img1);
+                    result.VisitImage.Image = Image.FromStream(ms1);
+                    result.Score1.Text = score1;
+                    result.Score2.Text = score2;
+                    TimeSpan span = (TimeSpan)row["TIME"];
+                    result.lbTime.Text = span.ToString(@"hh\:mm");
+                }
+
+                connection.Close();
+            }
+
+            result.ShowDialog();
+        }
+
         private void metroTabControl1_Click(object sender, EventArgs e)
         {
             if (metroTabControl1.SelectedTab.Text == "Ranking")
@@ -211,7 +258,7 @@ namespace Soccer_Management_Premier_League
 
             form1.lbName.Text = text;
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select PIC,DAYBUILT,ADDRESS,NATION,STADIUM,CITY from CLUB where CLBNAME = '" + text + "'";
@@ -253,7 +300,7 @@ namespace Soccer_Management_Premier_League
 
         private void LoadTopPlayer()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select ROW_NUMBER() OVER(ORDER BY COUNT(G.IDGOAL) desc) Position, F.PLNAME,C.CLBNAME,COUNT(G.IDGOAL) as SCORE " +
@@ -285,7 +332,14 @@ namespace Soccer_Management_Premier_League
         {
             flpMatch.Controls.Clear();
             dem++;
-            LoadMatch1(dem % 10, dem);
+            if (dem >= 10)
+            {
+                LoadMatch1(dem, dem);
+            }
+            else
+            {
+                LoadMatch1(dem % 10, dem);
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -293,7 +347,24 @@ namespace Soccer_Management_Premier_League
             flpMatch.Controls.Clear();
             if (dem > 1)
                 dem--;
-            LoadMatch1(dem % 10, dem);
+            if (dem >= 10)
+            {
+                LoadMatch1(dem, dem);
+            }
+            else
+            {
+                LoadMatch1(dem % 10, dem);
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to log out ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Form1 lg = new Form1();
+                this.Hide();
+                lg.Show();
+            }
         }
     }
 }

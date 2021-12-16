@@ -100,6 +100,7 @@ namespace Soccer_Management_Premier_League
             this.DataGridView_match.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView_match.Location = new System.Drawing.Point(0, 51);
             this.DataGridView_match.Name = "DataGridView_match";
+            this.DataGridView_match.ReadOnly = true;
             this.DataGridView_match.RowHeadersVisible = false;
             this.DataGridView_match.RowTemplate.Height = 80;
             this.DataGridView_match.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -118,7 +119,7 @@ namespace Soccer_Management_Premier_League
             this.DataGridView_match.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.DataGridView_match.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DataGridView_match.ThemeStyle.HeaderStyle.Height = 24;
-            this.DataGridView_match.ThemeStyle.ReadOnly = false;
+            this.DataGridView_match.ThemeStyle.ReadOnly = true;
             this.DataGridView_match.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridView_match.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DataGridView_match.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

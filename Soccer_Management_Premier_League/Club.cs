@@ -77,7 +77,7 @@ namespace Soccer_Management_Premier_League
 
             if (Verify())
             {
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
                 {
                     string id = ID_Txt.Text;
                     string name = Name_Txt.Text;

@@ -39,7 +39,6 @@ namespace Soccer_Management_Premier_League
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.HostName = new System.Windows.Forms.Label();
-            this.VisitName = new System.Windows.Forms.Label();
             this.Score1 = new System.Windows.Forms.Label();
             this.Score2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -69,6 +68,7 @@ namespace Soccer_Management_Premier_League
             this.VisitImage = new System.Windows.Forms.PictureBox();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.VisitName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,7 +99,7 @@ namespace Soccer_Management_Premier_League
             // 
             this.ID_txt.AutoSize = true;
             this.ID_txt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_txt.Location = new System.Drawing.Point(315, 13);
+            this.ID_txt.Location = new System.Drawing.Point(437, 13);
             this.ID_txt.Name = "ID_txt";
             this.ID_txt.Size = new System.Drawing.Size(136, 16);
             this.ID_txt.TabIndex = 8;
@@ -110,7 +110,7 @@ namespace Soccer_Management_Premier_League
             // 
             this.StadiumName.AutoSize = true;
             this.StadiumName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StadiumName.Location = new System.Drawing.Point(182, 13);
+            this.StadiumName.Location = new System.Drawing.Point(262, 12);
             this.StadiumName.Name = "StadiumName";
             this.StadiumName.Size = new System.Drawing.Size(136, 16);
             this.StadiumName.TabIndex = 7;
@@ -119,11 +119,10 @@ namespace Soccer_Management_Premier_League
             // RefereeName
             // 
             this.RefereeName.AutoEllipsis = true;
-            this.RefereeName.AutoSize = true;
             this.RefereeName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RefereeName.Location = new System.Drawing.Point(109, 12);
             this.RefereeName.Name = "RefereeName";
-            this.RefereeName.Size = new System.Drawing.Size(41, 16);
+            this.RefereeName.Size = new System.Drawing.Size(111, 16);
             this.RefereeName.TabIndex = 6;
             this.RefereeName.Text = "hung";
             // 
@@ -149,7 +148,7 @@ namespace Soccer_Management_Premier_League
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Soccer_Management_Premier_League.Properties.Resources.stadium_30px;
-            this.pictureBox1.Location = new System.Drawing.Point(152, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(226, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.TabIndex = 3;
@@ -171,25 +170,13 @@ namespace Soccer_Management_Premier_League
             // HostName
             // 
             this.HostName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.HostName.AutoSize = true;
             this.HostName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HostName.Location = new System.Drawing.Point(83, 126);
+            this.HostName.Location = new System.Drawing.Point(-4, 126);
             this.HostName.Name = "HostName";
-            this.HostName.Size = new System.Drawing.Size(152, 19);
+            this.HostName.Size = new System.Drawing.Size(249, 19);
             this.HostName.TabIndex = 150;
             this.HostName.Text = "Manchester United";
-            // 
-            // VisitName
-            // 
-            this.VisitName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.VisitName.AutoSize = true;
-            this.VisitName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VisitName.Location = new System.Drawing.Point(608, 126);
-            this.VisitName.Name = "VisitName";
-            this.VisitName.Size = new System.Drawing.Size(67, 19);
-            this.VisitName.TabIndex = 151;
-            this.VisitName.Text = "Arsenal";
-            this.VisitName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.HostName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Score1
             // 
@@ -311,7 +298,7 @@ namespace Soccer_Management_Premier_League
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(633, 716);
+            this.button1.Location = new System.Drawing.Point(636, 718);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 39);
             this.button1.TabIndex = 174;
@@ -337,7 +324,7 @@ namespace Soccer_Management_Premier_League
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(509, 715);
+            this.button2.Location = new System.Drawing.Point(509, 718);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(118, 39);
             this.button2.TabIndex = 177;
@@ -499,12 +486,24 @@ namespace Soccer_Management_Premier_League
             // 
             this.guna2DragControl1.TargetControl = this.panel1;
             // 
+            // VisitName
+            // 
+            this.VisitName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.VisitName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VisitName.Location = new System.Drawing.Point(517, 126);
+            this.VisitName.Name = "VisitName";
+            this.VisitName.Size = new System.Drawing.Size(249, 19);
+            this.VisitName.TabIndex = 193;
+            this.VisitName.Text = "Manchester United";
+            this.VisitName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ResultDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(766, 749);
+            this.ClientSize = new System.Drawing.Size(766, 760);
+            this.Controls.Add(this.VisitName);
             this.Controls.Add(this.guna2VSeparator1);
             this.Controls.Add(this.flpVisit);
             this.Controls.Add(this.flpHome);
@@ -531,7 +530,6 @@ namespace Soccer_Management_Premier_League
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Score2);
             this.Controls.Add(this.Score1);
-            this.Controls.Add(this.VisitName);
             this.Controls.Add(this.HostName);
             this.Controls.Add(this.HostImage);
             this.Controls.Add(this.panel1);
@@ -570,7 +568,6 @@ namespace Soccer_Management_Premier_League
         public System.Windows.Forms.Label DateMatch;
         public System.Windows.Forms.PictureBox HostImage;
         public System.Windows.Forms.Label HostName;
-        public System.Windows.Forms.Label VisitName;
         public System.Windows.Forms.Label Score1;
         public System.Windows.Forms.Label Score2;
         public System.Windows.Forms.PictureBox VisitImage;
@@ -599,5 +596,6 @@ namespace Soccer_Management_Premier_League
         private System.Windows.Forms.FlowLayoutPanel flpVisit;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         public Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        public System.Windows.Forms.Label VisitName;
     }
 }

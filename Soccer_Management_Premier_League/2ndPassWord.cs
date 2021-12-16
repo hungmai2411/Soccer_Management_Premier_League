@@ -54,7 +54,7 @@ namespace Soccer_Management_Premier_League
             }
             else if (q1answer.Text == this.code.ToString()) //Khi da nhap lieu du
             {
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True")) { 
+                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True")) { 
                     connection.Open();
 
                     //Cau lenh SQL de them tai khoan vao database
@@ -65,7 +65,7 @@ namespace Soccer_Management_Premier_League
                         // Thuc thi cau lenh them cau hoi bi mat
                         command.ExecuteNonQuery();
                         MessageBox.Show(" SIGN UP SUCCESSFULLY !\n THANK YOU FOR YOUR REGISTRATION TO OUR APP. \n HAVE A GREAT DAY.");
-                        Login lg = new Login();
+                        Form1 lg = new Form1();
                         this.Hide();
                         lg.Show();
                     }
@@ -81,13 +81,12 @@ namespace Soccer_Management_Premier_League
                 MessageBox.Show("Your code is incorrect. Please try again", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        
-        private void BackButton_Click(object sender, EventArgs e)
+
+        private void BackButton_Click_1(object sender, EventArgs e)
         {
             Signup su = new Signup(username, password, emaill);
             this.Hide();
             su.Show();
         }
-        
     }
 }

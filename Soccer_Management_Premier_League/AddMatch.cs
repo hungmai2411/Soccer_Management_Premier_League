@@ -21,12 +21,12 @@ namespace Soccer_Management_Premier_League
 
         public void LoadMatchs()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 
                 connection.Open();
-                string query = "Select IDMatch, T1.PIC,T1.CLBNAME,T2.PIC,T2.CLBNAME, DATE,TIME, STAYDIUM,IDREF from CLUB as T1, CLUB as T2, MATCH1 as M where M.CLB1 = T1.IDCLB and " +
-                    "M.CLB2 = T2.IDCLB";
+                string query = "Select IDMatch, T1.PIC,T1.CLBNAME,T2.PIC,T2.CLBNAME, DATE,TIME, STAYDIUM,R.REF_NAME from CLUB as T1, CLUB as T2, MATCH1 as M,REFEREE as R where M.CLB1 = T1.IDCLB and " +
+                    "M.CLB2 = T2.IDCLB and M.IDREF = R.IDREF";
 
                 SqlDataAdapter ada = new SqlDataAdapter(query, connection);
                 DataTable dt = new DataTable();
@@ -77,7 +77,7 @@ namespace Soccer_Management_Premier_League
         {
             string id;
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select IDCLB from CLUB where CLBNAME = '" + text + "'";
@@ -143,6 +143,7 @@ namespace Soccer_Management_Premier_League
 
                 match.Owner = formBackground;
 
+                match.IDREF_cbx.Text = DataGridView_match.CurrentRow.Cells[8].Value.ToString();
                 match.tbIDMatch.Text = DataGridView_match.CurrentRow.Cells[0].Value.ToString();
                 match.Club_cbx.Text = DataGridView_match.CurrentRow.Cells[2].Value.ToString();
                 match.Club_cbx1.Text = DataGridView_match.CurrentRow.Cells[4].Value.ToString();
@@ -164,12 +165,12 @@ namespace Soccer_Management_Premier_League
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
-                string query = "Select IDMatch, T1.PIC,T1.CLBNAME,T2.PIC,T2.CLBNAME, DATE,TIME, STAYDIUM,IDREF from CLUB as T1, CLUB as T2, MATCH1 as M where M.CLB1 = T1.IDCLB and " +
-                    "M.CLB2 = T2.IDCLB and DATE = '" + dateTimePicker1.Value + "'";
-
+                string query = "Select IDMatch, T1.PIC,T1.CLBNAME,T2.PIC,T2.CLBNAME, DATE,TIME, STAYDIUM,R.REF_NAME from CLUB as T1, CLUB as T2, MATCH1 as M,REFEREE as R where M.CLB1 = T1.IDCLB and " +
+                    "M.CLB2 = T2.IDCLB and M.IDREF = R.IDREF and DATE = '" + dateTimePicker1.Value + "'";
+                
                 SqlDataAdapter ada = new SqlDataAdapter(query, connection);
                 DataTable dt = new DataTable();
                 ada.Fill(dt);

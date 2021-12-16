@@ -250,6 +250,12 @@
     <Compile Include="Coach.Designer.cs">
       <DependentUpon>Coach.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConfirmPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmPassword.Designer.cs">
+      <DependentUpon>ConfirmPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,18 @@
     <Compile Include="ForgotPassword.Designer.cs">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FResult.Designer.cs">
+      <DependentUpon>FResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="FUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -309,12 +327,6 @@
     </Compile>
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Loading.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Loading.Designer.cs">
-      <DependentUpon>Loading.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -423,6 +435,9 @@
     <EmbeddedResource Include="Coach.resx">
       <DependentUpon>Coach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmPassword.resx">
+      <DependentUpon>ConfirmPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -444,6 +459,12 @@
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FResult.resx">
+      <DependentUpon>FResult.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FUser.resx">
       <DependentUpon>FUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -452,9 +473,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Loading.resx">
-      <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -571,6 +589,8 @@
     <None Include="Resources\audiotheme .wav" />
     <None Include="Resources\326ffb9bef63243d7d72.jpg" />
     <None Include="Resources\back_30px.png" />
+    <None Include="Resources\back_20px.png" />
+    <None Include="Resources\265052224_320672859917005_7668647726320608763_n.png" />
     <Content Include="Resources\close_window_30px.png" />
     <None Include="Resources\edit_30px.png" />
     <None Include="Resources\delete_user_male_30px.png" />
@@ -635,6 +655,14 @@
     <None Include="Resources\MCI1.png" />
     <None Include="Resources\forward_30px.png" />
     <None Include="Resources\forward_30px1.png" />
+    <None Include="Resources\right-arrow %281%29.png" />
+    <None Include="Resources\forward_20px.png" />
+    <None Include="Resources\skip.png" />
+    <None Include="Resources\name_40px.png" />
+    <None Include="Resources\name_40px1.png" />
+    <None Include="Resources\name_30px.png" />
+    <None Include="Resources\name_20px.png" />
+    <None Include="Resources\password_50px.png" />
     <Content Include="Resources\Statement_Graphic_PL_Lilac.jpg" />
     <None Include="Resources\t2.png" />
     <None Include="Resources\t3.png" />

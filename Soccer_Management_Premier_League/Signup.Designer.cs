@@ -43,6 +43,7 @@
             this.EmailTextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.SignUpButton = new Guna.UI2.WinForms.Guna2Button();
             this.BackButton = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.UserPanel.SuspendLayout();
             this.PassPanel.SuspendLayout();
             this.RwPassPanel.SuspendLayout();
@@ -294,6 +295,20 @@
             this.BackButton.Size = new System.Drawing.Size(63, 45);
             this.BackButton.TabIndex = 8;
             this.BackButton.UseTransparentBackground = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click_1);
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(845, 0);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.Size = new System.Drawing.Size(40, 29);
+            this.guna2ControlBox1.TabIndex = 9;
             // 
             // Signup
             // 
@@ -302,12 +317,14 @@
             this.BackgroundImage = global::Soccer_Management_Premier_League.Properties.Resources.football_ge8782764d_1920;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(884, 516);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.SignUpButton);
             this.Controls.Add(this.EmailPanel);
             this.Controls.Add(this.PassPanel);
             this.Controls.Add(this.UserPanel);
             this.Controls.Add(this.RwPassPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Signup";
@@ -340,6 +357,7 @@
         private Guna.UI2.WinForms.Guna2TextBox EmailTextbox;
         private Guna.UI2.WinForms.Guna2Button SignUpButton;
         private Guna.UI2.WinForms.Guna2Button BackButton;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }
 

@@ -21,7 +21,7 @@ namespace Soccer_Management_Premier_League
 
         public void LoadClubs()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 
                 string query = "Select CLBID, CLBNAME, DAYBUILT, ADDRESS,STADIUM, NATION, CITY,Pic from CLUB where CLBNAME like '%" + textSearch.Text + "%'";
@@ -156,7 +156,7 @@ namespace Soccer_Management_Premier_League
             {
                 if (MessageBox.Show("Are you sure you want to remove this club", "Remove club", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
                     {
                         connection.Open();
                         string query = "Delete from CLUB where CLBID = '" + DataGridView_club.CurrentRow.Cells[0].Value.ToString() + "'";

@@ -23,7 +23,7 @@ namespace Soccer_Management_Premier_League
         private void Ranking_Load_1(object sender, EventArgs e)
         {
             
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "select * from BXH where PL = 38";
@@ -44,7 +44,7 @@ namespace Soccer_Management_Premier_League
 
         public void LoadRanking()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select ROW_NUMBER() OVER(ORDER BY PTS desc) Position, C.PIC, C.CLBNAME, PL, W, D,L,GF,GA,GD,PTS from BXH as B, CLUB as C where C.IDCLB = B.IDCLB";
@@ -143,7 +143,7 @@ namespace Soccer_Management_Premier_League
         {
             string s = "";
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "select top(1) CLBNAME from BXH,CLUB where CLUB.IDCLB = BXH.IDCLB order by PTS desc";
