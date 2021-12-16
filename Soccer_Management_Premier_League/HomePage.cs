@@ -21,9 +21,18 @@ namespace Soccer_Management_Premier_League
 
         private void Btn_Club_Click(object sender, EventArgs e)
         {
+            Slide(Btn_Club);
             OpenChildForm(new Registration());
             btnSound.Visible = true;
             changedmusic();
+        }
+
+        public void Slide(Button b)
+        {
+            panel8.Visible = true;
+            panel8.BackColor = Color.FromArgb(35, 30, 54);
+            panel8.Height = b.Height;
+            panel8.Top = b.Top;
         }
 
         private Form activeForm = null;
@@ -43,6 +52,7 @@ namespace Soccer_Management_Premier_League
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Slide(button2);
             OpenChildForm(new ManagePlayer());
             btnSound.Visible = true;
             changedmusic();
@@ -50,6 +60,7 @@ namespace Soccer_Management_Premier_League
 
         private void Btn_MatchSchedule_Click(object sender, EventArgs e)
         {
+            Slide(Btn_MatchSchedule);
             OpenChildForm(new AddMatch());
             btnSound.Visible = true;
             changedmusic();
@@ -57,7 +68,7 @@ namespace Soccer_Management_Premier_League
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
+            Form1 login = new Form1();
             
             
             axWindowsMediaPlayer1.Ctlcontrols.stop();
@@ -70,6 +81,7 @@ namespace Soccer_Management_Premier_League
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Slide(button3);
             OpenChildForm(new AddResult());
             btnSound.Visible = true;
             changedmusic();
@@ -77,6 +89,7 @@ namespace Soccer_Management_Premier_League
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Slide(button4);
             OpenChildForm(new Ranking());
             btnSound.Visible = true;
             changedmusic();
@@ -90,6 +103,7 @@ namespace Soccer_Management_Premier_League
 
         private void button5_Click(object sender, EventArgs e)
         {
+            Slide(button5);
             OpenChildForm(new Referee());
             btnSound.Visible = true;
             changedmusic();
@@ -97,6 +111,7 @@ namespace Soccer_Management_Premier_League
 
         private void button6_Click(object sender, EventArgs e)
         {
+            Slide(button6);
             OpenChildForm(new Coach());
             btnSound.Visible = true;
             changedmusic();
@@ -148,7 +163,8 @@ namespace Soccer_Management_Premier_League
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+            player.Stop();
+            timer2.Enabled = false;
             HomePage hp = new HomePage();
             this.Dispose();
             hp.Show();

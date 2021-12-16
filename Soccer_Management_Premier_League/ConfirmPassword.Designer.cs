@@ -1,7 +1,7 @@
 ﻿
 namespace Soccer_Management_Premier_League
 {
-    partial class _2ndPassWord
+    partial class ConfirmPassword
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@ namespace Soccer_Management_Premier_League
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_2ndPassWord));
             this.question1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.q1answer = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelquestion1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -161,7 +160,6 @@ namespace Soccer_Management_Premier_League
             this.BackButton.Size = new System.Drawing.Size(40, 44);
             this.BackButton.TabIndex = 6;
             this.BackButton.UseTransparentBackground = true;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click_1);
             // 
             // guna2ControlBox1
             // 
@@ -176,7 +174,7 @@ namespace Soccer_Management_Premier_League
             this.guna2ControlBox1.Size = new System.Drawing.Size(40, 29);
             this.guna2ControlBox1.TabIndex = 10;
             // 
-            // _2ndPassWord
+            // ConfirmPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -191,12 +189,10 @@ namespace Soccer_Management_Premier_League
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.panelquestion1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "_2ndPassWord";
+            this.Name = "ConfirmPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "premier_league_manager";
-            this.Load += new System.EventHandler(this._2ndPassWord_Load);
             this.panelquestion1.ResumeLayout(false);
             this.panelquestion1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();

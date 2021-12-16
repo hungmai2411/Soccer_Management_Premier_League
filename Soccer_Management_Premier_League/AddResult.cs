@@ -26,7 +26,7 @@ namespace Soccer_Management_Premier_League
 
         public void LoadResult()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select IDMatch, T1.PIC,T1.CLBNAME,SCORED1,SCORED2,T2.PIC,T2.CLBNAME, DATE,TIME, STAYDIUM from CLUB as T1, CLUB as T2, MATCH1 as M where M.CLB1 = T1.IDCLB and " +
@@ -81,7 +81,7 @@ namespace Soccer_Management_Premier_League
         {
             string hostClub;
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select IDCLB from CLUB where CLBNAME = '" + text + "'";
@@ -96,7 +96,7 @@ namespace Soccer_Management_Premier_League
         }
         private string GetNameRef(string idMatch)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select REF_NAME from REFEREE AS R, MATCH1 AS M where IDMATCH = '" + idMatch + "' and M.IDREF = R.IDREF";
@@ -125,17 +125,7 @@ namespace Soccer_Management_Premier_League
 
                     result.HostName.Text = DataGridView_match.CurrentRow.Cells[2].Value.ToString();
 
-                    if (result.HostName.Text.Length >= 11)
-                    {
-                        result.HostName.Location = new Point(result.HostImage.Location.X - 30, 126);
-                    }
-
                     result.VisitName.Text = DataGridView_match.CurrentRow.Cells[6].Value.ToString();
-
-                    if (result.VisitName.Text.Length >= 11)
-                    {
-                        result.VisitName.Location = new Point(result.VisitImage.Location.X - 30, 126);
-                    }
 
                     result.Score1.Text = DataGridView_match.CurrentRow.Cells[3].Value.ToString();
                     result.Score2.Text = DataGridView_match.CurrentRow.Cells[4].Value.ToString();
@@ -145,7 +135,7 @@ namespace Soccer_Management_Premier_League
                     var date = (DateTime)DataGridView_match.CurrentRow.Cells[7].Value;
                     result.DateMatch.Text = date.ToString("dd/MM/yyyy");
 
-                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
                     {
                         connection.Open();
                         string query = "Select CLBName from CLUB where CLBNAME = '" + DataGridView_match.CurrentRow.Cells[2].Value.ToString() + "' or CLBNAME = '" + DataGridView_match.CurrentRow.Cells[6].Value.ToString() + "'";
@@ -175,7 +165,7 @@ namespace Soccer_Management_Premier_League
 
         private bool CheckReferee()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "select * from MATCH1 where IDREF is not null and IDMATCH = '" + DataGridView_match.CurrentRow.Cells[0].Value.ToString() + "'";
@@ -194,7 +184,7 @@ namespace Soccer_Management_Premier_League
         }
         public bool CheckResult()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "select * from MATCH1 where SCORED1 is not null and SCORED2 is not null and IDMATCH = '" + DataGridView_match.CurrentRow.Cells[0].Value.ToString() + "'";
@@ -213,7 +203,7 @@ namespace Soccer_Management_Premier_League
         }
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select IDMatch, T1.PIC,T1.CLBNAME,SCORED1,SCORED2,T2.PIC,T2.CLBNAME, DATE,TIME, STAYDIUM from CLUB as T1, CLUB as T2, MATCH1 as M where M.CLB1 = T1.IDCLB and " +

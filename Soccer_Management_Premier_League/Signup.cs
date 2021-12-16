@@ -19,8 +19,6 @@ namespace Soccer_Management_Premier_League
         {
             InitializeComponent();
         }
-        string strcon = @"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True";
-        SqlConnection sqlcon = null;
 
         public Signup(string u, string p, string e)
         {
@@ -63,7 +61,7 @@ namespace Soccer_Management_Premier_League
             }
             else // Khi da nhap lieu du
             {
-                SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True");
+                SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True");
 
                 // Tao cau lenh de lay ra user co trung ten voi ten User ma nguoi dung dang chon
                 SqlDataAdapter da = new SqlDataAdapter("select USERNAME from account where USERNAME = N'" + Usertextbox.Text + "'", connection);
@@ -102,12 +100,6 @@ namespace Soccer_Management_Premier_League
             }
         }
 
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            Login lg = new Login();
-            this.Hide();
-            lg.Show();
-        }
         string email = "projectuit0@gmail.com";
         void SendMail(string from, string to, string subject, string message)
         {
@@ -118,6 +110,13 @@ namespace Soccer_Management_Premier_League
             client.Credentials = new NetworkCredential(email, "projectuit01234");
 
             client.Send(mess);
+        }
+
+        private void BackButton_Click_1(object sender, EventArgs e)
+        {
+            Form1 lg = new Form1();
+            this.Hide();
+            lg.Show();
         }
     }
 }

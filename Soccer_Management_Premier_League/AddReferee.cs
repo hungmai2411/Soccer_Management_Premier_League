@@ -31,7 +31,7 @@ namespace Soccer_Management_Premier_League
                 DateTime dt = date_birth.Value;
 
 
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
                 {
                     connection.Open();
                     string query = "insert into REFEREE(REF_NAME,NATIONALITY, DAY_BORN, TYPE_REF) values(@name,@nationality,@dt,@type)";

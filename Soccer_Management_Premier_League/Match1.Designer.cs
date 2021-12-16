@@ -33,10 +33,11 @@ namespace Soccer_Management_Premier_League
             this.lbClubHost = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbScore = new System.Windows.Forms.Label();
             this.lbClubVisit = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.ptbClubHost = new System.Windows.Forms.PictureBox();
+            this.btnForward = new Guna.UI2.WinForms.Guna2Button();
             this.ptbClubVisit = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbClubHost)).BeginInit();
+            this.ptbClubHost = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbClubVisit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbClubHost)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTime
@@ -89,14 +90,26 @@ namespace Soccer_Management_Premier_League
             this.lbClubVisit.Text = "Wolves";
             this.lbClubVisit.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // ptbClubHost
+            // btnForward
             // 
-            this.ptbClubHost.Location = new System.Drawing.Point(333, 12);
-            this.ptbClubHost.Name = "ptbClubHost";
-            this.ptbClubHost.Size = new System.Drawing.Size(25, 25);
-            this.ptbClubHost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbClubHost.TabIndex = 8;
-            this.ptbClubHost.TabStop = false;
+            this.btnForward.CheckedState.Parent = this.btnForward;
+            this.btnForward.CustomImages.Parent = this.btnForward;
+            this.btnForward.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnForward.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnForward.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnForward.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnForward.DisabledState.Parent = this.btnForward;
+            this.btnForward.FillColor = System.Drawing.Color.White;
+            this.btnForward.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnForward.ForeColor = System.Drawing.Color.White;
+            this.btnForward.HoverState.Parent = this.btnForward;
+            this.btnForward.Image = global::Soccer_Management_Premier_League.Properties.Resources.skip;
+            this.btnForward.ImageSize = new System.Drawing.Size(16, 16);
+            this.btnForward.Location = new System.Drawing.Point(772, 12);
+            this.btnForward.Name = "btnForward";
+            this.btnForward.ShadowDecoration.Parent = this.btnForward;
+            this.btnForward.Size = new System.Drawing.Size(30, 25);
+            this.btnForward.TabIndex = 10;
             // 
             // ptbClubVisit
             // 
@@ -107,11 +120,21 @@ namespace Soccer_Management_Premier_League
             this.ptbClubVisit.TabIndex = 9;
             this.ptbClubVisit.TabStop = false;
             // 
+            // ptbClubHost
+            // 
+            this.ptbClubHost.Location = new System.Drawing.Point(333, 12);
+            this.ptbClubHost.Name = "ptbClubHost";
+            this.ptbClubHost.Size = new System.Drawing.Size(25, 25);
+            this.ptbClubHost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbClubHost.TabIndex = 8;
+            this.ptbClubHost.TabStop = false;
+            // 
             // Match1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnForward);
             this.Controls.Add(this.ptbClubVisit);
             this.Controls.Add(this.ptbClubHost);
             this.Controls.Add(this.lbClubVisit);
@@ -122,8 +145,8 @@ namespace Soccer_Management_Premier_League
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Match1";
             this.Size = new System.Drawing.Size(803, 46);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbClubHost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbClubVisit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbClubHost)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -136,5 +159,6 @@ namespace Soccer_Management_Premier_League
         public Guna.UI2.WinForms.Guna2HtmlLabel lbClubVisit;
         public System.Windows.Forms.PictureBox ptbClubHost;
         public System.Windows.Forms.PictureBox ptbClubVisit;
+        public Guna.UI2.WinForms.Guna2Button btnForward;
     }
 }

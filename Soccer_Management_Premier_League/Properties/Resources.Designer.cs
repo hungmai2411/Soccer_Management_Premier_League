@@ -123,6 +123,16 @@ namespace Soccer_Management_Premier_League.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _265052224_320672859917005_7668647726320608763_n {
+            get {
+                object obj = ResourceManager.GetObject("265052224_320672859917005_7668647726320608763_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2705_fifa_22_release_date {
             get {
                 object obj = ResourceManager.GetObject("2705_fifa-22-release-date", resourceCulture);
@@ -275,6 +285,16 @@ namespace Soccer_Management_Premier_League.Properties {
         internal static System.Drawing.Bitmap AVL {
             get {
                 object obj = ResourceManager.GetObject("AVL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap back_20px {
+            get {
+                object obj = ResourceManager.GetObject("back_20px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -485,6 +505,16 @@ namespace Soccer_Management_Premier_League.Properties {
         internal static System.Drawing.Bitmap football_ge8782764d_1920 {
             get {
                 object obj = ResourceManager.GetObject("football-ge8782764d_1920", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap forward_20px {
+            get {
+                object obj = ResourceManager.GetObject("forward_20px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -732,6 +762,46 @@ namespace Soccer_Management_Premier_League.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap name_20px {
+            get {
+                object obj = ResourceManager.GetObject("name_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap name_30px {
+            get {
+                object obj = ResourceManager.GetObject("name_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap name_40px {
+            get {
+                object obj = ResourceManager.GetObject("name_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap name_40px1 {
+            get {
+                object obj = ResourceManager.GetObject("name_40px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap NEW {
             get {
                 object obj = ResourceManager.GetObject("NEW", resourceCulture);
@@ -785,6 +855,16 @@ namespace Soccer_Management_Premier_League.Properties {
         internal static System.Drawing.Bitmap outline_volume_up_black_24dp {
             get {
                 object obj = ResourceManager.GetObject("outline_volume_up_black_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap password_50px {
+            get {
+                object obj = ResourceManager.GetObject("password_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -855,6 +935,16 @@ namespace Soccer_Management_Premier_League.Properties {
         internal static System.Drawing.Bitmap referee_30px1 {
             get {
                 object obj = ResourceManager.GetObject("referee_30px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap right_arrow__1_ {
+            get {
+                object obj = ResourceManager.GetObject("right-arrow (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -935,6 +1025,16 @@ namespace Soccer_Management_Premier_League.Properties {
         internal static System.Drawing.Bitmap shield_30px {
             get {
                 object obj = ResourceManager.GetObject("shield_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skip {
+            get {
+                object obj = ResourceManager.GetObject("skip", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

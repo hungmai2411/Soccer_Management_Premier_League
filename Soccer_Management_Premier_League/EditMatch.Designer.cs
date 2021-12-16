@@ -280,7 +280,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox IDREF_cbx;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label14;
@@ -295,5 +294,6 @@
         public System.Windows.Forms.ComboBox Club_cbx1;
         public System.Windows.Forms.ComboBox Club_cbx;
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.ComboBox IDREF_cbx;
     }
 }

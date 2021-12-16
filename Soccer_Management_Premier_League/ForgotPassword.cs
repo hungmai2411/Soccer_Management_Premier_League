@@ -29,7 +29,7 @@ namespace Soccer_Management_Premier_League
         private string GetEmail(string name)
         {
             string s = "";
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select Email from ACCOUNT where USERNAME = '" + name + "'";
@@ -58,7 +58,7 @@ namespace Soccer_Management_Premier_League
             {
                 SendMail(email, dest, "RESET PASSWORD", "YOUR PASSCODE IS: " + n);
                 this.Hide();
-                _2ndPassWord sc = new _2ndPassWord(n);
+                ConfirmPassword sc = new ConfirmPassword(n, EmailTextbox.Text);
                 sc.Show();
             }
         }
@@ -81,9 +81,9 @@ namespace Soccer_Management_Premier_League
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            Signup su = new Signup();
+            Form1 lg = new Form1();
             this.Hide();
-            su.Show();
+            lg.Show();
         }
     }
 }

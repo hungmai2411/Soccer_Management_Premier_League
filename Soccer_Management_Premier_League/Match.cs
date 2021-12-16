@@ -22,12 +22,29 @@ namespace Soccer_Management_Premier_League
             GetHomeClub();
             GetVisitClub();
             GetStadium();
+            GetReferee();
             add = ad;
         }
 
+        private void GetReferee()
+        {
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            {
+                connection.Open();
+                string query = "Select REF_NAME,IDREF from REFEREE";
+                SqlDataAdapter ada = new SqlDataAdapter(query, connection);
+                DataSet ds = new DataSet();
+                ada.Fill(ds);
+
+                IDREF_cbx.DataSource = ds.Tables[0];
+                IDREF_cbx.DisplayMember = "REF_NAME";
+                IDREF_cbx.ValueMember = "IDREF";
+                IDREF_cbx.SelectedIndex = -1;
+            }
+        }
         private void GetHomeClub()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select CLBNAME from CLUB";
@@ -43,7 +60,7 @@ namespace Soccer_Management_Premier_League
 
         private void GetVisitClub()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select CLBNAME from CLUB";
@@ -59,7 +76,7 @@ namespace Soccer_Management_Premier_League
 
         private void GetStadium()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select STADIUM from CLUB";
@@ -85,11 +102,11 @@ namespace Soccer_Management_Premier_League
 
             gio.ToShortTimeString();
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
 
-                string query = "insert into MATCH1(CLB1,CLB2, DATE,TIME, STAYDIUM) values(@hostClub,@visitClub,@ngay,@gio,@san)";
+                string query = "insert into MATCH1(CLB1,CLB2, DATE,TIME, STAYDIUM,IDREF) values(@hostClub,@visitClub,@ngay,@gio,@san,@idmatch)";
 
                 SqlCommand command = new SqlCommand(query, connection);
 
@@ -98,7 +115,8 @@ namespace Soccer_Management_Premier_League
                 command.Parameters.AddWithValue("@ngay", ngay);
                 command.Parameters.AddWithValue("@gio", gio);
                 command.Parameters.AddWithValue("@san", stadium);
-
+                command.Parameters.AddWithValue("@idmatch", IDREF_cbx.SelectedValue.ToString());
+                
                 try
                 {
                     command.ExecuteNonQuery();
@@ -118,7 +136,7 @@ namespace Soccer_Management_Premier_League
         {
             string hostClub;
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select IDCLB from CLUB where CLBNAME = '" + text + "'";
