@@ -121,14 +121,17 @@
   <data name="alex-motoc-7NhFrPxlgM8-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alex-motoc-7NhFrPxlgM8-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="t31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\t31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="scorecard_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scorecard_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="t31" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\t31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="t2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\t2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="t7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\t7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,11 +148,14 @@
   <data name="right-arrow (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\right-arrow (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="audiotheme" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\audiotheme .wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="t57" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\t57.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="260886767_1482152325499570_6929150643213079603_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\260886767_1482152325499570_6929150643213079603_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="name_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\name_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,8 +163,8 @@
   <data name="mu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\admin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FIFA22-PC-REQUIREMENTS1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FIFA22-PC-REQUIREMENTS1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="t39" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\t39.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,6 +190,9 @@
   <data name="soccer_player_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\soccer_player_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tải xuống (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tải xuống (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ibra" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ibra.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,26 +205,29 @@
   <data name="TOT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TOT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BUR" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BUR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="password_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\password_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outline_volume_up_black_24dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\outline_volume_up_black_24dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SOU" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SOU.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hinh-anh-dau-hoi-cham-dep" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hinh-anh-dau-hoi-cham-dep.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BHA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BHA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WAT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="audio_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\audio_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="password_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\password_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tải xuống1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tải xuống1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="skip" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images.v3-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images.v3-removebg-preview.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BRE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BRE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,11 +241,11 @@
   <data name="name_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\name_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WHU" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WHU.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="soccer_ball_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\soccer_ball_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="265052224_320672859917005_7668647726320608763_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\265052224_320672859917005_7668647726320608763_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bruno" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bruno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,14 +259,14 @@
   <data name="NEW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NEW.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="images2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="soccer-championship-design-football-champion-concept-shiny-gold-laurel-ribbon-banner-ball-glowing-green-background-30810506" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\soccer-championship-design-football-champion-concept-shiny-gold-laurel-ribbon-banner-ball-glowing-green-background-30810506.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nhan-dinh-soi-keo-pordenone-vs-spezia-coppa-italia-202122" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nhan-dinh-soi-keo-pordenone-vs-spezia-coppa-italia-202122.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stadium_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stadium_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="forward_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\forward_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -307,14 +319,17 @@
   <data name="245563627_551284619266395_1057269644741995866_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\245563627_551284619266395_1057269644741995866_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="t2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\t2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MCI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MCI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="images.v3-removebg-preview (1)-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.v3-removebg-preview (1)-removebg-preview.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FIFA22-PC-REQUIREMENTS1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FIFA22-PC-REQUIREMENTS1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hinh-anh-dau-hoi-cham-dep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hinh-anh-dau-hoi-cham-dep.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="leaderboard_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\leaderboard_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -328,23 +343,20 @@
   <data name="ngoai-hang-anh-cup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ngoai-hang-anh-cup.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MCI" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MCI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="260886767_1482152325499570_6929150643213079603_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\260886767_1482152325499570_6929150643213079603_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ARS1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ARS1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\admin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EVE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EVE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="t21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\t21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hinh-nen-manchester-united-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hinh-nen-manchester-united-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="unnamed2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\unnamed3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="t45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\t45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1455017114-premier-league-lion-green-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1455017114-premier-league-lion-green-removebg-preview.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -370,17 +382,17 @@
   <data name="ARS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ARS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="t20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\t20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BUR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BUR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="audiotheme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audiotheme .wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="images.v3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images.v3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="t14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\t14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hinh-nen-manchester-united-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hinh-nen-manchester-united-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WHU" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WHU.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="referee_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\referee_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -397,9 +409,6 @@
   <data name="scorecard_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scorecard_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete_user_male_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_user_male_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -412,29 +421,23 @@
   <data name="WOL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WOL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add_30px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_30px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="referee_30px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\referee_30px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="search_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="outline_volume_mute_black_24dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\outline_volume_mute_black_24dp.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LEI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LEI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pngegg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngegg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="images.v3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images.v3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="t14" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\t14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="t20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\t20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="schedule_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\schedule_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CRY" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CRY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -457,17 +460,17 @@
   <data name="whistle_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\whistle_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="t45" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\t45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="audio_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="back_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tải xuống (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tải xuống (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="schedule_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\schedule_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BHA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BHA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ARS1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ARS1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LEE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LEE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -478,11 +481,11 @@
   <data name="t11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\t11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tải xuống1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tải xuống1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pngegg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngegg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="outline_volume_up_black_24dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\outline_volume_up_black_24dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="t21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\t21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="t90" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\t90.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -499,11 +502,11 @@
   <data name="coach_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coach_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stadium_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stadium_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="images2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="images.v3-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images.v3-removebg-preview.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add_30px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_30px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CgZFMkJFMzY" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CgZFMkJFMzY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -511,16 +514,16 @@
   <data name="intro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\intro.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="LEI" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LEI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete_user_male_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_user_male_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="referee_30px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\referee_30px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CHEL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CHEL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="265052224_320672859917005_7668647726320608763_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\265052224_320672859917005_7668647726320608763_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tải xuống1-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tải xuống1-removebg-preview.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

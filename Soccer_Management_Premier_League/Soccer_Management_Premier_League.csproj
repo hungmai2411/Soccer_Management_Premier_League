@@ -687,6 +687,7 @@
     <None Include="Resources\tải xuống.png" />
     <None Include="Resources\tải xuống %281%29.png" />
     <None Include="Resources\tải xuống1.png" />
+    <None Include="Resources\tải xuống1-removebg-preview.jpg" />
     <Content Include="Resources\unnamed.png" />
   </ItemGroup>
   <ItemGroup />

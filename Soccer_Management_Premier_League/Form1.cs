@@ -24,19 +24,20 @@ namespace Soccer_Management_Premier_League
             {
                 HomePage admin = new HomePage();
                 this.Hide();
-                admin.Show();
+                admin.ShowDialog();
             }
             else
             {
                 SqlConnection Connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True");
-                SqlDataAdapter da = new SqlDataAdapter("select * from account where USERNAME = N'" + UserTextbox.Text + "' and PASS = N'" + PassTextbox.Text + "'", Connection);
+                SqlDataAdapter da = new SqlDataAdapter("select * from ACCOUNT where USERNAME = N'" + UserTextbox.Text + "' and PASS = N'" + PassTextbox.Text + "'", Connection);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
                     FUser user = new FUser();
                     this.Hide();
-                    user.Show();
+                    user.ShowDialog();
+                    this.Show();
                 }
                 else MessageBox.Show("Your Username or Password is incorrect \nPlease try again!", "NOTICE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

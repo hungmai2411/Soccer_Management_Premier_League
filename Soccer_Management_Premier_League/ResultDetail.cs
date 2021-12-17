@@ -184,45 +184,66 @@ namespace Soccer_Management_Premier_League
             }
         }
 
+        private bool CheckDate()
+        {
+            bool output = false;
+
+            DateTime dt1 = DateTime.Parse(DateMatch.Text);
+            DateTime dt2 = DateTime.Now;
+
+            if (dt1.Date < dt2.Date)
+            {
+                output = true;
+            }
+
+            return output;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to add this result", "Add result", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (CheckDate())
             {
-                int score1 = int.Parse(Score1.Text);
-                int score2 = int.Parse(Score2.Text);
-
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+                if (MessageBox.Show("Are you sure you want to add this result", "Add result", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    connection.Open();
-                    string query = "Update MATCH1 set SCORED1 = '" + score1 + "',SCORED2 = '" + score2 + "' where IDMatch = '" + ID_txt.Text.ToString() + "'";
-                    SqlCommand command = new SqlCommand(query, connection);
-                    try
-                    {
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Add result successfully");
-                        addResult.LoadResult();
-                        UpdateRanking(score1, score2, GetID(HostName.Text));
-                        UpdateGD(GetID(HostName.Text));
-                        UpdateRanking(score2, score1, GetID(VisitName.Text));
-                        UpdateGD(GetID(VisitName.Text));
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
+                    int score1 = int.Parse(Score1.Text);
+                    int score2 = int.Parse(Score2.Text);
 
-                    connection.Close();
+                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+                    {
+                        connection.Open();
+                        string query = "Update MATCH1 set SCORED1 = '" + score1 + "',SCORED2 = '" + score2 + "' where IDMatch = '" + ID_txt.Text.ToString() + "'";
+                        SqlCommand command = new SqlCommand(query, connection);
+                        try
+                        {
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Add result successfully");
+                            addResult.LoadResult();
+                            UpdateRanking(score1, score2, GetID(HostName.Text));
+                            UpdateGD(GetID(HostName.Text));
+                            UpdateRanking(score2, score1, GetID(VisitName.Text));
+                            UpdateGD(GetID(VisitName.Text));
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+
+                        connection.Close();
+                    }
+                }
+                else
+                {
+                    scoreHome = 0;
+                    scoreVisit = 0;
+                    Score1.Text = "";
+                    Score2.Text = "";
+
+                    DeleteGoal();
+                    DeleteCard();
                 }
             }
             else
             {
-                scoreHome = 0;
-                scoreVisit = 0;
-                Score1.Text = "";
-                Score2.Text = "";
-
-                DeleteGoal();
-                DeleteCard();
+                MessageBox.Show("Match hasn't been started", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -588,18 +609,23 @@ namespace Soccer_Management_Premier_League
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if(comboBox1.Text == HostName.Text)
+            if (CheckDate())
             {
-                LoadScore(flpHome);
+                if (comboBox1.Text == HostName.Text)
+                {
+                    LoadScore(flpHome);
+                }
+                else
+                {
+                    LoadScore(flpVisit);
+                }
+
+                Clear();
             }
             else
             {
-                LoadScore(flpVisit);
+                MessageBox.Show("Match hasn't been started", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            Clear();
-            
-            //Goal(Player_cbx.Text,Assistant_cbx.Text);
         }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
