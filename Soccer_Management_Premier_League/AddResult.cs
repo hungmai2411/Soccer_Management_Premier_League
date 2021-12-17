@@ -109,79 +109,54 @@ namespace Soccer_Management_Premier_League
         }
         private void DataGridView_match_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (CheckReferee())
+
+            try
             {
-                try
+                ResultDetail result = new ResultDetail(this);
+
+                byte[] img1 = (byte[])DataGridView_match.CurrentRow.Cells[1].Value;
+                MemoryStream ms1 = new MemoryStream(img1);
+                result.HostImage.Image = Image.FromStream(ms1);
+
+                img1 = (byte[])DataGridView_match.CurrentRow.Cells[5].Value;
+                ms1 = new MemoryStream(img1);
+                result.VisitImage.Image = Image.FromStream(ms1);
+
+                result.HostName.Text = DataGridView_match.CurrentRow.Cells[2].Value.ToString();
+
+                result.VisitName.Text = DataGridView_match.CurrentRow.Cells[6].Value.ToString();
+
+                result.Score1.Text = DataGridView_match.CurrentRow.Cells[3].Value.ToString();
+                result.Score2.Text = DataGridView_match.CurrentRow.Cells[4].Value.ToString();
+                result.StadiumName.Text = DataGridView_match.CurrentRow.Cells[9].Value.ToString();
+                result.ID_txt.Text = DataGridView_match.CurrentRow.Cells[0].Value.ToString();
+                result.RefereeName.Text = GetNameRef(result.ID_txt.Text);
+                var date = (DateTime)DataGridView_match.CurrentRow.Cells[7].Value;
+                result.DateMatch.Text = date.ToString("MM/dd/yyyy");
+
+                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
                 {
-                    ResultDetail result = new ResultDetail(this);
+                    connection.Open();
+                    string query = "Select CLBName from CLUB where CLBNAME = '" + DataGridView_match.CurrentRow.Cells[2].Value.ToString() + "' or CLBNAME = '" + DataGridView_match.CurrentRow.Cells[6].Value.ToString() + "'";
+                    SqlDataAdapter ada = new SqlDataAdapter(query, connection);
+                    DataSet ds = new DataSet();
+                    ada.Fill(ds);
 
-                    byte[] img1 = (byte[])DataGridView_match.CurrentRow.Cells[1].Value;
-                    MemoryStream ms1 = new MemoryStream(img1);
-                    result.HostImage.Image = Image.FromStream(ms1);
-
-                    img1 = (byte[])DataGridView_match.CurrentRow.Cells[5].Value;
-                    ms1 = new MemoryStream(img1);
-                    result.VisitImage.Image = Image.FromStream(ms1);
-
-                    result.HostName.Text = DataGridView_match.CurrentRow.Cells[2].Value.ToString();
-
-                    result.VisitName.Text = DataGridView_match.CurrentRow.Cells[6].Value.ToString();
-
-                    result.Score1.Text = DataGridView_match.CurrentRow.Cells[3].Value.ToString();
-                    result.Score2.Text = DataGridView_match.CurrentRow.Cells[4].Value.ToString();
-                    result.StadiumName.Text = DataGridView_match.CurrentRow.Cells[9].Value.ToString();
-                    result.ID_txt.Text = DataGridView_match.CurrentRow.Cells[0].Value.ToString();
-                    result.RefereeName.Text = GetNameRef(result.ID_txt.Text);
-                    var date = (DateTime)DataGridView_match.CurrentRow.Cells[7].Value;
-                    result.DateMatch.Text = date.ToString("dd/MM/yyyy");
-
-                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
-                    {
-                        connection.Open();
-                        string query = "Select CLBName from CLUB where CLBNAME = '" + DataGridView_match.CurrentRow.Cells[2].Value.ToString() + "' or CLBNAME = '" + DataGridView_match.CurrentRow.Cells[6].Value.ToString() + "'";
-                        SqlDataAdapter ada = new SqlDataAdapter(query, connection);
-                        DataSet ds = new DataSet();
-                        ada.Fill(ds);
-
-                        result.comboBox1.DisplayMember = "CLBName";
-                        result.comboBox1.ValueMember = "CLBNAME";
-                        result.comboBox1.DataSource = ds.Tables[0];
-                    }
-
-                    var idMatch = DataGridView_match.CurrentRow.Cells[0].Value.ToString();
-
-                    result.ShowDialog();
+                    result.comboBox1.DisplayMember = "CLBName";
+                    result.comboBox1.ValueMember = "CLBNAME";
+                    result.comboBox1.DataSource = ds.Tables[0];
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+
+                var idMatch = DataGridView_match.CurrentRow.Cells[0].Value.ToString();
+
+                result.ShowDialog();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please add referee", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
         }
 
-        private bool CheckReferee()
-        {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
-            {
-                connection.Open();
-                string query = "select * from MATCH1 where IDREF is not null and IDMATCH = '" + DataGridView_match.CurrentRow.Cells[0].Value.ToString() + "'";
-
-                SqlDataAdapter ada = new SqlDataAdapter(query, connection);
-                DataTable dt = new DataTable();
-                ada.Fill(dt);
-
-                if (dt.Rows.Count == 0)
-                {
-                    return false; 
-                }
-            }
-
-            return true;
-        }
         public bool CheckResult()
         {
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))

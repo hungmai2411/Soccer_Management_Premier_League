@@ -362,8 +362,7 @@ namespace Soccer_Management_Premier_League
             if (MessageBox.Show("Are you sure you want to log out ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Form1 lg = new Form1();
-                this.Hide();
-                lg.Show();
+                this.Close();
             }
         }
     }
