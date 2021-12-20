@@ -54,7 +54,7 @@ namespace Soccer_Management_Premier_League
             }
             else if (q1answer.Text == this.code.ToString()) //Khi da nhap lieu du
             {
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True")) { 
+                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True")) { 
                     connection.Open();
 
                     //Cau lenh SQL de them tai khoan vao database

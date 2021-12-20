@@ -22,7 +22,7 @@ namespace Soccer_Management_Premier_League
         {
             string name = "";
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select PLNAME from FOOTBALL_PLAYER where IDPL = '" + id + "'";
@@ -40,7 +40,7 @@ namespace Soccer_Management_Premier_League
         {
             string id = "";
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = $"select IDMATCH FROM MATCH1 WHERE CLB1 = '{GetID(home)}' AND CLB2 = '{GetID(visit)}'";
@@ -57,7 +57,7 @@ namespace Soccer_Management_Premier_League
         private void LoadHistory(string home,FlowLayoutPanel flp,string id)
         {
             flp.Controls.Clear();
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
 
@@ -112,7 +112,7 @@ namespace Soccer_Management_Premier_League
         {
             string id = "";
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = $"select IDCLB FROM CLUB WHERE CLBNAME = '{home}'";
@@ -137,7 +137,7 @@ namespace Soccer_Management_Premier_League
 
         private void LoadCard(string text,FlowLayoutPanel flp,string id)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
 

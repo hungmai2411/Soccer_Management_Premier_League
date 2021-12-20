@@ -21,7 +21,7 @@ namespace Soccer_Management_Premier_League
 
         public void LoadMatchs()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 
                 connection.Open();
@@ -77,7 +77,7 @@ namespace Soccer_Management_Premier_League
         {
             string id;
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select IDCLB from CLUB where CLBNAME = '" + text + "'";
@@ -165,7 +165,7 @@ namespace Soccer_Management_Premier_League
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select IDMatch, T1.PIC,T1.CLBNAME,T2.PIC,T2.CLBNAME, DATE,TIME, STAYDIUM,R.REF_NAME from CLUB as T1, CLUB as T2, MATCH1 as M,REFEREE as R where M.CLB1 = T1.IDCLB and " +

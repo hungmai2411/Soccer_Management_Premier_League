@@ -29,7 +29,7 @@ namespace Soccer_Management_Premier_League
         private string GetEmail(string name)
         {
             string s = "";
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select Email from ACCOUNT where USERNAME = '" + name + "'";

@@ -28,7 +28,7 @@ namespace Soccer_Management_Premier_League
 
         private void GetReferee()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select REF_NAME,IDREF from REFEREE";
@@ -44,7 +44,7 @@ namespace Soccer_Management_Premier_League
         }
         private void GetHomeClub()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select CLBNAME from CLUB";
@@ -60,7 +60,7 @@ namespace Soccer_Management_Premier_League
 
         private void GetVisitClub()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select CLBNAME from CLUB";
@@ -76,7 +76,7 @@ namespace Soccer_Management_Premier_League
 
         private void GetStadium()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select STADIUM from CLUB";
@@ -102,7 +102,7 @@ namespace Soccer_Management_Premier_League
 
             gio.ToShortTimeString();
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
 
@@ -136,7 +136,7 @@ namespace Soccer_Management_Premier_League
         {
             string hostClub;
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select IDCLB from CLUB where CLBNAME = '" + text + "'";

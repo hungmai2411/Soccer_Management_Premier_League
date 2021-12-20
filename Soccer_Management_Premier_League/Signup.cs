@@ -61,7 +61,7 @@ namespace Soccer_Management_Premier_League
             }
             else // Khi da nhap lieu du
             {
-                SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True");
+                SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True");
 
                 // Tao cau lenh de lay ra user co trung ten voi ten User ma nguoi dung dang chon
                 SqlDataAdapter da = new SqlDataAdapter("select USERNAME from account where USERNAME = N'" + Usertextbox.Text + "'", connection);
@@ -91,7 +91,7 @@ namespace Soccer_Management_Premier_League
                 else // Neu bang khong co du lieu thi User co the dung duoc cai ten do
                 {
                     Random rnd = new Random();
-                    int n = rnd.Next(100, 999);
+                    int n = rnd.Next(1000, 9999);
                     SendMail(email, EmailTextbox.Text, "ACTIVATION EMAIL", "Your activation code is: " + n);
                     this.Hide();
                     _2ndPassWord sp = new _2ndPassWord(Usertextbox.Text, PassTestbox.Text, EmailTextbox.Text, n);

@@ -30,7 +30,7 @@ namespace Soccer_Management_Premier_League
                 string nationality = Nation_Txt.Text;
                 string type = cbType.Text;
                 DateTime dt = Birth_Date.Value;
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
                 {
                     connection.Open();
                     string query = "insert into COACH(IDCLB, COACHNAME, NATIONALITY, DAY_BORN, TYPE_COACH) values(@id, @name,@nationality,@dt,@type)";

@@ -21,7 +21,7 @@ namespace Soccer_Management_Premier_League
         public void LoadReferee()
         {
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select IDREF, REF_NAME, NATIONALITY, DAY_BORN, TYPE_REF from REFEREE";
@@ -127,7 +127,7 @@ namespace Soccer_Management_Premier_League
             {
                 if (MessageBox.Show("Are you sure you want to remove this referee", "Remove referee", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
                     {
                         connection.Open();
                         string query = "Delete from REFEREE where IDREF = '" + DataGridView_referee.CurrentRow.Cells[0].Value.ToString() + "'";
@@ -152,7 +152,7 @@ namespace Soccer_Management_Premier_League
 
         private void textSearch_TextChanged(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = $"Select IDREF, REF_NAME, NATIONALITY, DAY_BORN, TYPE_REF from REFEREE where REF_NAME like '%{textSearch.Text}%'";

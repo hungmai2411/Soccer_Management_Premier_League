@@ -25,7 +25,7 @@ namespace Soccer_Management_Premier_League
         {
             if (MessageBox.Show("Are you sure you want to remove this club", "Remove club", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
                 {
                     connection.Open();
                     string query = "Delete from CLUB where CLBID = '" + ID_Txt.Text.ToString() + "'";
@@ -49,7 +49,7 @@ namespace Soccer_Management_Premier_League
 
         private void button_update_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 string id = ID_Txt.Text;
                 string name = Name_Txt.Text;

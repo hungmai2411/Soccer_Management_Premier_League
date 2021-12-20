@@ -27,7 +27,7 @@ namespace Soccer_Management_Premier_League
 
         public void LoadPlayers()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select C.CLBNAME, PLNAME,NATIONALITY, VITRI,NUMBER, DAY_BORN,P.PIC from FOOTBALL_PLAYER as P,CLUB as C where P.IDCLB = '" + guna2ComboBox1.SelectedValue.ToString() + "' and C.CLBNAME = '" + guna2ComboBox1.Text + "'";
@@ -63,7 +63,7 @@ namespace Soccer_Management_Premier_League
 
         private void GetClub()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select IDCLB,CLBName from CLUB";
@@ -80,7 +80,7 @@ namespace Soccer_Management_Premier_League
         private string GetIDPlayer(string name)
         {
             string s = "";
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select IDPL from FOOTBALL_PLAYER where PLNAME = '" + name + "'";
@@ -109,7 +109,7 @@ namespace Soccer_Management_Premier_League
 
                 form1.CLBID_txt.Text = guna2ComboBox1.SelectedValue.ToString();
 
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
                 {
                     connection.Open();
                     string query = "Select PIC from CLUB where IDCLB = '" + form1.CLBID_txt.Text + "'";
@@ -169,7 +169,7 @@ namespace Soccer_Management_Premier_League
 
                     form1.CLBID_txt.Text = guna2ComboBox1.SelectedValue.ToString();
 
-                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
                     {
                         connection.Open();
                         string query = "Select PIC from CLUB where IDCLB = '" + form1.CLBID_txt.Text + "'";
@@ -231,7 +231,7 @@ namespace Soccer_Management_Premier_League
 
                     form1.CLBID_txt.Text = guna2ComboBox1.SelectedValue.ToString();
 
-                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
                     {
                         connection.Open();
                         string query = "Select PIC from CLUB where IDCLB = '" + form1.CLBID_txt.Text + "'";
@@ -287,7 +287,7 @@ namespace Soccer_Management_Premier_League
             {
                 if (MessageBox.Show("Are you sure you want to remove this player", "Remove player", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
                     {
                         connection.Open();
                         string query = "Delete from FOOTBALL_PLAYER where PLNAME = '" + DataGridView_player.CurrentRow.Cells[1].Value.ToString() + "'";

@@ -22,7 +22,7 @@ namespace Soccer_Management_Premier_League
         
         private void LoadRanking()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select ROW_NUMBER() OVER(ORDER BY PTS desc) Position, C.CLBNAME, PL, W, D,L,GD,PTS from BXH as B, CLUB as C where C.IDCLB = B.IDCLB";
@@ -69,7 +69,7 @@ namespace Soccer_Management_Premier_League
 
         public void LoadPlayers()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
 
@@ -93,7 +93,7 @@ namespace Soccer_Management_Premier_League
         private string GetID(string name)
         {
             string s = "";
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select IDCLB from CLUB where CLBNAME = '" + name + "'";
@@ -121,7 +121,7 @@ namespace Soccer_Management_Premier_League
 
             this.Invoke(new Action(() =>
             {
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
                 {
                     connection.Open();
                     string query = $"Select M.IDMATCH,T1.PIC,T1.CLBNAME,T2.PIC,T2.CLBNAME,TIME,SCORED1,SCORED2,DATE from CLUB as T1, CLUB as T2, MATCH1 as M where M.CLB1 = T1.IDCLB and M.CLB2 = T2.IDCLB and (M.CLB1 = '{id}' or M.CLB2 = '{id}') order by DATE asc";
@@ -215,7 +215,7 @@ namespace Soccer_Management_Premier_League
             Guna2Button b = sender as Guna2Button;
             string id = b.Tag.ToString();
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
             {
                 connection.Open();
                 string query = $"Select T1.PIC,T1.CLBNAME,T2.PIC,T2.CLBNAME,TIME,SCORED1,SCORED2 from CLUB as T1, CLUB as T2, MATCH1 as M where M.CLB1 = T1.IDCLB and M.CLB2 = T2.IDCLB and M.IDMATCH='{id}'";

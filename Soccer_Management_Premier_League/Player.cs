@@ -96,7 +96,7 @@ namespace Soccer_Management_Premier_League
                 Player_Ptx.Image.Save(ms, Player_Ptx.Image.RawFormat);
                 byte[] img = ms.ToArray();
 
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=PremierLeagueManagement;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-9HO6E70\SQLEXPRESS;Initial Catalog=SoccerManage;Integrated Security=True"))
                 {
                     connection.Open();
                     string query = "insert into FOOTBALL_PLAYER(IDCLB, PLNAME,NATIONALITY, VITRI,NUMBER, DAY_BORN,PIC) values(@id,@name,@nationality,@role,@number,@dt,@img)";
