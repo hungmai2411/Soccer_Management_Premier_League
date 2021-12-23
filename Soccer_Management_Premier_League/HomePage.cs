@@ -21,18 +21,9 @@ namespace Soccer_Management_Premier_League
 
         private void Btn_Club_Click(object sender, EventArgs e)
         {
-            Slide(Btn_Club);
             OpenChildForm(new Registration());
             btnSound.Visible = true;
             changedmusic();
-        }
-
-        public void Slide(Button b)
-        {
-            panel8.Visible = true;
-            panel8.BackColor = Color.FromArgb(35, 30, 54);
-            panel8.Height = b.Height;
-            panel8.Top = b.Top;
         }
 
         private Form activeForm = null;
@@ -52,7 +43,6 @@ namespace Soccer_Management_Premier_League
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Slide(button2);
             OpenChildForm(new ManagePlayer());
             btnSound.Visible = true;
             changedmusic();
@@ -60,7 +50,6 @@ namespace Soccer_Management_Premier_League
 
         private void Btn_MatchSchedule_Click(object sender, EventArgs e)
         {
-            Slide(Btn_MatchSchedule);
             OpenChildForm(new AddMatch());
             btnSound.Visible = true;
             changedmusic();
@@ -68,19 +57,22 @@ namespace Soccer_Management_Premier_League
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 login = new Form1();
-            
-            
-            axWindowsMediaPlayer1.Ctlcontrols.stop();
-            timer1.Stop();
-            player.Stop();
-            timer2.Stop();
-            this.Close();
+            if (MessageBox.Show("Do you surely want to log out ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Form1 login = new Form1();
+
+
+                axWindowsMediaPlayer1.Ctlcontrols.stop();
+                timer1.Stop();
+                player.Stop();
+                timer2.Stop();
+                this.Dispose();
+                login.Show();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Slide(button3);
             OpenChildForm(new AddResult());
             btnSound.Visible = true;
             changedmusic();
@@ -88,7 +80,6 @@ namespace Soccer_Management_Premier_League
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Slide(button4);
             OpenChildForm(new Ranking());
             btnSound.Visible = true;
             changedmusic();
@@ -96,13 +87,11 @@ namespace Soccer_Management_Premier_League
 
         private void Btn_exit_Click_1(object sender, EventArgs e)
         {
-            changedmusic();
             Application.Exit();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Slide(button5);
             OpenChildForm(new Referee());
             btnSound.Visible = true;
             changedmusic();
@@ -110,7 +99,6 @@ namespace Soccer_Management_Premier_League
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Slide(button6);
             OpenChildForm(new Coach());
             btnSound.Visible = true;
             changedmusic();
@@ -132,10 +120,16 @@ namespace Soccer_Management_Premier_League
         }
         private void audio()
         {
-            if (timer2.Enabled == false)
+            if (btnSound.Checked)
             {
-                player.Play();
-                timer2.Enabled = true;
+            }
+            else
+            {
+                if (timer2.Enabled == false)
+                {
+                    player.Play();
+                    timer2.Enabled = true;
+                }
             }
         }
         private void timer1_Tick(object sender, EventArgs e)
@@ -146,18 +140,6 @@ namespace Soccer_Management_Premier_League
         private void timer2_Tick(object sender, EventArgs e)
         {
             player.Play();
-        }
-
-        private void axWindowsMediaPlayer1_ClickEvent(object sender, AxWMPLib._WMPOCXEvents_ClickEvent e)
-        {
-            if (axWindowsMediaPlayer1.playState == WMPLib.WMPPlayState.wmppsPlaying)
-            {
-                axWindowsMediaPlayer1.Ctlcontrols.pause();
-            }
-            else
-            {
-                axWindowsMediaPlayer1.Ctlcontrols.play();
-            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -176,13 +158,14 @@ namespace Soccer_Management_Premier_League
                 btnSound.Image = new Bitmap(Properties.Resources.outline_volume_up_black_24dp);
                 btnSound.Checked = false;
                 player.Play();
+                timer2.Enabled = true;
             }
             else
             {
                 btnSound.Image = new Bitmap(Properties.Resources.outline_volume_mute_black_24dp);
                 btnSound.Checked = true;
                 player.Stop();
-                
+                timer2.Enabled = false;
             }
         }
     }

@@ -123,17 +123,6 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>66</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnSound.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAPFJREFUSEvt
-        lU0OQTEUhTsyMzCwArECZgYSFmEV1mBgYBNswc/ABliFXSBmBpzTvpM0jYo+7Ygv+fJ6bpN7o54yf0qy
-        hCO3zMesepJH5QF2WPgWNmdDsYAXyNoZDmBt1NwfQFpwDzWkC5Pxm4cDSAPuIPeOLKSg5vfq6Q/YwKZb
-        mja8Qu6PWYihJr5sPvGy4HrrlpY5ZG1lUwQ1kWpOVBPKfZuMGULmk00RwiY+4Z7y1CZ3TMw3myKETXzC
-        PeVaA+QnR9SzKfGIfLN+ySHvXtM1TH5NX1H0hyaKXhVCQ0TWy05wiNAnynZdhxT5w/k5jHkCdCd4iYbB
-        hWQAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="axWindowsMediaPlayer1.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
@@ -143,6 +132,17 @@
         AAAAAAMAAQAAAAsA//8DAAAAAAALAP//CAACAAAAAAADADIAAAALAAAACAAKAAAAZgB1AGwAbAAAAAsA
         //8LAAAACwD//wsA//8LAAAACAACAAAAAAAIAAIAAAAAAAgAAgAAAAAACAACAAAAAAALAAAA2lcAADws
         AAAL
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnSound.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAPFJREFUSEvt
+        lU0OQTEUhTsyMzCwArECZgYSFmEV1mBgYBNswc/ABliFXSBmBpzTvpM0jYo+7Ygv+fJ6bpN7o54yf0qy
+        hCO3zMesepJH5QF2WPgWNmdDsYAXyNoZDmBt1NwfQFpwDzWkC5Pxm4cDSAPuIPeOLKSg5vfq6Q/YwKZb
+        mja8Qu6PWYihJr5sPvGy4HrrlpY5ZG1lUwQ1kWpOVBPKfZuMGULmk00RwiY+4Z7y1CZ3TMw3myKETXzC
+        PeVaA+QnR9SzKfGIfLN+ySHvXtM1TH5NX1H0hyaKXhVCQ0TWy05wiNAnynZdhxT5w/k5jHkCdCd4iYbB
+        hWQAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
