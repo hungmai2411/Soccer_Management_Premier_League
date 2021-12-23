@@ -93,6 +93,11 @@ namespace Soccer_Management_Premier_League
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (Club_cbx.Text == Club_cbx1.Text)
+            {
+                MessageBox.Show("Can't add match for 2 same team", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             string hostClub = GetID(Club_cbx.Text);
             string visitClub = GetID(Club_cbx1.Text);
 

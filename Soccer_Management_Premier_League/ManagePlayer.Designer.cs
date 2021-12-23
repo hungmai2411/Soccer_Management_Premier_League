@@ -123,7 +123,7 @@ namespace Soccer_Management_Premier_League
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.label5.Location = new System.Drawing.Point(806, 41);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 16);
+            this.label5.Size = new System.Drawing.Size(35, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "Add";
             // 
@@ -134,7 +134,7 @@ namespace Soccer_Management_Premier_League
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.label3.Location = new System.Drawing.Point(765, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 16);
+            this.label3.Size = new System.Drawing.Size(31, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Edit";
             // 
@@ -230,6 +230,7 @@ namespace Soccer_Management_Premier_League
             this.DataGridView_player.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView_player.Location = new System.Drawing.Point(0, 45);
             this.DataGridView_player.Name = "DataGridView_player";
+            this.DataGridView_player.ReadOnly = true;
             this.DataGridView_player.RowHeadersVisible = false;
             this.DataGridView_player.RowTemplate.Height = 80;
             this.DataGridView_player.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -248,7 +249,7 @@ namespace Soccer_Management_Premier_League
             this.DataGridView_player.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.DataGridView_player.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DataGridView_player.ThemeStyle.HeaderStyle.Height = 24;
-            this.DataGridView_player.ThemeStyle.ReadOnly = false;
+            this.DataGridView_player.ThemeStyle.ReadOnly = true;
             this.DataGridView_player.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridView_player.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DataGridView_player.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

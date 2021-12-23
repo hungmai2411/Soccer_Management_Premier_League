@@ -396,7 +396,6 @@ namespace Soccer_Management_Premier_League
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(850, 428);
             this.axWindowsMediaPlayer1.TabIndex = 0;
-            this.axWindowsMediaPlayer1.ClickEvent += new AxWMPLib._WMPOCXEvents_ClickEventHandler(this.axWindowsMediaPlayer1_ClickEvent);
             // 
             // panel4
             // 
@@ -640,7 +639,9 @@ namespace Soccer_Management_Premier_League
             // 
             // guna2DragControl1
             // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.panel2;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // panel7
             // 
